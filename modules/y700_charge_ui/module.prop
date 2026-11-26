@@ -1,0 +1,6 @@
+id=y700_charge_ui
+name=Y700 充电 UI 真值桥（ICharger 应答）
+version=v1
+versionCode=1
+author=hutao
+description=补上 ColorOS 需要而本机缺失的 vendor.oplus.hardware.charger.ICharger：只按内核真实 charge_type 与 usb 电压电流回答，其余方法一律回不支持异常，不伪造充电协议、不实现任何写操作。

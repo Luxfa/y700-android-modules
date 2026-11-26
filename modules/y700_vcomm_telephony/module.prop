@@ -1,0 +1,6 @@
+id=y700_vcomm_telephony
+name=Y700 通信共享与通话修复
+version=v7
+versionCode=7
+author=hutao
+description=清空高通 noRil 排除清单、恢复 android.hardware.telephony 特性族，使框架注册 telecom 服务，从而让一加通信共享（拨出/接听/短信）可用；并每次开机重设非持久 TCP adb 端口，删模块加重启即自然关闭。

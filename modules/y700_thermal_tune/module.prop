@@ -1,0 +1,6 @@
+id=y700_thermal_tune
+name=Y700 温控提前收油门（只改运行期阈值，不写分区）
+version=v1
+versionCode=1
+author=hutao
+description=把联想原厂 thermal-engine 的降频触发温度整体提前（CPU 43→38℃、GPU 44→41℃），让日常刷视频时壳温不再长期顶在 40℃ 以上。实现方式=开机时用 bind mount 覆盖 /vendor/etc 下两个阈值文件，分区原文件一字节未改。回退：删本模块目录（或改名 disable）重启即可。

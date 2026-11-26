@@ -1,0 +1,6 @@
+id=y700_dolby_min
+name=Y700 外放最小挂载（只在音乐流登记杜比 DAP，不带档位桥、不装原厂 APK）
+version=v1
+versionCode=1
+author=hutao
+description=单一变量实验：在联想原厂音效配置的音乐流后处理里，除默认已有的 dlb_music_listener 外，再登记一行杜比 DAP 效果（apply effect="dap"）。目的只有一个——验证"底层能不能把 DAP 引擎拉起来、拉起后音频服务稳不稳"。做法是 bind mount 覆盖一个文件，不写任何分区、不改机型身份、不碰不可逆区；禁用本模块并重启即完全回到原厂原状。

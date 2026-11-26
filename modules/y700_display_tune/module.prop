@@ -1,0 +1,6 @@
+id=y700_display_tune
+name=Y700 显示色彩偏好落地（饱和度 + 色温）
+version=v1
+versionCode=1
+author=hutao
+description=开机把用户选定的饱和度 83 与自定义色温 1000,982,918 落回系统，全部走 ColorOS 自带的显示服务通道，不写分区、不改机型身份、不动色彩模式档位，也不碰出厂标定所在的不可逆区。

@@ -1,0 +1,136 @@
+1	VolDividerIcWorkModeSet	int	String
+2	chgExchangeMesgInit	int	
+3	chgExchangeSohMesgInit	int	
+4	getAcType	int	
+5	getBattAuthenticate	int	
+6	getBattPPSChgIng	int	
+7	getBattPPSChgPower	int	
+8	getBattParamNoplug	String	
+9	getBattShortIcOtpStatus	int	
+10	getBattSubCurrent	int	
+11	getBattVoocChgIng	int	
+12	getBatteryVoltageNow	int	
+13	getBccCsvData	String	
+14	getBccExpStatus	int	
+15	getBmsHeatingRunningStatus	String	
+16	getBmsHeatingStatus	int	
+17	getChargerControl	String	
+18	getChargerCoolDown	int	
+19	getChargerCriticalLog	int	
+20	getChargerIdVolt	int	
+21	getChargerLog	int	
+22	getCustomSelectChgMode	int	
+23	getDevinfoFastchg	String	
+24	getFastCharge	int	
+25	getParallelChgMosTestResult	int	
+26	getPsyAcOnline	int	
+27	getPsyBatteryCC	int	
+28	getPsyBatteryCurrentNow	int	
+29	getPsyBatteryFcc	int	
+30	getPsyBatteryHmac	int	
+31	getPsyBatteryLevel	int	
+32	getPsyBatteryNotify	int	
+33	getPsyBatteryPchg	int	
+34	getPsyBatteryPchgResetCount	int	
+35	getPsyBatteryRm	int	
+36	getPsyBatteryShortFeature	int	
+37	getPsyBatteryShortStatus	int	
+38	getPsyBatteryStatus	String	
+39	getPsyBatteryTemp	int	
+40	getPsyChargeTech	int	
+41	getPsyFastChgType	int	
+42	getPsyInputCurrent	int	
+43	getPsyOtgOnline	int	
+44	getPsyOtgSwitch	int	
+45	getPsyPcPortOnline	int	
+46	getPsyQGVbatDeviation	int	
+47	getPsyTypeOrientation	int	
+48	getPsyUsbOnline	int	
+49	getPsyUsbStatus	int	
+50	getPsyWirelessRX	String	
+51	getPsyWirelessRxVersion	String	
+52	getPsyWirelessTX	String	
+53	getPsyWirelessTxVersion	String	
+54	getQgVbatDeviation	int	
+55	getQuickModeGain	String	
+56	getReserveSocDebug	String	
+57	getSmartChgMode	int	
+58	getUIsohValue	int	
+59	getUisohDebugParameterInfo	String	
+60	getUsbInputCurrentNow	int	
+61	getUsbPrimalType	int	
+62	getWiredOtgOnline	int	
+63	getWirelessAdapterPower	int	
+64	getWirelessCapacity	int	
+65	getWirelessChargePumpEn	int	
+66	getWirelessCurrentNow	int	
+67	getWirelessDeviated	String	
+68	getWirelessOnline	int	
+69	getWirelessPenPresent	int	
+70	getWirelessPtmcId	int	
+71	getWirelessRXEnable	int	
+72	getWirelessRealType	int	
+73	getWirelessTXEnable	String	
+74	getWirelessUserSleepMode	int	
+75	getWirelessVoltageNow	int	
+76	healthd_update_ui_soc_decimal	String	
+77	nightstandby	int	int
+78	notifyScreenStatus	int	int
+79	queryChargeInfo	String	
+80	setChargeEMMode	int	String
+81	setChargerControl	int	String
+82	setChargerCoolDown	int	String
+83	setChargerCriticalLog	int	String
+84	setChargerCycle	int	String
+85	setChargerFactoryModeTest	int	String
+86	setChargerLog	int	String
+87	setChgStatusToBcc	int	int
+88	setCustomSelectChgMode	int	int,boolean
+89	setFastchgFwUpdate	int	String
+90	setPsyMmiChgEn	int	String
+91	setPsyOtgSwitch	int	String
+92	setReserveSocDebug	int	String
+93	setShipMode	int	String
+94	setSmartChgMode	int	String
+95	setSmartCoolDown	int	int,int,String
+96	setTbattPwrOff	int	String
+97	setUisohDebugInfo	int	String
+98	setUsbPrimalType	int	String
+99	setWirelessChargePumpEn	int	String
+100	setWirelessFtmMode	int	String
+101	setWirelessIconDelay	int	String
+102	setWirelessIdtAdcTest	int	String
+103	setWirelessPenSoc	int	String
+104	setWirelessRXEnable	int	String
+105	setWirelessTXEnable	int	String
+106	setWirelessUserSleepMode	int	String
+107	setWlsThirdPartitionInfo	int	String
+108	testKitFeatureTest	?Lvendor/oplus/hardware/charger/testKitFeatureTestResult;	int
+109	testKitGetFeatureList	String	
+110	testKitGetFeatureName	String	int
+111	testKitGetFeatureNum	int	
+112	updateUiSohToPartion	int	
+113	queryWlsPencilInfo	String	
+114	getChgOlcConfig	String	
+115	setChgOlcConfig	int	String
+116	setSuperEnduranceStatus	int	String
+117	setSuperEnduranceCount	int	String
+118	setBobStatus	int	String
+119	setPsySlowChgEn	int	String
+120	getCpVbatDeviation	int	
+121	setBatteryLogPush	int	String
+122	getChargingModeInGsmCall	int	
+123	setChargingModeInGsmCall	int	String
+124	setChgRusConfig	int	String
+125	getPsyBatterySN	String	
+126	getBattGaugeInfo	String	
+127	setChgConfig	int	int,String,int
+128	getChgConfig	String	int,String,int
+129	setUsbEyeDiagram	int	int,String,boolean
+130	getUsbCurrentEyeDiagram	String	int
+131	queryRgcpHboostInfo	String	
+132	setCV	String	int,int
+133	getDeepSleepClustersSleepWake	String	
+134	getPowerbankInfo	String	String,int
+16777214	getInterfaceHash	String	
+16777215	getInterfaceVersion	int	

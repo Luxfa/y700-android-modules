@@ -1,0 +1,6 @@
+id=y700_auto_brightness
+name=Y700 自动亮度自建执行器（已停用）
+version=v5
+versionCode=5
+author=hutao
+description=读环境光传感器直接写 screen_brightness 的备用自动亮度执行器。11-24 经遮光实测确认系统原生自动亮度可用且映射更合理，本模块已打 disable 标记停用、亮度交回系统。注意：daemon.sh 仍会在开关打开时强制关回，重启用前必须先改这段语义。

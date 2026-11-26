@@ -1,0 +1,6 @@
+id=y700_fps_unlock
+name=Y700 游戏高帧率解锁（只补一个被改掉的属性，不写分区）
+version=v1
+versionCode=1
+author=hutao
+description=联想原厂 ZUI 用 content detection 按画面内容自动升帧（该键在原厂为 true），移植包把它改成了 false，导致游戏层停在 60Hz 节拍。本模块只在运行期把这一个键覆盖回 true。面板本身支持 30/60/90/120/144/165。回退：删除本模块目录重启即可，分区零改动。

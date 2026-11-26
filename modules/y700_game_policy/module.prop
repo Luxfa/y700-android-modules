@@ -1,0 +1,6 @@
+id=y700_game_policy
+name=Y700 游戏与性能 SELinux 放行
+version=v1
+versionCode=1
+author=hutao
+description=开机逐条把 sepolicy.rule 打进实时策略：放行 ColorOS 各域查找联想实现的 oplus 性能服务（机型专用类型），放行 oiface 读 GPU 频率节点、性能域读 zram。模块级 sepolicy.rule 在 Magisk 31.1 不生效，故走 service.sh。

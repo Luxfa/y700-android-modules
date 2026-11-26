@@ -1,0 +1,11 @@
+# 性能服务本体：ColorOS 各域 -> 联想实现的 oplus IPerformance（类型带机型名 tb323fu）
+allow surfaceflinger vendor_tb323fu_oplus_performance_service service_manager find
+allow audioserver vendor_tb323fu_oplus_performance_service service_manager find
+allow platform_app vendor_tb323fu_oplus_performance_service service_manager find
+allow system_server vendor_tb323fu_oplus_performance_service service_manager find
+allow oiface vendor_tb323fu_oplus_performance_service service_manager find
+# GPU 频率/利用率节点被拒 239 次
+allow oiface vendor_sysfs_kgsl file { read open getattr }
+allow oiface vendor_sysfs_kgsl dir { read open getattr search }
+# 性能域读 zram 被拒 43 次
+allow vendor_tb323fu_oplus_performance sysfs_zram dir { search read open getattr }

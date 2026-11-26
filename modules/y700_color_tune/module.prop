@@ -1,0 +1,6 @@
+id=y700_color_tune
+name=Y700 五代 色彩档位（开机只补饱和度）
+version=v3
+versionCode=3
+author=hutao
+description=原厂 ZUXOS 2.5.10.055 专用。开机只重放原厂存不住的那一样——饱和度连续覆盖（默认 95，来自 /data/adb/y700_color/profile.conf）；色温由系统设置项自行持久，本模块不顶。切换与停用走 03_脚本与模块/色彩档位/color_profile.sh（soft|std|manual|now）。

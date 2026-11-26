@@ -1,0 +1,62 @@
+{
+  "_comment": "G1 期望配方：007 super 重组干跑件（派单_007，2026-11-23）。底座=联想 ZUI 2.5.10.055（geometry/组上限/块设备逐字段一致），载荷=4 件联想底分区 + 11 件供体 OPD2513_17.0.0.105 系统层分区，显式 _a/_b 名（_b 全 0）。来源：临时存档/007/build_super_dryrun.sh + 007_super重组干跑.md",
+  "geometry": {
+    "metadata_max_size": 65536,
+    "metadata_slot_count": 3,
+    "logical_block_size": 4096,
+    "sha256": "12ff55f0aba7b506f25cb5da5dca09344234e8df1d9c93ae82a499d98019467e"
+  },
+  "header": {
+    "major": 10,
+    "minor": 2,
+    "header_size": 256,
+    "flags": 1
+  },
+  "block_device": {
+    "partition_name": "super",
+    "first_logical_sector": 2048,
+    "alignment": 1048576,
+    "alignment_offset": 21474836480
+  },
+  "groups": {
+    "default": 0,
+    "qti_dynamic_partitions_a": 21470642176,
+    "qti_dynamic_partitions_b": 21470642176
+  },
+  "extents": {
+    "first_sector": 2048,
+    "contiguous": true
+  },
+  "partitions": [
+    {"name": "odm_a",           "size": 334217216,  "group": "qti_dynamic_partitions_a", "attributes": "readonly"},
+    {"name": "product_a",       "size": 168751104,  "group": "qti_dynamic_partitions_a", "attributes": "readonly"},
+    {"name": "system_a",        "size": 1063563264, "group": "qti_dynamic_partitions_a", "attributes": "readonly"},
+    {"name": "system_dlkm_a",   "size": 14868480,   "group": "qti_dynamic_partitions_a", "attributes": "readonly"},
+    {"name": "system_ext_a",    "size": 957083648,  "group": "qti_dynamic_partitions_a", "attributes": "readonly"},
+    {"name": "vendor_a",        "size": 2200080384, "group": "qti_dynamic_partitions_a", "attributes": "readonly"},
+    {"name": "vendor_dlkm_a",   "size": 118304768,  "group": "qti_dynamic_partitions_a", "attributes": "readonly"},
+    {"name": "my_product_a",    "size": 2683600896, "group": "qti_dynamic_partitions_a", "attributes": "readonly"},
+    {"name": "my_stock_a",      "size": 3916038144, "group": "qti_dynamic_partitions_a", "attributes": "readonly"},
+    {"name": "my_region_a",     "size": 7237632,    "group": "qti_dynamic_partitions_a", "attributes": "readonly"},
+    {"name": "my_manifest_a",   "size": 724992,     "group": "qti_dynamic_partitions_a", "attributes": "readonly"},
+    {"name": "my_carrier_a",    "size": 335872,     "group": "qti_dynamic_partitions_a", "attributes": "readonly"},
+    {"name": "my_heytap_a",     "size": 335872,     "group": "qti_dynamic_partitions_a", "attributes": "readonly"},
+    {"name": "my_engineering_a","size": 335872,     "group": "qti_dynamic_partitions_a", "attributes": "readonly"},
+    {"name": "my_bigball_a",    "size": 335872,     "group": "qti_dynamic_partitions_a", "attributes": "readonly"},
+    {"name": "odm_b",           "size": 0, "group": "qti_dynamic_partitions_b", "attributes": "readonly"},
+    {"name": "product_b",       "size": 0, "group": "qti_dynamic_partitions_b", "attributes": "readonly"},
+    {"name": "system_b",        "size": 0, "group": "qti_dynamic_partitions_b", "attributes": "readonly"},
+    {"name": "system_dlkm_b",   "size": 0, "group": "qti_dynamic_partitions_b", "attributes": "readonly"},
+    {"name": "system_ext_b",    "size": 0, "group": "qti_dynamic_partitions_b", "attributes": "readonly"},
+    {"name": "vendor_b",        "size": 0, "group": "qti_dynamic_partitions_b", "attributes": "readonly"},
+    {"name": "vendor_dlkm_b",   "size": 0, "group": "qti_dynamic_partitions_b", "attributes": "readonly"},
+    {"name": "my_product_b",    "size": 0, "group": "qti_dynamic_partitions_b", "attributes": "readonly"},
+    {"name": "my_stock_b",      "size": 0, "group": "qti_dynamic_partitions_b", "attributes": "readonly"},
+    {"name": "my_region_b",     "size": 0, "group": "qti_dynamic_partitions_b", "attributes": "readonly"},
+    {"name": "my_manifest_b",   "size": 0, "group": "qti_dynamic_partitions_b", "attributes": "readonly"},
+    {"name": "my_carrier_b",    "size": 0, "group": "qti_dynamic_partitions_b", "attributes": "readonly"},
+    {"name": "my_heytap_b",     "size": 0, "group": "qti_dynamic_partitions_b", "attributes": "readonly"},
+    {"name": "my_engineering_b","size": 0, "group": "qti_dynamic_partitions_b", "attributes": "readonly"},
+    {"name": "my_bigball_b",    "size": 0, "group": "qti_dynamic_partitions_b", "attributes": "readonly"}
+  ]
+}

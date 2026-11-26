@@ -1,0 +1,26 @@
+# 2026-11-26 原厂 2.5.10.055 第一轮瘦身清单（作者 hutao）
+# 方式：pm disable-user --user 0（可逆）；penservice 额外用 pm uninstall --user 0（因 PERSISTENT 件不看用户级停用）
+disable|com.lenovo.menu_assistant.hd|联想小天 AI 助手（LenovoXiaoTian，桌面有图标）|186MB
+disable|com.lenovo.lfh.tianjiao.tablet|天娇平板版（priv-app，无入口）|450MB
+disable|com.zui.asr.sherpa|离线语音识别模型（sherpa）|213MB
+disable|com.zui.ai.lens|AI 识屏/扫一扫|165MB
+disable|com.zui.ai.aiservice|AI 服务（与 lens 同版本）|77MB
+disable|com.zui.pengen|手写笔增强 ZuiPenGen|159MB
+disable|com.lenovo.screensaver|待机模式/屏保 ZuiStandbyMode|107MB
+disable|com.tblenovo.ue.config|运营商定制资源 VantateResources（无卡平板）|63MB
+disable|com.zui.browser|联想浏览器|156MB
+uninstall|com.lenovo.penservice|手写笔服务（PERSISTENT 常驻，停用无效，改为用户级卸载）|306MB
+
+# 第二轮（同日 15:5x，用户裁定"不用电脑模式、该卸载的卸载"）：全部改为用户级卸载
+uninstall|com.motorola.mobiledesktop|电脑模式/移动桌面（RSS 320MB）|—
+uninstall|com.lenovo.menu_assistant.hd|联想小天（第一轮已停用，本轮卸载）|186MB
+uninstall|com.lenovo.lfh.tianjiao.tablet|天娇平板版|450MB
+uninstall|com.zui.asr.sherpa|离线语音识别模型|213MB
+uninstall|com.zui.ai.lens|AI 识屏/扫一扫|165MB
+uninstall|com.zui.ai.aiservice|AI 服务|77MB
+uninstall|com.zui.pengen|手写笔增强|159MB
+uninstall|com.lenovo.screensaver|待机模式/屏保|107MB
+uninstall|com.tblenovo.ue.config|运营商定制资源|63MB
+uninstall|com.zui.browser|联想浏览器|156MB
+# 实测口径（重启后干净值）：MemAvailable 6553MB → 7710MB（+1.16GB）
+# 空间结论：/data 8.3G → 8.4G，**卸载系统件省不出用户空间**（APK 在只读分区）；真正的大头是游戏离线资源，走 microSD 才是省空间的路

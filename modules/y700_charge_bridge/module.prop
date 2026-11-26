@@ -1,0 +1,6 @@
+id=y700_charge_bridge
+name=Y700 充电开关桥（旁路充电 / 充电上限）
+version=v2
+versionCode=2
+author=hutao
+description=监听 ColorOS 的 bypass_charge_state 与 regular_charge_protection 键，翻译成联想底层唯一有效的 charging_enabled 节点写入；带 5% 回差防抖。不改动任何分区，删模块即完全回退。

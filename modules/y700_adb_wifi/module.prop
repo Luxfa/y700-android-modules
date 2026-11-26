@@ -1,0 +1,6 @@
+id=y700_adb_wifi
+name=Y700 五代 无线调试开机常驻
+version=v1
+versionCode=1
+author=hutao
+description=开机把 adb 切到 TCP 端口（默认 5555）并重启 adbd，让拔线后仍能连上。端口存 /data/adb/y700_adb_wifi/port，停用则建 off 文件。安全边界不变：陌生设备首次连接仍必须在本机屏幕上点"允许"；本模块走的是经典 TCP adb（不加密），介意就走系统设置里的"无线调试"（TLS，但端口每次重启会变）。

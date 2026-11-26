@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  原厂 ZUI 的白名单只给了三项；联想原厂没设 ro.control_privapp_permissions（默认不检查），
+  所以缺 INTERACT_ACROSS_USERS_FULL 也能开机。
+  C17 的系统层是 ColorOS，它把这个键设成了 enforce —— 照搬原厂那份会在开机时判
+  "permissions not in allowlist" 直接起不来。这里按 APK 实际申请的受限权限补全。
+  补全人：hutao
+-->
+<permissions>
+    <privapp-permissions package="com.dolby.daxservice">
+        <permission name="android.permission.INTERACT_ACROSS_USERS"/>
+        <permission name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+        <permission name="android.permission.MANAGE_USERS"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+        <!-- 它自己定义的 DAXSERVICE 保护级别是 signature|privileged(0x12)，enforce 模式下同样要登记 -->
+        <permission name="com.dolby.permission.DAXSERVICE"/>
+    </privapp-permissions>
+</permissions>

@@ -1,0 +1,65 @@
+# Y700 五代（Lenovo Legion Y700 Gen5 / TB323FU）Magisk 模块与取证工具集
+
+作者：**hutao**。许可：MIT（见 `LICENSE`）。**先读 `DISCLAIMER.md`** —— 本仓库内容涉及 bootloader 解锁、root、分区读写，可能造成设备损坏、数据丢失、保修与安全能力损失。
+
+这些代码来自一台真实设备的移植与日用调优过程，每一个模块都经过真机安装、真实重启复验或明确的"判死"结论；**判死的件也保留在仓库里**，因为它们记录了"此路不通"的证据，比只留成功件更有价值。
+
+## 一、仓库结构
+
+| 目录 | 内容 |
+|---|---|
+| `modules/` | 13 个 Magisk 模块源码（纯脚本/配置，**不含任何 APK、.so、镜像**） |
+| `tools/` | 设备侧取证与刷写脚本（adb / 9008 / erofs / LP 分区表 / 备份回退） |
+| `skill/android-port-discipline/` | 从这套流程里沉淀出的**取证纪律与改动门禁**清单（含 51 条实测踩坑） |
+
+## 二、模块索引
+
+**适用底层要分清**：这台机器跑过两套系统层——联想原厂 `ZUXOS 2.5.10.055`（Android 17 系统层 + 16 vendor 层）与移植包 `C17`（ColorOS 17 系统层 + 联想 043 底层）。**ColorOS 私有接口在原厂包上直接报错**（实测：`settings put --put package:display` 报 `Invalid namespace`），所以跨底层搬模块前必须先验接口存在，否则是空转。
+
+| 模块 | 干什么 | 适用底层 | 上机状态 |
+|---|---|---|---|
+| `y700_color_tune` v3 | 开机重放饱和度连续覆盖（色温交还系统原生） | 原厂 055 | **现役，真重启复验通过** |
+| `y700_adb_wifi` v1 | 开机把 adb 切到 TCP 端口并重启 adbd，拔线仍可连 | 通用 | **现役，真重启复验通过** |
+| `y700_charge_bridge` v2 | 把充电开关/上限翻译成联想底层唯一有效的 `charging_enabled` 节点 | C17 | 曾在装（一期） |
+| `y700_charge_ui` v1 | 补本机缺失的 `vendor.oplus.hardware.charger.ICharger`，只按内核真值应答 | C17 | 曾在装（一期）；**实测过外部看门狗起不来，封顶改由 jar 内部自管** |
+| `y700_display_tune` v1 | 走 ColorOS 自带显示服务落地饱和度+色温 | C17 | 曾在装（一期），原厂 055 上接口不通 |
+| `y700_dolby_bridge` / `y700_dolby_min` | 外放杜比/DAP 链路的三轮尝试 | C17 | **判死并已从设备移出**：底层无人创建 DAP 会话，强挂会因 dms HAL 不应答 FMQ 导致 audioserver 周期性 SIGABRT（对照实验：关模块 10.5 分钟 0 崩 vs 开模块 20 分钟 7 崩）。最终只保留 `y700_dolby_gate` 的"特性声明"部分，**该模块源码未在本仓库**（当时按裁定只留在设备侧与离线快照里，不含可复用逻辑） |
+| `y700_game_policy` v1 | 逐条把 sepolicy 放行打进实时策略（不写分区） | C17 | 曾在装（一期） |
+| `y700_identity_hygiene` v2 | 只处理普通 App 真能读到的残留属性 | C17 | 曾在装（一期）。**注意：它做的是"清残留"，不是伪造认证身份**，与 Widevine/Play Integrity 无关 |
+| `y700_vcomm_telephony` v7 | 通话/电信侧能力补齐 + 开机固定 adb 端口 | C17 | 曾在装（一期）；**原始 APK 不在仓库**（第三方固件，见 `tools/` 内取回说明） |
+| `y700_fps_unlock` v1 | 只补一个被移植包改掉的属性，恢复原厂按内容升帧 | C17 | 实验件，未长期在装 |
+| `y700_thermal_tune` v1 | 只改运行期温控阈值（bind mount，不写分区） | C17 | 实验件。**铁律：禁止 `setprop ctl.restart thermal-engine`**——重启后 daemon 不会自己接回默认场景，等于一段时间内无温控 |
+| `y700_auto_brightness` v5 | 自建自动亮度执行器 | C17 | **已卸载**：遮光实测证明系统原生可用（强阻尼慢跟随，滞后约 70 秒）。**重装前必须先改掉强制 `mode=0` 那段** |
+
+`y700_dolby_daxservice` **未收录**：它的主要内容是杜比专有 `.so` 与 `daxService.apk`，属第三方固件，不能随本仓库分发。需要的人请自行从合法渠道取得的固件里解出。
+
+## 三、装法与回退
+
+```bash
+# 打包：module.prop 必须在 zip 根，否则 Magisk 报 "This zip is not a Magisk module!"
+cd modules/<模块名> && "/c/Program Files/7-Zip/7z.exe" a -tzip ../<模块名>.zip module.prop *.sh *.xml *.conf *.prop
+
+# 安装（设备侧）
+adb -s <你的设备> push <模块名>.zip /data/local/tmp/
+adb -s <你的设备> shell su -c 'magisk --install-module /data/local/tmp/<模块名>.zip'
+```
+
+**装完必须核对**（实测坑）：`magisk --install-module` 会留下"半装"态——正式目录只剩 `module.prop` + `update` 标记，`service.sh` 还停在 `/data/adb/modules_update/<模块名>/`。核对命令：
+
+```bash
+adb -s <设备> shell su -c 'ls -l /data/adb/modules/<模块名>/'
+```
+
+**停用/卸载**：Magisk 的标记文件名是 **`disable`**（写成 `disabled` 完全无效，曾导致已知危险模块重启后复活）、`remove` 为开机自删。
+
+## 四、第三方模块的安全边界
+
+只从项目 Releases 取原文；**装前先解包读脚本**，见到 `curl | sh`、往 `priv-app` 写、不明二进制、要求联网的，不装并上报。已知真实先例：伪装成"终端扩展"的模块经 `service.sh` 注入 `priv-app` 窃取短信与支付信息，**卸载后仍能开机复活**。兜底：`magisk --remove-modules`，或开机长按音量减进安全模式。
+
+## 五、隐私说明
+
+本仓库已做过脱敏并复扫零命中：设备序列号 → `YOUR_SERIAL`，内网地址 → `192.0.2.10`（RFC 5737 文档地址段），线刷包解包口令 → `${PACK_PASSWORD}`（不随仓库分发）。仓库内**不含任何固件、镜像、APK、`.so` 或个人账号信息**。
+
+## 六、这里最值钱的部分
+
+不是模块本身，而是 `skill/android-port-discipline/`：它把"结论必须区分实测与推断""改动必须验证完才叫装上""回退判据只看运行态"这类纪律，和 51 条真实返工记录写在一起。动 Android 底层前照着过一遍，能省下不止一次砖。

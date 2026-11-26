@@ -1,0 +1,12 @@
+# Magisk 排除列表策略（2026-11-26，作者 hutao）
+# 策略：所有第三方 App 默认全部加入排除列表（看不到 root），下列 7 件**故意不排除**
+com.topjohnwu.magisk|Magisk 本体，排除后自己管不了自己
+com.lenovo.hyperengine|联想 HyperEngine 调度引擎，游戏性能档位相关
+com.xiaoji.egggame|小鸡/原厂手柄映射层（用户有原厂手柄）
+com.lenovo.dsa|用途未查实（保守保留，不排除）
+com.lenovo.hybridworkspace|多窗口/混合工作区功能件
+com.zuxos.wpslauncher|PC 版 WPS 启动器（功能件）
+com.orion.notein|用途未查实（保守保留，不排除）
+# 实测（2026-11-26 16:0x）：排除 40 条、Denylist is enforced
+# 隐藏生效证据：和平精英 pid=14586 的 maps 与 mounts 里 magisk/zygisk 命中均为 0
+# adb 侧 root 不受影响：su 仍为 uid=0 context=u:r:magisk:s0（shell 不在排除列表）

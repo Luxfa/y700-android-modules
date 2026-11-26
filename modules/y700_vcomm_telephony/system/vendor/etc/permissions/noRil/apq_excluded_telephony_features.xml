@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Y700 ColorOS port: telephony-feature exclusions neutralized.
+    The stock Lenovo WiFi-only base used this list to strip
+    android.hardware.telephony* from a modem-less target, which keeps
+    the framework from registering the telecom service.  ColorOS
+    virtual-comm (通信共享) needs telecom for calls and SMS.
+-->
+<permissions>
+</permissions>
