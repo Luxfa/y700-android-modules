@@ -1,0 +1,38 @@
+## 采集 2026-11-24 18:2x —— 用正确 AIDL 实名（包名.接口名/实例）复核
+# 说明：首版误用 "包名/default" 形式，会把已注册服务判成 not found（连 composer3 都被误判），该版已作废重写。
+
+系统层 /system/etc/vintf/compatibility_matrix.device.xml 要求（显示/色彩类，共 36 项，节选关键）：
+  vendor.oplus.hardware.display.MixLut3D            version 1-2  IMixLut3D/default   （矩阵第 727-733 行）
+  vendor.oplus.hardware.displaycolorfeature         IDisplayColorFeature/default
+  vendor.oplus.hardware.displaypanelfeature         IDisplayPanelFeature/default
+  vendor.oplus.hardware.mmdisplayfeature            IMMDisplayFeature/default
+  vendor.pixelworks.hardware.display                IDisplay/default
+  vendor.qti.hardware.display.*                     composer/allocator/config/demura/postproc/aiqe 等
+
+逐项 service check 实况：
+  vendor.oplus.hardware.display.MixLut3D.IMixLut3D/default           not found
+  vendor.oplus.hardware.displaycolorfeature.IDisplayColorFeature/...  not found
+  vendor.oplus.hardware.displaypanelfeature.IDisplayPanelFeature/...  not found
+  vendor.oplus.hardware.mmdisplayfeature.IMMDisplayFeature/default    not found
+  vendor.pixelworks.hardware.display.IDisplay/default                 not found
+  android.hardware.graphics.composer3.IComposer/default               found   （进程 vendor.qti.hardware.display.composer-service pid 1820）
+  vendor.qti.hardware.display.config.IDisplayConfig/default           found   （service list 第 449 行）
+  vendor.qti.hardware.display.aiqe.IDisplayAiqe/default               found   （service list 第 448 行）
+  android.hardware.light.ILights/default                              found
+  vendor.lenovo.hardware.display.IDisplay/default                     found   （进程 pid 1804，联想自家显示 HAL）
+
+全量 service list 中已注册的 vendor.oplus.* 服务（共 6 项，无一项属于显示/色彩）：
+  421 vendor.oplus.hardware.charger.ICharger/default                     ← 本项目 charge_bridge 模块自己注册的
+  422 vendor.oplus.hardware.communicationcenter.IDmtpService/default
+  423 vendor.oplus.hardware.performance.IPerformance/default
+  424 vendor.oplus.hardware.stability.oplus_project.IOplusProject/default
+  425 vendor.oplus.hardware.subsys_interface.subsys.ISubsys/default
+  426 vendor.oplus.hardware.subsys_interface.subsys_radio.ISubsysRadio/slot1
+
+全量 service list 中已注册的 vendor.lenovo.* 服务（共 10 项）：
+  411 IBattery  412 IDisplay  413 IFactory  414 IHyperschedule  415 ILed
+  416 IPerformance  417 ITouchscreen  418 IUfs  419 IUsb  420 IVibratorDual
+
+SELinux 侧：日志中唯一一条 MixLut3D 的 `avc denied { find }` 由本次探针触发
+  （pid=12682 uid=2000 scontext=u:r:shell:s0 tcontext=u:object_r:default_android_service:s0）
+  ⇒ 不能作为"ColorOS 运行时调用 MixLut3D 失败"的证据。

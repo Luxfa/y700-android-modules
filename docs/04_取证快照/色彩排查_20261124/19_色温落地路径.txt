@@ -1,0 +1,36 @@
+## 色温落地路径追查 2026-11-24 19:15:32
+### 可 dump 的护眼/色彩类服务
+  color_display
+  color_screenshot
+  display
+  oplusscreenmode
+  vendor.lenovo.hardware.display.IDisplay/default
+  vendor.lenovo.hardware.touchscreen.ITouchscreen/default
+  vendor.qti.hardware.display.aiqe.IDisplayAiqe/default
+  vendor.qti.hardware.display.config.IDisplayConfig/default
+### 最近 3000 行里的色彩落地痕迹
+11-24 19:15:26.229  4724  5714 I OplusHansManager : uid=10261, pkg=com.oplus.eyeprotect F enter(), M stay=10
+11-24 19:15:26.229  4724  5714 I OplusHansManager : cgroup failed, freeze uid: 10261 com.oplus.eyeprotect pids: [] scene: LcdOn
+11-24 19:15:26.229  4724  5714 I OplusHansManager : uid=10261, pkg=com.oplus.eyeprotect HansSceneManager.freeze() failed, go back to R
+11-24 19:15:26.229  4724  5714 I OplusHansManager : uid=10261, pkg=com.oplus.eyeprotect F exit(), F stay=0, reason=R_F_TargetMap, FrozenActionKeepProxy=false
+11-24 19:15:26.229  4724  5714 I OplusHansManager : uid=10261, pkg=com.oplus.eyeprotect M exit(), M stay=0
+11-24 19:15:31.231  4724  5714 I OplusHansManager : uid=10261, pkg=com.oplus.eyeprotect M enter(), R stay=5
+### 护眼服务状态
+    defaultCCT=7900
+      eyeProtectEnabled=false
+      aiIntelligentEyeProtectEnabled=false
+      eyeProtectRGB=RGB{red=943, green=983, blue=1000, protectCoeff=0}
+      sensorCCT=0.0
+      cct=7900.0
+      rgb=RGB{red=943, green=983, blue=1000, protectCoeff=0}
+      [0] OplusFeatureAmbientColor
+      OplusFeatureAmbientColor:
+        modelConfig=ModelConfig{profile=DEFAULT, dayLockLux=30.0, dayLockCct=5300.0, nightLockLux=30.0, nightLockCct=5100.0, lutLockLux=0.0, lutLockCct=0.0, lockPanelX=0.0, lockPanelY=0.0, temperatureRegulationLockLux=0.0, temperatureRegulationLockCct=0.0, temperatureRegulationLockPanelX=0.0, temperatureRegulationLockPanelY=0.0, customDrags=null, customTemperature=null, hbmLux=null, hbmCct=null}
+      [1] OplusFeatureAmbientEyeprotect
+      OplusFeatureAmbientEyeprotect:
+### 现值回读
+  eyeprotect_rgb                                 943,983,1000,1,1
+  color_ball_last_pointx                         432.956
+  color_ball_last_pointy                         562.88806
+  color_temperate_ball_mode                      3
+  setting_enable_color_temperature_regulation    0

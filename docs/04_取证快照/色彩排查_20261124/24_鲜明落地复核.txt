@@ -1,0 +1,5 @@
+## 鲜明档是否真落地复核 2026-11-24 19:23:05
+  settings 档位 = 12
+      Current color mode: ColorMode::SRGB (7)
+     colorMode=SRGB (7) renderIntent=COLORIMETRIC (0) dataspace=V0_SRGB (142671872) 
+  composer 侧

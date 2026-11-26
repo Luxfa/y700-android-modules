@@ -1,0 +1,7 @@
+## 远程写色温是否驱动服务（用服务侧值做判据，不用截图）2026-11-24 19:43:08
+基线服务侧: eyeProtectRGB=RGB{red=1000,green=1000,blue=1000,protectCoeff=0} rgb=RGB{red=1000,green=1000,blue=1000,protectCoeff=0}
+--- 写入轻暖 1000,985,930
+写后键值: 1000,985,930,1,1
+写后服务侧: eyeProtectRGB=RGB{red=1000,green=985,blue=930,protectCoeff=0} rgb=RGB{red=1000,green=985,blue=930,protectCoeff=0} currentRGB=RGB{red=1000,green=1000,blue=1000,protectCoeff=0}
+写后 ball_mode: 2
+### 判据说明：服务侧 rgb 跟上新值 = 键驱动有效；观感由用户判

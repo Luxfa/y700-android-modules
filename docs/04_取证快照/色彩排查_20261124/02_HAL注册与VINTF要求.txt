@@ -1,0 +1,9 @@
+## OPLUS 显示相关 HAL 注册状态（service check）
+vendor.oplus.hardware.display.MixLut3D/default Service vendor.oplus.hardware.display.MixLut3D/default: not found
+vendor.oplus.hardware.opluslights/default      Service vendor.oplus.hardware.opluslights/default: not found
+vendor.oplus.hardware.commondcs/default        Service vendor.oplus.hardware.commondcs/default: not found
+vendor.oplus.hardware.olc2/default             Service vendor.oplus.hardware.olc2/default: not found
+android.hardware.light.ILights/default         Service android.hardware.light.ILights/default: found
+vendor.lenovo.hardware.display.IDisplay/default Service vendor.lenovo.hardware.display.IDisplay/default: found
+
+## VINTF 对 MixLut3D 的要求

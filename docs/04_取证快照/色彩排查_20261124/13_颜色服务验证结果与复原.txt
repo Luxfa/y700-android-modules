@@ -1,0 +1,16 @@
+## 颜色服务启用验证结果与复原 2026-11-24 19:07:51
+### 启用后接口方法（实测，无饱和度入口）：init / deInit / getRenderIntentsMap / getSPRMode / setSPRMode / toggleSocketService
+### STC 配置文件是否存在
+  不存在（字符串编译进了 libstcMotoColor.so，但机器上没有这份表）
+### 实际生效标定的来源对比
+  运行日志白点终点: 4095 4095 4095 -> 4095 4030 3724
+  /mnt/vendor/persist/display/ 两份 cali 末行: 4095 4030 3724  <== 命中（逐机出厂标定）
+  /vendor/etc/display/          两份 cali 末行: 4095 4071 3788  <== 未命中（通用参考件）
+### 停止服务复原
+[init.svc.vendor.qti.hardware.display.color-service]: [stopped]
+  vendor.qti.hardware.display.color.IDisplayColor          not found
+  vendor.qti.hardware.display.postproc.IDisplayPostproc    not found
+### 色彩状态回归检查
+    Current color mode: ColorMode::NATIVE (0)
+### 当前档
+12

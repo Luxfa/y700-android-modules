@@ -1,0 +1,33 @@
+## 面板标定文件清单（本机相关）
+-rw-r--r-- 1 root root    1840 2009-01-01 08:00 SVIConfig.xml
+-rw-r--r-- 1 root root  142355 2009-01-01 08:00 panel_baldur_nt36523_csot_3k_dsc_vid_C3D_cali_p3.txt
+-rw-r--r-- 1 root root  144425 2009-01-01 08:00 panel_baldur_nt36523_csot_3k_dsc_vid_C3D_cali_srgb.txt
+-rw-r--r-- 1 root root  764901 2009-01-01 08:00 qdcm_calib_data_nt36523_3k_fhd_plus_165Hz_DPHY_video_panel.json
+
+## cali_p3 头 5 行 / cali_srgb 头 5 行
+0	0	0	0	0	0
+
+255	0	0	257	0	0
+
+511	0	0	514	0	0
+
+767	0	0	774	4	0
+
+1023	0	0	1033	6	0
+
+---
+0	0	0	0	0	0
+
+255	0	0	219	9	4
+
+511	0	0	456	26	10
+
+767	0	0	693	52	20
+
+1023	0	0	930	91	35
+
+
+## QDCM json 色域/Gamma 字段统计
+
+## nits 映射端点
+0.2289

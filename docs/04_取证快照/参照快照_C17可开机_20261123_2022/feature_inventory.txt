@@ -1,0 +1,85 @@
+### 功能面盘点（root）2026-11-23 21:06:11
+
+== /proc/bootconfig 里的 androidboot.*（AVB 真读数）
+androidboot.hardware = "qcom"
+androidboot.memcg = "1"
+androidboot.usbcontroller = "a600000.dwc3"
+androidboot.load_modules_parallel = "true"
+androidboot.hypervisor.protected_vm.supported = "true"
+androidboot.hypervisor.version = "gunyah"
+androidboot.vendor.qspa = "true"
+androidboot.vendor.qspa.gpu = "enabled"
+androidboot.vendor.qspa.video = "enabled"
+androidboot.vendor.qspa.camera = "enabled"
+androidboot.vendor.qspa.display = "enabled"
+androidboot.vendor.qspa.audio = "enabled"
+androidboot.vendor.qspa.modem = "enabled"
+androidboot.vendor.qspa.wlan = "enabled"
+androidboot.vendor.qspa.comp = "enabled"
+androidboot.vendor.qspa.sensors = "enabled"
+androidboot.vendor.qspa.npu = "enabled"
+androidboot.vendor.qspa.spss = "enabled"
+androidboot.vendor.qspa.nav = "enabled"
+androidboot.vendor.qspa.comp1 = "enabled"
+androidboot.vendor.qspa.display1 = "enabled"
+androidboot.vendor.qspa.nsp = "enabled"
+androidboot.vendor.qspa.eva = "enabled"
+androidboot.serialconsole = "0"
+androidboot.pcbaverinfo = "MP"
+
+== 充电/电池现状
+  Charger voltage : 0
+  AC powered: true
+  USB powered: false
+  Max charging current: 3000000
+ Time when the latest updated value of the Max charging current was sent via battery changed broadcast: +5s900ms
+  Max charging voltage: 5000000
+  status: 2
+  voltage: 4534
+ Time when the latest updated value of the voltage was sent via battery changed broadcast: +1m38s472ms
+ The last voltage value sent via the battery changed broadcast: 4528
+  temperature: 359
+
+== 旁路充电/游戏/互联 相关已安装包
+com.nearme.gamecenter
+com.oplus.deepthinker
+com.oplus.game.empowerment.folder
+com.oplus.games
+com.oplus.padconnect
+com.oplus.powermonitor
+
+== 已注册的 oplus 侧 binder 服务（看谁活着）
+2	ISubsysRadio: [com.oplus.telephony.ISubsysRadio]
+3	IVirtualComm: [com.oplus.virtualcomm.IVirtualCommService]
+5	OPLUSExService: [android.os.IOplusExService]
+6	OplusLocationManager: [android.location.IOplusLocationManager]
+7	OplusShoulderPressureManagerService: [com.oplus.shoulderpressure.IOplusShoulderPressureManager]
+16	additionald: [android.os.IOplusService]
+19	aiwidget: [com.oplus.aiwidget.IAIWidgetManagerService]
+105	anti_root_dialog: [com.oplus.exsystemservice.antirootdialog.IAntiRootDialog]
+107	app_compatibility: [com.oplus.compatibility.IOplusCompatibilityService]
+115	athenaservice: [com.oplus.app.IAthenaService]
+139	color_screenshot: [com.oplus.screenshot.IOplusScreenshotManager]
+140	commscene: [com.oplus.commscene.ICommScene]
+170	dynamic_filter: [com.oplus.filter.IDynamicFilterService]
+175	engineer: [android.engineer.IOplusEngineerManager]
+176	engineer_fw: [com.android.server.engineering.IOplusEngineerFwService]
+184	gaiad: [android.gaia.IOplusGaia]
+193	heimdall: [com.oplus.heimdall.IHeimdallService]
+194	horae: [com.oplus.horae.IHoraeService]
+208	isms_ext: [com.oplus.telephony.ISmsExt]
+210	isub_ext: [com.oplus.telephony.ISubExt]
+
+== settings 里与旁路/游戏有关的键
+Row: 16 name=com.nearme.gamecenter_has_download_task, value=0
+Row: 94 name=power_save_pre_refresh_state, value=-1
+Row: 171 name=oplus_games_action_button_prevent, value=0
+Row: 193 name=setting_zoomwindow_game_shrink, value=0
+Row: 207 name=sys_gamespace_joystick_intercept_key, value=0
+Row: 285 name=multi_device_reduce_refresh_rate, value=wifi:,2,virtual:com.coloros.sharescreen,2,virtual:com.oplus.screenrecorder,3
+Row: 286 name=oplus_font_kill_protect_list, value=com.coloros.backuprestore;com.heytap.music;com.oneplus.soundrecorder;com.android.launcher;com.coloros.translate;com.tencent.qqmusic;com.oplus.screenrecorder;com.nearme.note;com.android.providers.downloads;com.oplus.themestore;com.oplus.ota;com.heytap.usercenter;com.google.android.marvin.talkback;org.codeaurora.bluetooth;com.coloros.bootreg;com.coloros.screenrecorder;com.android.contacts;com.amazon.mp3;com.oplus.pantanal.ums;com.android.mms;com.android.nfc;com.color.safecenter;com.oneplus.retailmode;com.oppo.community;com.oplus.synergy;com.android.incallui;com.nearme.themespace;com.google.android.dialer;com.heytap.appplatform;com.tencent.wework;com.oplus.pscanvas;com.android.keyguard;com.coloros.weather;com.nearme.gamecenter;com.tencent.mobileqq;com.android.packageinstaller;com.kugou.android;com.oplus.appplatform;com.coloros.alarmclock;com.android.wallpaper.livepicker;com.coloros.safecenter;com.android.settings;com.heytap.vip;com.coloros.filemanager;cn.kuwo.player;com.oplus.riderMode;com.coloros.ocrscanner;com.coloros.soundrecorder;com.android.email;com.android.phone;com.oplus.ocar;com.android.systemui;com.heytap.themestore;com.mediatek.mtklogger;com.coloros.gallery3d;com.android.bluetooth;com.netease.cloudmusic;com.android.captiveportallogin
+Row: 291 name=bypass_charge_state, value=0
+Row: 293 name=game_speed_up_switch, value=0
+Row: 351 name=peak_refresh_rate, value=165.0
+Row: 435 name=key_super_play_report_apm_switch_com.tencent.tmgp.sgame, value=-1
+Row: 440 name=com.oplus.games_get_cta_auth_state, value=1

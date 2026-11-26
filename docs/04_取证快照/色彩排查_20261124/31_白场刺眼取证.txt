@@ -1,0 +1,24 @@
+## 白场刺眼取证 2026-11-24 19:41:49
+### 亮度模式与当前亮度
+  screen_brightness_mode = 1  (1=自适应)
+  screen_brightness      = 2344
+  背光节点 brightness/max = 938
+ 4095
+ 
+### 框架侧亮度与 nits
+  Display Brightness=2344.0
+  Display SdrBrightness=2344.0
+  isHighBrightnessModeEnabled=true
+  mBrightnessState=2344.0
+  mHbmData=HBM{minLux: 10000.0
+### 当前环境光读数
+  stk_stk3acx Ambient Light Sensor Non-wakeup (handle=0x00000033, connections=2)
+  stk_stk3acx Proximity Sensor Wakeup (handle=0x00000052, connections=1)
+  sns_smd  Wakeup (handle=0x000000ac, connections=1)
+  pedometer  Non-wakeup (handle=0x000000bf, connections=2)
+### 深色模式/阅读模式状态
+  ui_night_mode = 0
+  night_display_activated = null
+### 色彩与饱和度现值
+  档位=12 NATIVE (0)
+  饱和度=Activated:true  色温=1000,1000,1000,1,1

@@ -1,0 +1,9 @@
+727:        <name>vendor.oplus.hardware.display.MixLut3D</name>
+728-        <version>1-2</version>
+729-        <interface>
+730:            <name>IMixLut3D</name>
+731-            <instance>default</instance>
+732-        </interface>
+733-    </hal>
+734-    <hal format="aidl">
+735-        <name>vendor.oplus.hardware.displaycolorfeature</name>

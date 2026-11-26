@@ -1,0 +1,40 @@
+## 采集 2026-11-24 18:28:08 —— 用户报告三档差异后复核
+### SF 色彩模式（当前档）
+    Current color mode: ColorMode::NATIVE (0)
+Current Color Mode: gamut 255 gamma 255 intent 0 Dynamice_range SDR
+### display 侧 colorMode
+colorMode 0
+mActiveColorMode=0
+mDefaultDisplayDefaultColorMode=0
+### ColorDisplayService 关键状态
+    Activated: false
+    Color temp: 2850
+Global saturation:
+    Activated: false
+App Saturation: 
+            mSaturationLevels: {}
+            mSaturationLevels: {}
+            mSaturationLevels: {}
+            mSaturationLevels: {}
+            mSaturationLevels: {}
+            mSaturationLevels: {}
+            mSaturationLevels: {}
+            mSaturationLevels: {}
+            mSaturationLevels: {}
+            mSaturationLevels: {}
+            mSaturationLevels: {}
+### 色彩模式与色温 settings 现值
+oplus_last_color_mode                          12
+access_color_setting                           -1
+color_temperate_ball_mode                      2
+eyeprotect_progress_value                      58
+oplus_customize_custom_eye_protect_enable      1
+oplus_customize_comfort_color_temperature_enable 0
+secure:oplus_customize_wcg_support             0
+secure:night_display_activated                 null
+### 有没有'锐利度/清晰度'类设置键
+Row: 29 name=close_direct_touch_class_name, value=com.oplus.gallery.pictureeditorpage.PhotoEditorActivity
+Row: 135 name=install_app_detail_safeguard_state, value=0
+Row: 323 name=video_color_enhance_switch, value=0
+Row: 460 name=has_show_voice_call_nc_detail, value=1
+### 图层 colorTransform 是否仍是单位矩阵

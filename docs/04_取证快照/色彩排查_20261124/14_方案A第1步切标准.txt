@@ -1,0 +1,20 @@
+## 方案A 第1步：切到标准档 2026-11-24 19:13:18
+### 切前
+  oplus_last_color_mode = 12
+  SF:     Current color mode: ColorMode::NATIVE (0)
+### 切后
+  oplus_last_color_mode = 10
+  SF:     Current color mode: ColorMode::DISPLAY_P3 (9)
+### 调用链确认
+### 色温/RGB 现值
+      currentCCT=7900
+        currentCCT=7900
+        currentRGB=RGB{red=1000, green=1000, blue=1000, protectCoeff=0}
+      stateCCT=7900.0
+### 色温候选设置键现值（供第2步定位用）
+  eyeprotect_cct                                 7900,0,7900,4296,0
+  eyeprotect_default_cct                         7900
+  eyeprotect_saved_default                       7900
+  color_temperate_ball_mode                      2
+  oplus_customize_comfort_color_temperature_enable 0
+  access_color_setting                           -1

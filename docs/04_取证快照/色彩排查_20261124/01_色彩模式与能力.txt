@@ -1,0 +1,19 @@
+# 采集时间 2026-11-24 18:17:38 设备 192.0.2.10:5555
+## SF 色彩模式与图层色空间
+    ColorMode::DISPLAY_P3 (9)
+    ColorMode::NATIVE (0)
+    ColorMode::SRGB (7)
+    Current color mode: ColorMode::NATIVE (0)
+12469779994: numHdrLayers(0), size(0x0), flags(0), desiredRatio(0.00)
+Binary file (standard input) matches
+
+## dumpsys display 色彩/HDR/HBM 摘要
+SupportedHdrTypes=[2, 3]
+colorMode 0
+isHighBrightnessModeEnabled=true
+mAmbientLightSensor=SensorData{type= , name= , refreshRateRange: [0.0, Infinity], supportedModes=[]
+mMaxAverageLuminance=750.0
+mMaxLuminance=750.0
+mMinLuminance=0.577
+supportedColorModes [0, 7, 9]
+supportedHdrTypes=[2, 3]

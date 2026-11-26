@@ -1,0 +1,14 @@
+## 用户 UI 切档后的真实状态 2026-11-24 19:26:55
+  settings 档位 = 12
+      Current color mode: ColorMode::NATIVE (0)
+     colorMode=NATIVE (0) renderIntent=COLORIMETRIC (0) dataspace=UNKNOWN (0) 
+### 色温是否真被重置（用户报系统提示：切档会将色温恢复默认值）
+  eyeprotect_rgb                                 1000,1000,1000,1,1
+  color_temperate_ball_mode                      2
+  setting_enable_color_temperature_regulation    0
+  color_ball_last_pointx                         374.85715
+  color_ball_last_pointy                         374.85715
+  服务侧实测: defaultCCT=7900 eyeProtectRGB=RGB{red=1000,green=1000,blue=1000,protectCoeff=0} currentRGB=RGB{red=1000,green=1000,blue=1000,protectCoeff=0}
+### 饱和度通道是否还挂着
+  Activated:true
+### 切档调用链

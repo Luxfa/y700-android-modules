@@ -1,0 +1,19 @@
+== 9008 刷写编排 ==
+串口:     COM5
+firehose: D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/prog_firehose_ddr.elf
+xml目录:  D:/Ai Work/Y700五代移植ColorOS/00_救生包/C17_ColorOS17移植包/image
+xml序列:  rawprogram0.xml,rawprogram1.xml,rawprogram2.xml,rawprogram3.xml,rawprogram4.xml,rawprogram5.xml
+
+== 阶段1: Sahara 握手 + 上传引导链（八映射，官方bat同款） ==
++ D:/Ai Work/Y700五代移植ColorOS/00_救生包/tools/violet-cli/QSaharaServer.exe -p \\.\COM5 -s 36:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/multi_image_qti.mbn -s 37:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/multi_image.mbn -s 21:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/xbl_sc.elf -s 60:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/signed_firmware_soc_view.elf -s 59:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/sequencer_ram.elf -s 61:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/tme_config.elf -s 13:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/prog_firehose_ddr.elf -s 38:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/xbl_config_devprg.elf -b D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image
+*QSaharaServer *
+: Jun  8 2025 @ 16:27:37
+ο: Jackson(ᰲ@),ĳ(ᰲ@ĳ)
+ʹñпշ,ʹڷǷΪ
+: 
+'D:\Ai Work\Y700ֲColorOS\00_\tools\violet-cli\QSaharaServer.exe -p \\.\COM5 -s 36:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/multi_image_qti.mbn -s 37:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/multi_image.mbn -s 21:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/xbl_sc.elf -s 60:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/signed_firmware_soc_view.elf -s 59:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/sequencer_ram.elf -s 61:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/tme_config.elf -s 13:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/prog_firehose_ddr.elf -s 38:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/xbl_config_devprg.elf -b D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image '
+
+11.23.2026-01.54.34 : ERROR: : add_search_path:93 Search paths must terminate with a slash
+
+11.23.2026-01.54.34 : ERROR: : main:248 ӵ·бʧ
+Sahara握手失败，中止（不进入写分区阶段）

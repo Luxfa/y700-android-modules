@@ -1,0 +1,802 @@
+== 9008 刷写编排 ==
+串口:     COM5
+firehose: 00_救生包/ZUI官方包_2.5.10.055/prog_firehose_ddr.elf
+xml目录:  06_二期自制移植/产出/candidate_v1
+xml序列:  rawprogram_v1.xml
+
+== 阶段1: Sahara 握手 + 上传引导链（八映射，官方bat同款） ==
++ D:/Ai Work/Y700五代移植ColorOS/00_救生包/tools/violet-cli/QSaharaServer.exe -p \\.\COM5 -s 36:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/multi_image_qti.mbn -s 37:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/multi_image.mbn -s 21:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/xbl_sc.elf -s 60:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/signed_firmware_soc_view.elf -s 59:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/sequencer_ram.elf -s 61:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/tme_config.elf -s 13:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/prog_firehose_ddr.elf -s 38:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/xbl_config_devprg.elf -b D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/
+*QSaharaServer *
+: Jun  8 2025 @ 16:27:37
+ο: Jackson(ᰲ@),ĳ(ᰲ@ĳ)
+ʹñпշ,ʹڷǷΪ
+: 
+'D:\Ai Work\Y700ֲColorOS\00_\tools\violet-cli\QSaharaServer.exe -p \\.\COM5 -s 36:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/multi_image_qti.mbn -s 37:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/multi_image.mbn -s 21:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/xbl_sc.elf -s 60:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/signed_firmware_soc_view.elf -s 59:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/sequencer_ram.elf -s 61:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/tme_config.elf -s 13:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/prog_firehose_ddr.elf -s 38:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/xbl_config_devprg.elf -b D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/ '
+Ŀ¼: D:\Ai Work\Y700ֲColorOS
+Sahara mappings:
+2: amss.mbn
+6: apps.mbn
+8: dsp1.mbn
+10: dbl.mbn
+11: osbl.mbn
+12: dsp2.mbn
+16: efs1.mbn
+17: efs2.mbn
+20: efs3.mbn
+21: D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/xbl_sc.elf
+22: sbl2.mbn
+23: rpm.mbn
+25: tz.mbn
+28: dsp3.mbn
+29: acdb.mbn
+30: wdt.mbn
+31: mba.mbn
+36: D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/multi_image_qti.mbn
+37: D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/multi_image.mbn
+60: D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/signed_firmware_soc_view.elf
+59: D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/sequencer_ram.elf
+61: D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/tme_config.elf
+13: D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/prog_firehose_ddr.elf
+38: D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/xbl_config_devprg.elf
+
+11.23.2026-03.46.37 : EVENT: ״̬ <-- SAHARA_WAIT_HELLO(ȴ豸HELLOݰ)
+
+[portstatus]sahara
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_HELLO(ܵ豸HELLOݰ)
+
+11.23.2026-03.46.37 : EVENT:  --> SAHARA_HELLO_RESPONSE(͵豸HELLOӦݰ)
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : Requested ID 59, file: "D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/sequencer_ram.elf"
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_END_IMAGE_TX()
+
+11.23.2026-03.46.37 : EVENT:  --> SAHARA_DONE(ݰ)
+
+11.23.2026-03.46.37 : 4876 bytes transferred in 0.000000 seconds
+
+11.23.2026-03.46.37 : File transferred successfully
+
+
+
+11.23.2026-03.46.37 : EVENT: STATE <-- SAHARA_WAIT_DONE_RESP
+
+
+11.23.2026-03.46.37 : EVENT: ״̬ <-- SAHARA_WAIT_HELLO(ȴ豸HELLOݰ)
+
+[portstatus]sahara
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_HELLO(ܵ豸HELLOݰ)
+
+11.23.2026-03.46.37 : EVENT:  --> SAHARA_HELLO_RESPONSE(͵豸HELLOӦݰ)
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : Requested ID 36, file: "D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/multi_image_qti.mbn"
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_END_IMAGE_TX()
+
+11.23.2026-03.46.37 : EVENT:  --> SAHARA_DONE(ݰ)
+
+11.23.2026-03.46.37 : 5072 bytes transferred in 0.000000 seconds
+
+11.23.2026-03.46.37 : File transferred successfully
+
+
+
+11.23.2026-03.46.37 : EVENT: STATE <-- SAHARA_WAIT_DONE_RESP
+
+
+11.23.2026-03.46.37 : EVENT: ״̬ <-- SAHARA_WAIT_HELLO(ȴ豸HELLOݰ)
+
+[portstatus]sahara
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_HELLO(ܵ豸HELLOݰ)
+
+11.23.2026-03.46.37 : EVENT:  --> SAHARA_HELLO_RESPONSE(͵豸HELLOӦݰ)
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : Requested ID 37, file: "D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/multi_image.mbn"
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_END_IMAGE_TX()
+
+11.23.2026-03.46.37 : EVENT:  --> SAHARA_DONE(ݰ)
+
+11.23.2026-03.46.37 : 5352 bytes transferred in 0.015000 seconds (0.3403MBps)
+
+
+
+11.23.2026-03.46.37 : File transferred successfully
+
+
+
+11.23.2026-03.46.37 : EVENT: STATE <-- SAHARA_WAIT_DONE_RESP
+
+
+11.23.2026-03.46.37 : EVENT: ״̬ <-- SAHARA_WAIT_HELLO(ȴ豸HELLOݰ)
+
+[portstatus]sahara
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_HELLO(ܵ豸HELLOݰ)
+
+11.23.2026-03.46.37 : EVENT:  --> SAHARA_HELLO_RESPONSE(͵豸HELLOӦݰ)
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : Requested ID 61, file: "D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/tme_config.elf"
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_END_IMAGE_TX()
+
+11.23.2026-03.46.37 : EVENT:  --> SAHARA_DONE(ݰ)
+
+11.23.2026-03.46.37 : 38764 bytes transferred in 0.032000 seconds (1.1553MBps)
+
+
+
+11.23.2026-03.46.37 : File transferred successfully
+
+
+
+11.23.2026-03.46.37 : EVENT: STATE <-- SAHARA_WAIT_DONE_RESP
+
+
+11.23.2026-03.46.37 : EVENT: ״̬ <-- SAHARA_WAIT_HELLO(ȴ豸HELLOݰ)
+
+[portstatus]sahara
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_HELLO(ܵ豸HELLOݰ)
+
+11.23.2026-03.46.37 : EVENT:  --> SAHARA_HELLO_RESPONSE(͵豸HELLOӦݰ)
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : Requested ID 60, file: "D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/signed_firmware_soc_view.elf"
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_END_IMAGE_TX()
+
+11.23.2026-03.46.37 : EVENT:  --> SAHARA_DONE(ݰ)
+
+11.23.2026-03.46.37 : 204256 bytes transferred in 0.046000 seconds (4.2346MBps)
+
+
+
+11.23.2026-03.46.37 : File transferred successfully
+
+
+
+11.23.2026-03.46.37 : EVENT: STATE <-- SAHARA_WAIT_DONE_RESP
+
+
+11.23.2026-03.46.37 : EVENT: ״̬ <-- SAHARA_WAIT_HELLO(ȴ豸HELLOݰ)
+
+[portstatus]sahara
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_HELLO(ܵ豸HELLOݰ)
+
+11.23.2026-03.46.37 : EVENT:  --> SAHARA_HELLO_RESPONSE(͵豸HELLOӦݰ)
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : Requested ID 21, file: "D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/xbl_sc.elf"
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_END_IMAGE_TX()
+
+11.23.2026-03.46.37 : EVENT:  --> SAHARA_DONE(ݰ)
+
+11.23.2026-03.46.37 : 1183256 bytes transferred in 0.172000 seconds (6.5607MBps)
+
+
+
+11.23.2026-03.46.37 : File transferred successfully
+
+
+
+11.23.2026-03.46.37 : EVENT: STATE <-- SAHARA_WAIT_DONE_RESP
+
+
+11.23.2026-03.46.37 : EVENT: ״̬ <-- SAHARA_WAIT_HELLO(ȴ豸HELLOݰ)
+
+[portstatus]sahara
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_HELLO(ܵ豸HELLOݰ)
+
+11.23.2026-03.46.37 : EVENT:  --> SAHARA_HELLO_RESPONSE(͵豸HELLOӦݰ)
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : Requested ID 13, file: "D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/prog_firehose_ddr.elf"
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_END_IMAGE_TX()
+
+11.23.2026-03.46.37 : EVENT:  --> SAHARA_DONE(ݰ)
+
+11.23.2026-03.46.37 : 311744 bytes transferred in 0.063000 seconds (4.7191MBps)
+
+
+
+11.23.2026-03.46.37 : File transferred successfully
+
+
+
+11.23.2026-03.46.37 : EVENT: STATE <-- SAHARA_WAIT_DONE_RESP
+
+
+11.23.2026-03.46.37 : EVENT: ״̬ <-- SAHARA_WAIT_HELLO(ȴ豸HELLOݰ)
+
+[portstatus]sahara
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_HELLO(ܵ豸HELLOݰ)
+
+11.23.2026-03.46.37 : EVENT:  --> SAHARA_HELLO_RESPONSE(͵豸HELLOӦݰ)
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : Requested ID 38, file: "D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/xbl_config_devprg.elf"
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-03.46.37 : EVENT:  <-- SAHARA_END_IMAGE_TX()
+
+11.23.2026-03.46.37 : EVENT:  --> SAHARA_DONE(ݰ)
+
+11.23.2026-03.46.37 : 184708 bytes transferred in 0.078000 seconds (2.2583MBps)
+
+
+
+11.23.2026-03.46.37 : File transferred successfully
+
+
+
+11.23.2026-03.46.37 : EVENT: STATE <-- SAHARA_WAIT_DONE_RESP
+
+
+11.23.2026-03.46.37 : EVENT: 
+
+Successfully uploaded all images
+
+
+11.23.2026-03.46.37 : Sahara protocol completed
+== 阶段2: Firehose 写分区 ==
+-- 写入 rawprogram_v1.xml
++ D:/Ai Work/Y700五代移植ColorOS/00_救生包/tools/violet-cli/fh_loader.exe --port=\\.\COM5 --sendxml=rawprogram_v1.xml --search_path=06_二期自制移植/产出/candidate_v1 --memoryname=ufs --zlpawarehost=1 --noprompt
+
+Base Version: 23.06.20.17.11
+Binary build date: Nov 19 2025 @ 01:16:43
+Incremental Build version: 25.11.19.01.16.43
+
+03:46:37: INFO: Output Dir Already exists ./
+03:46:37: INFO: 1. Calling fopen('.//port_trace.txt') with AccessMode='w'
+03:46:37: INFO: FH_LOADER WAS CALLED EXACTLY LIKE THIS
+************************************************
+D:\Ai Work\Y700ֲColorOS\00_\tools\violet-cli\fh_loader.exe --port=\\.\COM5 --sendxml=rawprogram_v1.xml --search_path=06_ֲ//candidate_v1 --memoryname=ufs --zlpawarehost=1 --noprompt 
+************************************************
+
+03:46:37: INFO: Current working dir (cwd): D:\Ai Work\Y700ֲColorOS\
+03:46:37: INFO: Showing network mappings to allow debugging
+03:46:37: INFO: '06_ֲ//candidate_v1/' changed to
+03:46:37: INFO: this 'D:\Ai Work\Y700ֲColorOS\06_ֲ//candidate_v1/'
+03:46:37: INFO: 
+
+
+
+03:46:37: INFO: Trying to store 'rawprogram_v1.xml' in string table
+03:46:37: INFO: Looking for file 'rawprogram_v1.xml'
+03:46:37: INFO: User wants to talk to port '\\.\COM5'
+03:46:38: INFO: Took       0.67200000 seconds to open port
+03:46:38: INFO: Sorting TAGS to ensure order is <configure>,<erase>, others, <patch>,<power>
+03:46:38: INFO: Sending <configure>
+
+03:46:38: INFO: TARGET SAID: 'INFO: Binary build date: Jan 20 2026 @ 16:54:11'
+
+03:46:38: INFO: TARGET SAID: 'INFO: Binary build date: Jan 20 2026 @ 16:54:11
+'
+
+03:46:38: INFO: TARGET SAID: 'INFO: Chip serial num (0xb64edd26) Chip ID (0x46a)'
+
+03:46:38: INFO: TARGET SAID: 'INFO: Supported Functions (15):'
+
+03:46:38: INFO: TARGET SAID: 'INFO: program'
+
+03:46:38: INFO: TARGET SAID: 'INFO: read'
+
+03:46:38: INFO: TARGET SAID: 'INFO: nop'
+
+03:46:38: INFO: TARGET SAID: 'INFO: patch'
+
+03:46:38: INFO: TARGET SAID: 'INFO: configure'
+
+03:46:38: INFO: TARGET SAID: 'INFO: setbootablestoragedrive'
+
+03:46:38: INFO: TARGET SAID: 'INFO: erase'
+
+03:46:38: INFO: TARGET SAID: 'INFO: power'
+
+03:46:38: INFO: TARGET SAID: 'INFO: firmwarewrite'
+
+03:46:38: INFO: TARGET SAID: 'INFO: getstorageinfo'
+
+03:46:38: INFO: TARGET SAID: 'INFO: benchmark'
+
+03:46:38: INFO: TARGET SAID: 'INFO: emmc'
+
+03:46:38: INFO: TARGET SAID: 'INFO: ufs'
+
+03:46:38: INFO: TARGET SAID: 'INFO: fixgpt'
+
+03:46:38: INFO: TARGET SAID: 'INFO: getsha256digest'
+
+03:46:38: INFO: TARGET SAID: 'INFO: End of supported functions 15'
+
+03:46:38: INFO: TARGET SAID: 'INFO: Calling handler for configure'
+
+03:46:38: INFO: TARGET SAID: 'INFO: Storage type set to value UFS'
+03:46:38: INFO: fh.attrs.MaxPayloadSizeToTargetInBytes = 1048576
+03:46:38: INFO: fh.attrs.MaxPayloadSizeToTargetInBytesSupported = 1048576
+03:46:38: INFO: In handleProgram('super.img')
+03:46:38: INFO: Looking for file 'super.img'
+03:46:38: INFO: =======================================================
+03:46:38: INFO: {<program> FILE: 'D:\Ai Work\Y700ֲColorOS\06_ֲ//candidate_v1/super.img'}
+03:46:38: INFO: {<program> (20.00 GB) 5242880 sectors needed at location 8968 on LUN 0}
+03:46:38: INFO: =======================================================
+
+
+03:46:38: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+03:46:40: INFO: Overall to target  2.000 seconds (45.00 MBps)
+03:46:42: INFO: Overall to target  4.000 seconds (44.75 MBps)
+03:46:44: INFO: Overall to target  6.016 seconds (44.55 MBps)
+03:46:46: INFO: Overall to target  8.016 seconds (44.41 MBps)
+03:46:48: INFO: Overall to target 10.016 seconds (44.43 MBps)
+03:46:50: INFO: Overall to target 12.016 seconds (44.52 MBps)
+03:46:52: INFO: Overall to target 14.016 seconds (44.59 MBps)
+03:46:54: INFO: Overall to target 16.016 seconds (44.64 MBps)
+03:46:56: INFO: Overall to target 18.016 seconds (44.68 MBps)
+03:46:58: INFO: Overall to target 20.016 seconds (44.76 MBps)
+03:47:00: INFO: Overall to target 22.031 seconds (44.76 MBps)
+03:47:02: INFO: Overall to target 24.031 seconds (44.78 MBps)
+03:47:04: INFO: Overall to target 26.047 seconds (44.77 MBps)
+03:47:06: INFO: Overall to target 28.063 seconds (44.79 MBps)
+03:47:08: INFO: Overall to target 30.063 seconds (44.84 MBps)
+03:47:10: INFO: Overall to target 32.078 seconds (44.86 MBps)
+03:47:12: INFO: Overall to target 34.078 seconds (44.87 MBps)
+03:47:14: INFO: Overall to target 36.078 seconds (44.87 MBps)
+03:47:16: INFO: Overall to target 38.078 seconds (44.88 MBps)
+03:47:18: INFO: Overall to target 40.078 seconds (44.86 MBps)
+03:47:20: INFO: Overall to target 42.078 seconds (44.87 MBps)
+03:47:22: INFO: Overall to target 44.078 seconds (44.85 MBps)
+03:47:24: INFO: Overall to target 46.078 seconds (44.86 MBps)
+03:47:26: INFO: Overall to target 48.094 seconds (44.85 MBps)
+03:47:28: INFO: Overall to target 50.094 seconds (44.86 MBps)
+03:47:30: INFO: Overall to target 52.110 seconds (44.85 MBps)
+03:47:32: INFO: Overall to target 54.110 seconds (44.83 MBps)
+03:47:34: INFO: Overall to target 56.110 seconds (44.82 MBps)
+03:47:36: INFO: Overall to target 58.110 seconds (44.78 MBps)
+03:47:38: INFO: Overall to target 60.110 seconds (44.77 MBps)
+03:47:40: INFO: Overall to target 62.125 seconds (44.73 MBps)
+03:47:42: INFO: Overall to target 64.125 seconds (44.74 MBps)
+03:47:44: INFO: Overall to target 66.125 seconds (44.73 MBps)
+03:47:46: INFO: Overall to target 68.125 seconds (44.73 MBps)
+03:47:48: INFO: Overall to target 70.141 seconds (44.72 MBps)
+03:47:50: INFO: Overall to target 72.156 seconds (44.72 MBps)
+03:47:52: INFO: Overall to target 74.156 seconds (44.72 MBps)
+03:47:54: INFO: Overall to target 76.156 seconds (44.72 MBps)
+03:47:56: INFO: Overall to target 78.172 seconds (44.72 MBps)
+03:47:58: INFO: Overall to target 80.188 seconds (44.72 MBps)
+03:48:00: INFO: Overall to target 82.203 seconds (44.72 MBps)
+03:48:02: INFO: Overall to target 84.203 seconds (44.71 MBps)
+03:48:04: INFO: Overall to target 86.203 seconds (44.72 MBps)
+03:48:06: INFO: Overall to target 88.203 seconds (44.72 MBps)
+03:48:08: INFO: Overall to target 90.219 seconds (44.71 MBps)
+03:48:10: INFO: Overall to target 92.219 seconds (44.72 MBps)
+03:48:12: INFO: Overall to target 94.219 seconds (44.71 MBps)
+03:48:14: INFO: Overall to target 96.219 seconds (44.71 MBps)
+03:48:16: INFO: Overall to target 98.235 seconds (44.71 MBps)
+03:48:18: INFO: Overall to target 100.235 seconds (44.70 MBps)
+03:48:20: INFO: Overall to target 102.235 seconds (44.70 MBps)
+03:48:22: INFO: Overall to target 104.250 seconds (44.70 MBps)
+03:48:24: INFO: Overall to target 106.250 seconds (44.71 MBps)
+03:48:26: INFO: Overall to target 108.250 seconds (44.70 MBps)
+03:48:28: INFO: Overall to target 110.266 seconds (44.70 MBps)
+03:48:30: INFO: Overall to target 112.266 seconds (44.71 MBps)
+03:48:32: INFO: Overall to target 114.266 seconds (44.71 MBps)
+03:48:34: INFO: Overall to target 116.266 seconds (44.72 MBps)
+03:48:36: INFO: Overall to target 118.281 seconds (44.72 MBps)
+03:48:38: INFO: Overall to target 120.297 seconds (44.73 MBps)
+03:48:40: INFO: Overall to target 122.297 seconds (44.74 MBps)
+03:48:42: INFO: Overall to target 124.297 seconds (44.74 MBps)
+03:48:45: INFO: Overall to target 126.313 seconds (44.74 MBps)
+03:48:47: INFO: Overall to target 128.313 seconds (44.74 MBps)
+03:48:49: INFO: Overall to target 130.328 seconds (44.74 MBps)
+03:48:51: INFO: Overall to target 132.328 seconds (44.74 MBps)
+03:48:53: INFO: Overall to target 134.328 seconds (44.74 MBps)
+03:48:55: INFO: Overall to target 136.328 seconds (44.75 MBps)
+03:48:57: INFO: Overall to target 138.328 seconds (44.75 MBps)
+03:48:59: INFO: Overall to target 140.328 seconds (44.75 MBps)
+03:49:01: INFO: Overall to target 142.328 seconds (44.76 MBps)
+03:49:03: INFO: Overall to target 144.328 seconds (44.76 MBps)
+03:49:05: INFO: Overall to target 146.328 seconds (44.76 MBps)
+03:49:07: INFO: Overall to target 148.328 seconds (44.77 MBps)
+03:49:09: INFO: Overall to target 150.328 seconds (44.77 MBps)
+03:49:11: INFO: Overall to target 152.328 seconds (44.77 MBps)
+03:49:13: INFO: Overall to target 154.328 seconds (44.77 MBps)
+03:49:15: INFO: Overall to target 156.328 seconds (44.78 MBps)
+03:49:17: INFO: Overall to target 158.328 seconds (44.78 MBps)
+03:49:19: INFO: Overall to target 160.344 seconds (44.78 MBps)
+03:49:21: INFO: Overall to target 162.360 seconds (44.78 MBps)
+03:49:23: INFO: Overall to target 164.360 seconds (44.78 MBps)
+03:49:25: INFO: Overall to target 166.360 seconds (44.78 MBps)
+03:49:27: INFO: Overall to target 168.360 seconds (44.78 MBps)
+03:49:29: INFO: Overall to target 170.360 seconds (44.78 MBps)
+03:49:31: INFO: Overall to target 172.360 seconds (44.78 MBps)
+03:49:33: INFO: Overall to target 174.375 seconds (44.78 MBps)
+03:49:35: INFO: Overall to target 176.391 seconds (44.78 MBps)
+03:49:37: INFO: Overall to target 178.391 seconds (44.78 MBps)
+03:49:39: INFO: Overall to target 180.391 seconds (44.79 MBps)
+03:49:41: INFO: Overall to target 182.391 seconds (44.79 MBps)
+03:49:43: INFO: Overall to target 184.391 seconds (44.79 MBps)
+03:49:45: INFO: Overall to target 186.391 seconds (44.79 MBps)
+03:49:47: INFO: Overall to target 188.391 seconds (44.79 MBps)
+03:49:49: INFO: Overall to target 190.391 seconds (44.80 MBps)
+03:49:51: INFO: Overall to target 192.391 seconds (44.80 MBps)
+03:49:53: INFO: Overall to target 194.391 seconds (44.80 MBps)
+03:49:55: INFO: Overall to target 196.391 seconds (44.80 MBps)
+03:49:57: INFO: Overall to target 198.391 seconds (44.81 MBps)
+03:49:59: INFO: Overall to target 200.391 seconds (44.81 MBps)
+03:50:01: INFO: Overall to target 202.391 seconds (44.81 MBps)
+03:50:03: INFO: Overall to target 204.391 seconds (44.82 MBps)
+03:50:05: INFO: Overall to target 206.391 seconds (44.82 MBps)
+03:50:07: INFO: Overall to target 208.406 seconds (44.82 MBps)
+03:50:09: INFO: Overall to target 210.406 seconds (44.82 MBps)
+03:50:11: INFO: Overall to target 212.406 seconds (44.82 MBps)
+03:50:13: INFO: Overall to target 214.422 seconds (44.83 MBps)
+03:50:15: INFO: Overall to target 216.422 seconds (44.83 MBps)
+03:50:17: INFO: Overall to target 218.438 seconds (44.83 MBps)
+03:50:19: INFO: Overall to target 220.438 seconds (44.83 MBps)
+03:50:21: INFO: Overall to target 222.453 seconds (44.83 MBps)
+03:50:23: INFO: Overall to target 224.453 seconds (44.83 MBps)
+03:50:25: INFO: Overall to target 226.453 seconds (44.83 MBps)
+03:50:27: INFO: Overall to target 228.453 seconds (44.83 MBps)
+03:50:29: INFO: Overall to target 230.469 seconds (44.83 MBps)
+03:50:31: INFO: Overall to target 232.485 seconds (44.83 MBps)
+03:50:33: INFO: Overall to target 234.485 seconds (44.83 MBps)
+03:50:35: INFO: Overall to target 236.500 seconds (44.83 MBps)
+03:50:37: INFO: Overall to target 238.500 seconds (44.83 MBps)
+03:50:39: INFO: Overall to target 240.516 seconds (44.83 MBps)
+03:50:41: INFO: Overall to target 242.531 seconds (44.83 MBps)
+03:50:43: INFO: Overall to target 244.531 seconds (44.83 MBps)
+03:50:45: INFO: Overall to target 246.547 seconds (44.83 MBps)
+03:50:47: INFO: Overall to target 248.547 seconds (44.83 MBps)
+03:50:49: INFO: Overall to target 250.547 seconds (44.83 MBps)
+03:50:51: INFO: Overall to target 252.547 seconds (44.84 MBps)
+03:50:53: INFO: Overall to target 254.563 seconds (44.84 MBps)
+03:50:55: INFO: Overall to target 256.563 seconds (44.84 MBps)
+03:50:57: INFO: Overall to target 258.563 seconds (44.84 MBps)
+03:50:59: INFO: Overall to target 260.563 seconds (44.85 MBps)
+03:51:01: INFO: Overall to target 262.563 seconds (44.85 MBps)
+03:51:03: INFO: Overall to target 264.563 seconds (44.85 MBps)
+03:51:05: INFO: Overall to target 266.563 seconds (44.85 MBps)
+03:51:07: INFO: Overall to target 268.563 seconds (44.85 MBps)
+03:51:09: INFO: Overall to target 270.563 seconds (44.85 MBps)
+03:51:11: INFO: Overall to target 272.563 seconds (44.85 MBps)
+03:51:13: INFO: Overall to target 274.563 seconds (44.85 MBps)
+03:51:15: INFO: Overall to target 276.563 seconds (44.85 MBps)
+03:51:17: INFO: Overall to target 278.563 seconds (44.85 MBps)
+03:51:19: INFO: Overall to target 280.578 seconds (44.85 MBps)
+03:51:21: INFO: Overall to target 282.578 seconds (44.85 MBps)
+03:51:23: INFO: Overall to target 284.578 seconds (44.85 MBps)
+03:51:25: INFO: Overall to target 286.578 seconds (44.85 MBps)
+03:51:27: INFO: Overall to target 288.594 seconds (44.85 MBps)
+03:51:29: INFO: Overall to target 290.594 seconds (44.85 MBps)
+03:51:31: INFO: Overall to target 292.610 seconds (44.84 MBps)
+03:51:33: INFO: Overall to target 294.610 seconds (44.85 MBps)
+03:51:35: INFO: Overall to target 296.610 seconds (44.84 MBps)
+03:51:37: INFO: Overall to target 298.610 seconds (44.84 MBps)
+03:51:39: INFO: Overall to target 300.610 seconds (44.85 MBps)
+03:51:41: INFO: Overall to target 302.610 seconds (44.85 MBps)
+03:51:43: INFO: Overall to target 304.610 seconds (44.85 MBps)
+03:51:45: INFO: Overall to target 306.625 seconds (44.85 MBps)
+03:51:47: INFO: Overall to target 308.625 seconds (44.85 MBps)
+03:51:49: INFO: Overall to target 310.625 seconds (44.85 MBps)
+03:51:51: INFO: Overall to target 312.641 seconds (44.85 MBps)
+03:51:53: INFO: Overall to target 314.641 seconds (44.85 MBps)
+03:51:55: INFO: Overall to target 316.656 seconds (44.85 MBps)
+03:51:57: INFO: Overall to target 318.672 seconds (44.85 MBps)
+03:51:59: INFO: Overall to target 320.672 seconds (44.85 MBps)
+03:52:01: INFO: Overall to target 322.672 seconds (44.85 MBps)
+03:52:03: INFO: Overall to target 324.672 seconds (44.85 MBps)
+03:52:05: INFO: Overall to target 326.672 seconds (44.85 MBps)
+03:52:07: INFO: Overall to target 328.688 seconds (44.85 MBps)
+03:52:09: INFO: Overall to target 330.703 seconds (44.86 MBps)
+03:52:11: INFO: Overall to target 332.719 seconds (44.86 MBps)
+03:52:13: INFO: Overall to target 334.719 seconds (44.86 MBps)
+03:52:15: INFO: Overall to target 336.735 seconds (44.86 MBps)
+03:52:17: INFO: Overall to target 338.750 seconds (44.86 MBps)
+03:52:19: INFO: Overall to target 340.766 seconds (44.86 MBps)
+03:52:21: INFO: Overall to target 342.766 seconds (44.86 MBps)
+03:52:23: INFO: Overall to target 344.766 seconds (44.87 MBps)
+03:52:25: INFO: Overall to target 346.766 seconds (44.87 MBps)
+03:52:27: INFO: Overall to target 348.781 seconds (44.87 MBps)
+03:52:29: INFO: Overall to target 350.781 seconds (44.87 MBps)
+03:52:31: INFO: Overall to target 352.797 seconds (44.87 MBps)
+03:52:33: INFO: Overall to target 354.813 seconds (44.87 MBps)
+03:52:35: INFO: Overall to target 356.828 seconds (44.87 MBps)
+03:52:37: INFO: Overall to target 358.844 seconds (44.87 MBps)
+03:52:39: INFO: Overall to target 360.844 seconds (44.88 MBps)
+03:52:41: INFO: Overall to target 362.844 seconds (44.88 MBps)
+03:52:43: INFO: Overall to target 364.844 seconds (44.88 MBps)
+03:52:45: INFO: Overall to target 366.860 seconds (44.88 MBps)
+03:52:47: INFO: Overall to target 368.860 seconds (44.88 MBps)
+03:52:49: INFO: Overall to target 370.860 seconds (44.88 MBps)
+03:52:51: INFO: Overall to target 372.875 seconds (44.89 MBps)
+03:52:53: INFO: Overall to target 374.891 seconds (44.89 MBps)
+03:52:55: INFO: Overall to target 376.891 seconds (44.89 MBps)
+03:52:57: INFO: Overall to target 378.891 seconds (44.89 MBps)
+03:52:59: INFO: Overall to target 380.906 seconds (44.89 MBps)
+03:53:01: INFO: Overall to target 382.906 seconds (44.89 MBps)
+03:53:03: INFO: Overall to target 384.906 seconds (44.90 MBps)
+03:53:05: INFO: Overall to target 386.906 seconds (44.90 MBps)
+03:53:07: INFO: Overall to target 388.922 seconds (44.90 MBps)
+03:53:09: INFO: Overall to target 390.922 seconds (44.90 MBps)
+03:53:11: INFO: Overall to target 392.922 seconds (44.90 MBps)
+03:53:13: INFO: Overall to target 394.922 seconds (44.90 MBps)
+03:53:15: INFO: Overall to target 396.922 seconds (44.90 MBps)
+03:53:17: INFO: Overall to target 398.938 seconds (44.90 MBps)
+03:53:19: INFO: Overall to target 400.953 seconds (44.90 MBps)
+03:53:21: INFO: Overall to target 402.953 seconds (44.91 MBps)
+03:53:23: INFO: Overall to target 404.953 seconds (44.91 MBps)
+03:53:25: INFO: Overall to target 406.953 seconds (44.91 MBps)
+03:53:27: INFO: Overall to target 408.953 seconds (44.91 MBps)
+03:53:29: INFO: Overall to target 410.953 seconds (44.91 MBps)
+03:53:31: INFO: Overall to target 412.969 seconds (44.91 MBps)
+03:53:33: INFO: Overall to target 414.969 seconds (44.91 MBps)
+03:53:35: INFO: Overall to target 416.969 seconds (44.91 MBps)
+03:53:37: INFO: Overall to target 418.985 seconds (44.92 MBps)
+03:53:39: INFO: Overall to target 421.000 seconds (44.92 MBps)
+03:53:41: INFO: Overall to target 423.016 seconds (44.92 MBps)
+03:53:43: INFO: Overall to target 425.031 seconds (44.92 MBps)
+03:53:45: INFO: Overall to target 427.047 seconds (44.92 MBps)
+03:53:47: INFO: Overall to target 429.063 seconds (44.92 MBps)
+03:53:49: INFO: Overall to target 431.063 seconds (44.92 MBps)
+03:53:51: INFO: Overall to target 433.063 seconds (44.92 MBps)
+03:53:53: INFO: Overall to target 435.078 seconds (44.93 MBps)
+03:53:55: INFO: Overall to target 437.094 seconds (44.93 MBps)
+03:53:57: INFO: Overall to target 439.110 seconds (44.93 MBps)
+03:53:59: INFO: Overall to target 441.110 seconds (44.93 MBps)
+03:54:01: INFO: Overall to target 443.110 seconds (44.93 MBps)
+03:54:03: INFO: Overall to target 445.125 seconds (44.93 MBps)
+03:54:05: INFO: Overall to target 447.141 seconds (44.93 MBps)
+03:54:07: INFO: Overall to target 449.141 seconds (44.93 MBps)
+03:54:09: INFO: Overall to target 451.156 seconds (44.93 MBps)
+03:54:11: INFO: Overall to target 453.172 seconds (44.93 MBps)
+03:54:13: INFO: Overall to target 455.172 seconds (44.93 MBps)
+03:54:14: INFO: Overall to target 455.781 seconds (44.93 MBps)
+03:54:14: INFO: 
+03:54:14: INFO: =======================================================
+03:54:14: INFO: ==================== {SUCCESS} ========================
+03:54:14: INFO: =======================================================
+
+
+03:54:14: INFO: In handleProgram('boot.img')
+03:54:14: INFO: Looking for file 'boot.img'
+03:54:14: INFO: =======================================================
+03:54:14: INFO: {<program> FILE: 'D:\Ai Work\Y700ֲColorOS\06_ֲ//candidate_v1/boot.img'}
+03:54:14: INFO: {<program> (96.00 MB) 24576 sectors needed at location 119078 on LUN 4}
+03:54:14: INFO: =======================================================
+
+
+03:54:14: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+03:54:14: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+03:54:14: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+03:54:16: INFO: Overall to target  2.016 seconds (45.14 MBps)
+03:54:16: INFO: Overall to target  2.141 seconds (44.84 MBps)
+03:54:16: INFO: 
+03:54:16: INFO: =======================================================
+03:54:16: INFO: ==================== {SUCCESS} ========================
+03:54:16: INFO: =======================================================
+
+
+03:54:16: INFO: In handleProgram('init_boot.img')
+03:54:16: INFO: Looking for file 'init_boot.img'
+03:54:16: INFO: =======================================================
+03:54:16: INFO: {<program> FILE: 'D:\Ai Work\Y700ֲColorOS\06_ֲ//candidate_v1/init_boot.img'}
+03:54:16: INFO: {<program> (8.00 MB) 2048 sectors needed at location 360742 on LUN 4}
+03:54:16: INFO: =======================================================
+
+
+03:54:16: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+03:54:16: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+03:54:16: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+03:54:16: INFO: Overall to target  0.172 seconds (46.51 MBps)
+03:54:16: INFO: 
+03:54:16: INFO: =======================================================
+03:54:16: INFO: ==================== {SUCCESS} ========================
+03:54:16: INFO: =======================================================
+
+
+03:54:16: INFO: In handleProgram('vendor_boot.img')
+03:54:16: INFO: Looking for file 'vendor_boot.img'
+03:54:16: INFO: =======================================================
+03:54:16: INFO: {<program> FILE: 'D:\Ai Work\Y700ֲColorOS\06_ֲ//candidate_v1/vendor_boot.img'}
+03:54:16: INFO: {<program> (96.00 MB) 24576 sectors needed at location 302310 on LUN 4}
+03:54:16: INFO: =======================================================
+
+
+03:54:16: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+03:54:16: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+03:54:16: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+03:54:19: INFO: Overall to target  2.015 seconds (45.66 MBps)
+03:54:19: INFO: Overall to target  2.125 seconds (45.18 MBps)
+03:54:19: INFO: 
+03:54:19: INFO: =======================================================
+03:54:19: INFO: ==================== {SUCCESS} ========================
+03:54:19: INFO: =======================================================
+
+
+03:54:19: INFO: In handleProgram('dtbo.img')
+03:54:19: INFO: Looking for file 'dtbo.img'
+03:54:19: INFO: =======================================================
+03:54:19: INFO: {<program> FILE: 'D:\Ai Work\Y700ֲColorOS\06_ֲ//candidate_v1/dtbo.img'}
+03:54:19: INFO: {<program> (22.00 MB) 5632 sectors needed at location 143722 on LUN 4}
+03:54:19: INFO: =======================================================
+
+
+03:54:19: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+03:54:19: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+03:54:19: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+03:54:19: INFO: Overall to target  0.485 seconds (45.36 MBps)
+03:54:19: INFO: 
+03:54:19: INFO: =======================================================
+03:54:19: INFO: ==================== {SUCCESS} ========================
+03:54:19: INFO: =======================================================
+
+
+03:54:19: INFO: In handleProgram('vbmeta_a.img')
+03:54:19: INFO: Looking for file 'vbmeta_a.img'
+03:54:19: INFO: =======================================================
+03:54:19: INFO: {<program> FILE: 'D:\Ai Work\Y700ֲColorOS\06_ֲ//candidate_v1/vbmeta_a.img'}
+03:54:19: INFO: {<program> (4.00 KB) 1 sectors needed at location 143706 on LUN 4}
+03:54:19: INFO: =======================================================
+
+
+03:54:19: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+03:54:19: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+03:54:19: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+03:54:19: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+03:54:19: INFO: 
+03:54:19: INFO: =======================================================
+03:54:19: INFO: ==================== {SUCCESS} ========================
+03:54:19: INFO: =======================================================
+
+
+03:54:19: INFO: ==============================================================
+03:54:19: INFO: Files used and their paths
+03:54:19: INFO:   1 './/port_trace.txt'
+03:54:19: INFO:   2 'D:\Ai Work\Y700ֲColorOS\06_ֲ//candidate_v1/rawprogram_v1.xml'
+03:54:19: INFO:   3 'D:\Ai Work\Y700ֲColorOS\06_ֲ//candidate_v1/super.img'
+03:54:19: INFO:   4 'D:\Ai Work\Y700ֲColorOS\06_ֲ//candidate_v1/boot.img'
+03:54:19: INFO:   5 'D:\Ai Work\Y700ֲColorOS\06_ֲ//candidate_v1/init_boot.img'
+03:54:19: INFO:   6 'D:\Ai Work\Y700ֲColorOS\06_ֲ//candidate_v1/vendor_boot.img'
+03:54:19: INFO:   7 'D:\Ai Work\Y700ֲColorOS\06_ֲ//candidate_v1/dtbo.img'
+03:54:19: INFO:   8 'D:\Ai Work\Y700ֲColorOS\06_ֲ//candidate_v1/vbmeta_a.img'
+
+03:54:19: INFO:      _             (done)
+03:54:19: INFO:     | |                 
+03:54:19: INFO:   __| | ___  _ __   ___ 
+03:54:19: INFO:  / _` |/ _ \| '_ \ / _ \
+03:54:19: INFO: | (_| | (_) | | | |  __/
+03:54:19: INFO:  \__,_|\___/|_| |_|\___|
+03:54:19: INFO: {All Finished Successfully}
+
+03:54:19: INFO: Overall to target 461.187 seconds (44.89 MBps)
+
+Writing log, might take a minute
+
+
+Log at 'D:\Ai Work\Y700ֲColorOS\port_trace.txt'
+
+== 完成 ==
+提示：刷完设备应自动重启；若 5 分钟无反应，按救砖SOP三键复位法处置。

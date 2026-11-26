@@ -1,0 +1,77 @@
+total 11456
+drwxr-xr-x 2 root shell    4096 2009-01-01 08:00 .
+drwxr-xr-x 9 root shell   45056 2009-01-01 08:00 ..
+-rw-r--r-- 1 root root  1048768 2009-01-01 08:00 libaudiopreprocessing.so
+-rw-r--r-- 1 root root   731432 2009-01-01 08:00 libbundleaidl.so
+-rw-r--r-- 1 root root   205664 2009-01-01 08:00 libbundlewrapper.so
+-rw-r--r-- 1 root root   427288 2009-01-01 08:00 libdlbvolaidl.so
+-rw-r--r-- 1 root root    51976 2009-01-01 08:00 libdownmix.so
+-rw-r--r-- 1 root root   491840 2009-01-01 08:00 libdownmixaidl.so
+-rw-r--r-- 1 root root   594968 2009-01-01 08:00 libdynamicsprocessingaidl.so
+-rw-r--r-- 1 root root    86392 2009-01-01 08:00 libdynproc.so
+-rw-r--r-- 1 root root    51536 2009-01-01 08:00 libeffectproxy.so
+-rw-r--r-- 1 root root   170664 2009-01-01 08:00 libhapticgenerator.so
+-rw-r--r-- 1 root root    51840 2009-01-01 08:00 libldnhncr.so
+-rw-r--r-- 1 root root   491920 2009-01-01 08:00 libloudnessenhanceraidl.so
+-rw-r--r-- 1 root root   875360 2009-01-01 08:00 libqcompostprocbundle.so
+-rw-r--r-- 1 root root   643688 2009-01-01 08:00 libqcomvisualizer.so
+-rw-r--r-- 1 root root   560448 2009-01-01 08:00 libqcomvoiceprocessing.so
+-rw-r--r-- 1 root root   743208 2009-01-01 08:00 libquasar.so
+-rw-r--r-- 1 root root   661848 2009-01-01 08:00 libreverbaidl.so
+-rw-r--r-- 1 root root   170072 2009-01-01 08:00 libreverbwrapper.so
+-rw-r--r-- 1 root root  2738480 2009-01-01 08:00 libswdapaidl.so
+-rw-r--r-- 1 root root    51592 2009-01-01 08:00 libvisualizer.so
+-rw-r--r-- 1 root root   560440 2009-01-01 08:00 libvisualizeraidl.so
+-rw-r--r-- 1 root root   673800 2009-01-01 08:00 libvolumelistener.so
+
+audio_effects.conf
+audio_effects.xml
+audio_effects_config.xml
+audio_effects_config_stub.xml
+audio_policy_configuration.xml
+mcs_defs_canoe_cdp_wsa885xi2s.xml
+mcs_defs_canoe_mtp.xml
+mcs_defs_canoe_mtp_wsa884x.xml
+mcs_defs_canoe_qrd.xml
+mcs_defs_canoe_qrd_wsa884x.xml
+mixer_paths_canoe_atp.xml
+mixer_paths_canoe_cdp.xml
+mixer_paths_canoe_cdp_wsa884x.xml
+mixer_paths_canoe_cdp_wsa885xi2s.xml
+mixer_paths_canoe_mtp.xml
+mixer_paths_canoe_mtp_qmp.xml
+mixer_paths_canoe_mtp_wsa884x.xml
+mixer_paths_canoe_qrd.xml
+mixer_paths_canoe_qrd_wsa884x.xml
+plugin_manager.xml
+quasar_config.xml
+resourcemanager_canoe_atp.xml
+resourcemanager_canoe_cdp.xml
+resourcemanager_canoe_cdp_wsa884x.xml
+resourcemanager_canoe_cdp_wsa885xi2s.xml
+resourcemanager_canoe_mtp.xml
+resourcemanager_canoe_mtp_qmp.xml
+resourcemanager_canoe_mtp_wsa884x.xml
+resourcemanager_canoe_qrd.xml
+resourcemanager_canoe_qrd_wsa884x.xml
+
+IDP_UPD
+alor_cdp
+alor_mtp_wcd9378
+alor_mtp_wcd939x
+alor_qrd
+canoe_atp
+canoe_cdp
+canoe_cdp_wsa884x
+canoe_cdp_wsa885xi2s
+canoe_mtp
+canoe_mtp_qmp
+canoe_mtp_wsa884x
+canoe_qrd
+canoe_qrd_wsa884x
+ffv_models
+haptics_data
+nn_ns_models
+nn_vad_models
+sdz_model
+wnr_models

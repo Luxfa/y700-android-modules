@@ -1,0 +1,44 @@
+ 0 [canoeqrdsndcard]: canoe-qrd-snd-c - canoe-qrd-snd-card
+                      canoe-qrd-snd-card
+
+00-00: CODEC_DMA-LPAIF_RXTX-RX-0 multicodec-0 :  : playback 1
+00-01: CODEC_DMA-LPAIF_RXTX-RX-1 multicodec-1 :  : playback 1
+00-02: CODEC_DMA-LPAIF_RXTX-RX-2 multicodec-2 :  : playback 1
+00-03: CODEC_DMA-LPAIF_RXTX-RX-3 multicodec-3 :  : playback 1
+00-04: CODEC_DMA-LPAIF_RXTX-RX-5 multicodec-4 :  : playback 1
+00-05: PCM_RT_PROXY-TX-1 snd-soc-dummy-dai-5 :  : capture 1
+00-06: PCM_RT_PROXY-TX-2 snd-soc-dummy-dai-6 :  : capture 1
+00-07: PCM_RT_PROXY-RX-1 snd-soc-dummy-dai-7 :  : playback 1
+00-08: USB_AUDIO-RX snd-soc-dummy-dai-8 :  : playback 1
+00-09: PCM_RT_PROXY-RX-2 snd-soc-dummy-dai-9 :  : playback 1
+00-10: USB_AUDIO-TX snd-soc-dummy-dai-10 :  : capture 1
+00-11: PCM_DUMMY-TX-0 snd-soc-dummy-dai-11 :  : capture 1
+00-12: PCM_DUMMY-RX-0 snd-soc-dummy-dai-12 :  : playback 1
+00-13: PCM_DUMMY-TX-1 snd-soc-dummy-dai-13 :  : capture 1
+00-14: MI2S-LPAIF-RX-PRIMARY multicodec-14 :  : playback 1
+00-15: MI2S-LPAIF-TX-PRIMARY multicodec-15 :  : capture 1
+00-16: MI2S-LPAIF-RX-SECONDARY msm-stub-rx-16 :  : playback 1
+00-17: MI2S-LPAIF-TX-SECONDARY msm-stub-tx-17 :  : capture 1
+00-18: MI2S-LPAIF_AUD-RX-SECONDARY msm-stub-rx-18 :  : playback 1
+00-19: MI2S-LPAIF_AUD-TX-SECONDARY msm-stub-tx-19 :  : capture 1
+00-20: MI2S-LPAIF_RXTX-RX-PRIMARY msm-stub-rx-20 :  : playback 1
+00-21: MI2S-LPAIF_RXTX-TX-PRIMARY msm-stub-tx-21 :  : capture 1
+00-22: MI2S-LPAIF_VA-RX-PRIMARY msm-stub-rx-22 :  : playback 1
+00-23: MI2S-LPAIF_VA-TX-PRIMARY msm-stub-tx-23 :  : capture 1
+00-24: MI2S-LPAIF_WSA-RX-PRIMARY msm-stub-rx-24 :  : playback 1
+00-25: MI2S-LPAIF_WSA-TX-PRIMARY msm-stub-tx-25 :  : capture 1
+00-26: MI2S-LPAIF_AUD-RX-PRIMARY msm-stub-rx-26 :  : playback 1
+00-27: MI2S-LPAIF_AUD-TX-PRIMARY msm-stub-tx-27 :  : capture 1
+00-28: TDM-LPAIF_WSA-RX-PRIMARY msm-stub-rx-28 :  : playback 1
+00-29: TDM-LPAIF_WSA-TX-PRIMARY msm-stub-tx-29 :  : capture 1
+00-30: DISPLAY_PORT-RX-0 msm_dp_audio_codec_rx_dai-30 :  : playback 1
+00-31: DISPLAY_PORT-RX-1 msm_dp_audio_codec_rx1_dai-31 :  : playback 1
+00-32: BTFM_PROXY-RX-0 btaudio_rx-32 :  : playback 1
+00-33: BTFM_PROXY-TX-0 btaudio_tx-33 :  : capture 1
+00-34: BTFM_PROXY-RX-1 btaudio_rx2-34 :  : playback 1
+00-35: BTFM_PROXY-TX-1 btaudio_tx2-35 :  : capture 1
+00-36: CODEC_DMA-LPAIF_RXTX-TX-3 multicodec-36 :  : capture 1
+00-37: CODEC_DMA-LPAIF_VA-TX-0 va_macro_tx1-37 :  : capture 1
+00-38: CODEC_DMA-LPAIF_RXTX-TX-4 multicodec-38 :  : capture 1
+00-39: CODEC_DMA-LPAIF_VA-TX-1 va_macro_tx2-39 :  : capture 1
+00-40: CODEC_DMA-LPAIF_VA-TX-2 va_macro_tx3-40 :  : capture 1

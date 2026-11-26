@@ -1,0 +1,31 @@
+### root 级取证（相位R 之后）2026-11-23 21:05:46
+
+== /proc/cmdline 关键项
+console=ttynull
+loglevel=6
+printk.console_no_auto_verbose=1
+console=ttynull
+
+== dmesg 里 AVB/verity/erofs/dm/UFS 判定（前 25 行）
+
+== SELinux denial 聚合（comm→tclass）
+    447 avc:  denied  { find } for pid=2874 uid=1000 name=vendor.oplus.hardware.charger.ICharger/default scontext=u:r:system_server:s0 tcontext=u:object_r:default_android_service:s0 tclass=service_manager permissive=0
+     38 avc:  denied  { find } for pid=2874 uid=1000 name=vendor.oplus.hardware.urcc.IUrcc/default scontext=u:r:system_server:s0 tcontext=u:object_r:default_android_service:s0 tclass=service_manager permissive=0
+     32 TcmReceiver → unix_stream_socket
+     30 TcmReceiver → sock_file
+     22 avc:  denied  { find } for pid=1877 uid=1000 name=vendor.oplus.hardware.performance.IPerformance/default scontext=u:r:surfaceflinger:s0 tcontext=u:object_r:vendor_tb323fu_oplus_performance_service:s0 tclass=service_manager permissive=0
+     22 audiohalservice → file
+     13 audiohalservice → dir
+     11 main → file
+      8 avc:  denied  { find } for pid=5535 uid=0 name=vendor.oplus.hardware.handlefactory.IHandleFactory/default scontext=u:r:stats:s0 tcontext=u:object_r:default_android_service:s0 tclass=service_manager permissive=0
+      7 logd.writer → file
+      7 B_p_11091_c_212 → file
+      6 avc:  denied  { find } for pid=4103 uid=10220 name=vendor.oplus.hardware.urcc.IUrcc/default scontext=u:r:platform_app:s0:c512,c768 tcontext=u:object_r:default_android_service:s0 tclass=service_manager permissive=0
+      4 avc:  denied  { find } for pid=4103 uid=10220 name=vendor.oplus.hardware.performance.IPerformance/default scontext=u:r:platform_app:s0:c512,c768 tcontext=u:object_r:vendor_tb323fu_oplus_performance_service:s0 tclass=service_manager permissive=0
+      3 re-initialized> → file
+      3 binder:1795_1 → dir
+      3 avc:  denied  { find } for pid=2874 uid=1000 name=vendor.oplus.hardware.touch.IOplusTouch/default scontext=u:r:system_server:s0 tcontext=u:object_r:default_android_service:s0 tclass=service_manager permissive=0
+      2 uiautomator → file
+      2 avc:  denied  { find } for pid=5535 uid=0 name=vendor.oplus.hardware.urcc.IUrcc/default scontext=u:r:stats:s0 tcontext=u:object_r:default_android_service:s0 tclass=service_manager permissive=0
+      2 avc:  denied  { find } for pid=14990 uid=1041 name=vendor.oplus.hardware.performance.IPerformance/default scontext=u:r:audioserver:s0 tcontext=u:object_r:vendor_tb323fu_oplus_performance_service:s0 tclass=service_manager permissive=0
+      2 avc:  denied  { find } for pid=14817 uid=1041 name=vendor.oplus.hardware.performance.IPerformance/default scontext=u:r:audioserver:s0 tcontext=u:object_r:vendor_tb323fu_oplus_performance_service:s0 tclass=service_manager permissive=0

@@ -1,0 +1,27 @@
+## 色温拖动前后差异 2026-11-24 19:15:12
+### 变动的设置键
+< Row: 114 name=eyeprotect_rgb, value=1000,1000,1000,1,1
+> Row: 114 name=eyeprotect_rgb, value=943,983,1000,1,1
+< Row: 169 name=oplus_sys_load_alert, value=129
+> Row: 169 name=oplus_sys_load_alert, value=0
+< Row: 177 name=color_temperate_ball_mode, value=2
+> Row: 177 name=color_temperate_ball_mode, value=3
+< Row: 403 name=setting_enable_color_temperature_regulation, value=1
+> Row: 403 name=setting_enable_color_temperature_regulation, value=0
+< Row: 521 name=color_ball_last_pointx, value=375.0
+< Row: 522 name=color_ball_last_pointy, value=375.0
+> Row: 521 name=color_ball_last_pointx, value=432.956
+> Row: 522 name=color_ball_last_pointy, value=562.88806
+< Row: 165 name=market_downloading_task_snapshot, value={"v":1,"ts":1795513278367,"interval":2000,"d":[]}
+> Row: 165 name=market_downloading_task_snapshot, value={"v":1,"ts":1795518876857,"interval":2000,"d":[]}
+### 色温实测
+      currentCCT=7900
+        currentCCT=7900
+        currentRGB=RGB{red=1000, green=1000, blue=1000, protectCoeff=0}
+      stateCCT=7900.0
+### 色彩矩阵层是否出现非单位
+    206 [[1.000,0.000,0.000,0.000][0.000,1.000,0.000,0.000][0.000,0.000,1.000,0.000][0.000,0.000,0.000,1.000]]
+### 色彩模式仍为
+  oplus_last_color_mode = 10
+  SF:     Current color mode: ColorMode::DISPLAY_P3 (9)
+### 最近色温相关日志

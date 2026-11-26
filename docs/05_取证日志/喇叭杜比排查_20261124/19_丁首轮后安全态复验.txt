@@ -1,0 +1,10 @@
+时间 11-24 23:34:24  uptime=2 min
+配置挂载条数=0
+dolby相关挂载条数=0
+daxService APK 可见=ls: /system_ext/priv-app/daxService/: No such file or directory
+杜比包已安装数=0
+audio_effects_config md5=6baa66e504c1c610c5b6101ff843eabb（原厂值应为 6baa66e504c1...）
+pid=1792 audiohalservice DAPV3线程=0
+pid=1897 audioserver DAPV3线程=0
+本次开机 audioserver 崩溃=0
+模块标记：y700_dolby_bridge=[disable,] y700_dolby_daxservice=[disable,] 

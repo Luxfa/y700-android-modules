@@ -1,0 +1,3883 @@
+== 9008 刷写编排 ==
+串口:     COM5
+firehose: D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/prog_firehose_ddr.elf
+xml目录:  D:/Ai Work/Y700五代移植ColorOS/00_救生包/C17_ColorOS17移植包/image
+xml序列:  rawprogram0.xml,rawprogram1.xml,rawprogram2.xml,rawprogram3.xml,rawprogram4.xml,rawprogram5.xml
+
+== 阶段1: Sahara 握手 + 上传引导链（八映射，官方bat同款） ==
++ D:/Ai Work/Y700五代移植ColorOS/00_救生包/tools/violet-cli/QSaharaServer.exe -p \\.\COM5 -s 36:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/multi_image_qti.mbn -s 37:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/multi_image.mbn -s 21:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/xbl_sc.elf -s 60:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/signed_firmware_soc_view.elf -s 59:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/sequencer_ram.elf -s 61:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/tme_config.elf -s 13:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/prog_firehose_ddr.elf -s 38:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/xbl_config_devprg.elf -b D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/
+*QSaharaServer *
+: Jun  8 2025 @ 16:27:37
+ο: Jackson(ᰲ@),ĳ(ᰲ@ĳ)
+ʹñпշ,ʹڷǷΪ
+: 
+'D:\Ai Work\Y700ֲColorOS\00_\tools\violet-cli\QSaharaServer.exe -p \\.\COM5 -s 36:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/multi_image_qti.mbn -s 37:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/multi_image.mbn -s 21:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/xbl_sc.elf -s 60:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/signed_firmware_soc_view.elf -s 59:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/sequencer_ram.elf -s 61:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/tme_config.elf -s 13:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/prog_firehose_ddr.elf -s 38:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/xbl_config_devprg.elf -b D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/ '
+Ŀ¼: D:\Ai Work\Y700ֲColorOS\03_űģ
+Sahara mappings:
+2: amss.mbn
+6: apps.mbn
+8: dsp1.mbn
+10: dbl.mbn
+11: osbl.mbn
+12: dsp2.mbn
+16: efs1.mbn
+17: efs2.mbn
+20: efs3.mbn
+21: D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/xbl_sc.elf
+22: sbl2.mbn
+23: rpm.mbn
+25: tz.mbn
+28: dsp3.mbn
+29: acdb.mbn
+30: wdt.mbn
+31: mba.mbn
+36: D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/multi_image_qti.mbn
+37: D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/multi_image.mbn
+60: D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/signed_firmware_soc_view.elf
+59: D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/sequencer_ram.elf
+61: D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/tme_config.elf
+13: D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/prog_firehose_ddr.elf
+38: D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/xbl_config_devprg.elf
+
+11.23.2026-04.28.36 : EVENT: ״̬ <-- SAHARA_WAIT_HELLO(ȴ豸HELLOݰ)
+
+[portstatus]sahara
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_HELLO(ܵ豸HELLOݰ)
+
+11.23.2026-04.28.36 : EVENT:  --> SAHARA_HELLO_RESPONSE(͵豸HELLOӦݰ)
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : Requested ID 59, file: "D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/sequencer_ram.elf"
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_END_IMAGE_TX()
+
+11.23.2026-04.28.36 : EVENT:  --> SAHARA_DONE(ݰ)
+
+11.23.2026-04.28.36 : 4876 bytes transferred in 0.000000 seconds
+
+11.23.2026-04.28.36 : File transferred successfully
+
+
+
+11.23.2026-04.28.36 : EVENT: STATE <-- SAHARA_WAIT_DONE_RESP
+
+
+11.23.2026-04.28.36 : EVENT: ״̬ <-- SAHARA_WAIT_HELLO(ȴ豸HELLOݰ)
+
+[portstatus]sahara
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_HELLO(ܵ豸HELLOݰ)
+
+11.23.2026-04.28.36 : EVENT:  --> SAHARA_HELLO_RESPONSE(͵豸HELLOӦݰ)
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : Requested ID 36, file: "D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/multi_image_qti.mbn"
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_END_IMAGE_TX()
+
+11.23.2026-04.28.36 : EVENT:  --> SAHARA_DONE(ݰ)
+
+11.23.2026-04.28.36 : 5072 bytes transferred in 0.016000 seconds (0.3023MBps)
+
+
+
+11.23.2026-04.28.36 : File transferred successfully
+
+
+
+11.23.2026-04.28.36 : EVENT: STATE <-- SAHARA_WAIT_DONE_RESP
+
+
+11.23.2026-04.28.36 : EVENT: ״̬ <-- SAHARA_WAIT_HELLO(ȴ豸HELLOݰ)
+
+[portstatus]sahara
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_HELLO(ܵ豸HELLOݰ)
+
+11.23.2026-04.28.36 : EVENT:  --> SAHARA_HELLO_RESPONSE(͵豸HELLOӦݰ)
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : Requested ID 37, file: "D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/multi_image.mbn"
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_END_IMAGE_TX()
+
+11.23.2026-04.28.36 : EVENT:  --> SAHARA_DONE(ݰ)
+
+11.23.2026-04.28.36 : 5352 bytes transferred in 0.016000 seconds (0.3190MBps)
+
+
+
+11.23.2026-04.28.36 : File transferred successfully
+
+
+
+11.23.2026-04.28.36 : EVENT: STATE <-- SAHARA_WAIT_DONE_RESP
+
+
+11.23.2026-04.28.36 : EVENT: ״̬ <-- SAHARA_WAIT_HELLO(ȴ豸HELLOݰ)
+
+[portstatus]sahara
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_HELLO(ܵ豸HELLOݰ)
+
+11.23.2026-04.28.36 : EVENT:  --> SAHARA_HELLO_RESPONSE(͵豸HELLOӦݰ)
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : Requested ID 61, file: "D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/tme_config.elf"
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_END_IMAGE_TX()
+
+11.23.2026-04.28.36 : EVENT:  --> SAHARA_DONE(ݰ)
+
+11.23.2026-04.28.36 : 38764 bytes transferred in 0.015000 seconds (2.4645MBps)
+
+
+
+11.23.2026-04.28.36 : File transferred successfully
+
+
+
+11.23.2026-04.28.36 : EVENT: STATE <-- SAHARA_WAIT_DONE_RESP
+
+
+11.23.2026-04.28.36 : EVENT: ״̬ <-- SAHARA_WAIT_HELLO(ȴ豸HELLOݰ)
+
+[portstatus]sahara
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_HELLO(ܵ豸HELLOݰ)
+
+11.23.2026-04.28.36 : EVENT:  --> SAHARA_HELLO_RESPONSE(͵豸HELLOӦݰ)
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : Requested ID 60, file: "D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/signed_firmware_soc_view.elf"
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_END_IMAGE_TX()
+
+11.23.2026-04.28.36 : EVENT:  --> SAHARA_DONE(ݰ)
+
+11.23.2026-04.28.36 : 204256 bytes transferred in 0.047000 seconds (4.1445MBps)
+
+
+
+11.23.2026-04.28.36 : File transferred successfully
+
+
+
+11.23.2026-04.28.36 : EVENT: STATE <-- SAHARA_WAIT_DONE_RESP
+
+
+11.23.2026-04.28.36 : EVENT: ״̬ <-- SAHARA_WAIT_HELLO(ȴ豸HELLOݰ)
+
+[portstatus]sahara
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_HELLO(ܵ豸HELLOݰ)
+
+11.23.2026-04.28.36 : EVENT:  --> SAHARA_HELLO_RESPONSE(͵豸HELLOӦݰ)
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : Requested ID 21, file: "D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/xbl_sc.elf"
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_END_IMAGE_TX()
+
+11.23.2026-04.28.36 : EVENT:  --> SAHARA_DONE(ݰ)
+
+11.23.2026-04.28.36 : 1183256 bytes transferred in 0.172000 seconds (6.5607MBps)
+
+
+
+11.23.2026-04.28.36 : File transferred successfully
+
+
+
+11.23.2026-04.28.36 : EVENT: STATE <-- SAHARA_WAIT_DONE_RESP
+
+
+11.23.2026-04.28.36 : EVENT: ״̬ <-- SAHARA_WAIT_HELLO(ȴ豸HELLOݰ)
+
+[portstatus]sahara
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_HELLO(ܵ豸HELLOݰ)
+
+11.23.2026-04.28.36 : EVENT:  --> SAHARA_HELLO_RESPONSE(͵豸HELLOӦݰ)
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : Requested ID 13, file: "D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/prog_firehose_ddr.elf"
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_END_IMAGE_TX()
+
+11.23.2026-04.28.36 : EVENT:  --> SAHARA_DONE(ݰ)
+
+11.23.2026-04.28.36 : 311744 bytes transferred in 0.046000 seconds (6.4631MBps)
+
+
+
+11.23.2026-04.28.36 : File transferred successfully
+
+
+
+11.23.2026-04.28.36 : EVENT: STATE <-- SAHARA_WAIT_DONE_RESP
+
+
+11.23.2026-04.28.36 : EVENT: ״̬ <-- SAHARA_WAIT_HELLO(ȴ豸HELLOݰ)
+
+[portstatus]sahara
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_HELLO(ܵ豸HELLOݰ)
+
+11.23.2026-04.28.36 : EVENT:  --> SAHARA_HELLO_RESPONSE(͵豸HELLOӦݰ)
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : Requested ID 38, file: "D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/xbl_config_devprg.elf"
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.28.36 : EVENT:  <-- SAHARA_END_IMAGE_TX()
+
+11.23.2026-04.28.36 : EVENT:  --> SAHARA_DONE(ݰ)
+
+11.23.2026-04.28.36 : 184708 bytes transferred in 0.079000 seconds (2.2298MBps)
+
+
+
+11.23.2026-04.28.36 : File transferred successfully
+
+
+
+11.23.2026-04.28.36 : EVENT: STATE <-- SAHARA_WAIT_DONE_RESP
+
+
+11.23.2026-04.28.36 : EVENT: 
+
+Successfully uploaded all images
+
+
+11.23.2026-04.28.36 : Sahara protocol completed
+== 阶段2: Firehose 写分区 ==
+-- 写入 rawprogram0.xml
++ D:/Ai Work/Y700五代移植ColorOS/00_救生包/tools/violet-cli/fh_loader.exe --port=\\.\COM5 --sendxml=rawprogram0.xml --search_path=D:/Ai Work/Y700五代移植ColorOS/00_救生包/C17_ColorOS17移植包/image --memoryname=ufs --zlpawarehost=1 --noprompt
+
+Base Version: 23.06.20.17.11
+Binary build date: Nov 19 2025 @ 01:16:43
+Incremental Build version: 25.11.19.01.16.43
+
+04:28:37: INFO: Output Dir Already exists ./
+04:28:37: INFO: 1. Calling fopen('.//port_trace.txt') with AccessMode='w'
+04:28:37: INFO: FH_LOADER WAS CALLED EXACTLY LIKE THIS
+************************************************
+D:\Ai Work\Y700ֲColorOS\00_\tools\violet-cli\fh_loader.exe --port=\\.\COM5 --sendxml=rawprogram0.xml --search_path=D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image --memoryname=ufs --zlpawarehost=1 --noprompt 
+************************************************
+
+04:28:37: INFO: Current working dir (cwd): D:\Ai Work\Y700ֲColorOS\03_űģ\
+04:28:37: INFO: Showing network mappings to allow debugging
+04:28:37: INFO: 
+
+
+
+04:28:37: INFO: Trying to store 'rawprogram0.xml' in string table
+04:28:37: INFO: Looking for file 'rawprogram0.xml'
+04:28:37: INFO: User wants to talk to port '\\.\COM5'
+04:28:37: INFO: Took       0.67100000 seconds to open port
+04:28:37: INFO: Sorting TAGS to ensure order is <configure>,<erase>, others, <patch>,<power>
+04:28:37: INFO: Sending <configure>
+
+04:28:37: INFO: TARGET SAID: 'INFO: Binary build date: Jan 20 2026 @ 16:54:11'
+
+04:28:37: INFO: TARGET SAID: 'INFO: Binary build date: Jan 20 2026 @ 16:54:11
+'
+
+04:28:37: INFO: TARGET SAID: 'INFO: Chip serial num (0xb64edd26) Chip ID (0x46a)'
+
+04:28:37: INFO: TARGET SAID: 'INFO: Supported Functions (15):'
+
+04:28:37: INFO: TARGET SAID: 'INFO: program'
+
+04:28:37: INFO: TARGET SAID: 'INFO: read'
+
+04:28:37: INFO: TARGET SAID: 'INFO: nop'
+
+04:28:37: INFO: TARGET SAID: 'INFO: patch'
+
+04:28:37: INFO: TARGET SAID: 'INFO: configure'
+
+04:28:37: INFO: TARGET SAID: 'INFO: setbootablestoragedrive'
+
+04:28:37: INFO: TARGET SAID: 'INFO: erase'
+
+04:28:37: INFO: TARGET SAID: 'INFO: power'
+
+04:28:37: INFO: TARGET SAID: 'INFO: firmwarewrite'
+
+04:28:37: INFO: TARGET SAID: 'INFO: getstorageinfo'
+
+04:28:37: INFO: TARGET SAID: 'INFO: benchmark'
+
+04:28:37: INFO: TARGET SAID: 'INFO: emmc'
+
+04:28:37: INFO: TARGET SAID: 'INFO: ufs'
+
+04:28:37: INFO: TARGET SAID: 'INFO: fixgpt'
+
+04:28:37: INFO: TARGET SAID: 'INFO: getsha256digest'
+
+04:28:37: INFO: TARGET SAID: 'INFO: End of supported functions 15'
+
+04:28:37: INFO: TARGET SAID: 'INFO: Calling handler for configure'
+
+04:28:37: INFO: TARGET SAID: 'INFO: Storage type set to value UFS'
+04:28:37: INFO: fh.attrs.MaxPayloadSizeToTargetInBytes = 1048576
+04:28:37: INFO: fh.attrs.MaxPayloadSizeToTargetInBytesSupported = 1048576
+04:28:37: INFO: In handleProgram('ssd.img')
+04:28:37: INFO: Looking for file 'ssd.img'
+04:28:37: INFO: =======================================================
+04:28:37: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/ssd.img'}
+04:28:37: INFO: {<program> (8.00 KB) 2 sectors needed at location 262 on LUN 0}
+04:28:37: INFO: =======================================================
+
+
+04:28:37: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:28:37: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:28:37: INFO: 
+04:28:37: INFO: =======================================================
+04:28:37: INFO: ==================== {SUCCESS} ========================
+04:28:37: INFO: =======================================================
+
+
+04:28:37: INFO: In handleProgram('misc.img')
+04:28:37: INFO: Looking for file 'misc.img'
+04:28:37: INFO: =======================================================
+04:28:37: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/misc.img'}
+04:28:37: INFO: {<program> (1.00 MB) 256 sectors needed at location 8456 on LUN 0}
+04:28:37: INFO: =======================================================
+
+
+04:28:37: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:28:37: INFO: Overall to target  0.032 seconds (31.25 MBps)
+04:28:37: INFO: 
+04:28:37: INFO: =======================================================
+04:28:37: INFO: ==================== {SUCCESS} ========================
+04:28:37: INFO: =======================================================
+
+
+04:28:37: INFO: In handleProgram('keystore.img')
+04:28:37: INFO: Looking for file 'keystore.img'
+04:28:37: INFO: =======================================================
+04:28:37: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/keystore.img'}
+04:28:37: INFO: {<program> (512.00 KB) 128 sectors needed at location 8712 on LUN 0}
+04:28:37: INFO: =======================================================
+
+
+04:28:37: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:28:38: INFO: Overall to target  0.016 seconds (31.25 MBps)
+04:28:38: INFO: 
+04:28:38: INFO: =======================================================
+04:28:38: INFO: ==================== {SUCCESS} ========================
+04:28:38: INFO: =======================================================
+
+
+04:28:38: INFO: In handleProgram('frp.img')
+04:28:38: INFO: Looking for file 'frp.img'
+04:28:38: INFO: =======================================================
+04:28:38: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/frp.img'}
+04:28:38: INFO: {<program> (512.00 KB) 128 sectors needed at location 8840 on LUN 0}
+04:28:38: INFO: =======================================================
+
+
+04:28:38: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:28:38: INFO: Overall to target  0.016 seconds (31.25 MBps)
+04:28:38: INFO: 
+04:28:38: INFO: =======================================================
+04:28:38: INFO: ==================== {SUCCESS} ========================
+04:28:38: INFO: =======================================================
+
+
+04:28:38: INFO: In handleProgram('super.img')
+04:28:38: INFO: Looking for file 'super.img'
+04:28:38: INFO: =======================================================
+04:28:38: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/super.img'}
+04:28:38: INFO: {<program> (20.00 GB) 5242880 sectors needed at location 8968 on LUN 0}
+04:28:38: INFO: =======================================================
+
+
+04:28:38: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:28:40: INFO: Overall to target  2.000 seconds (45.00 MBps)
+04:28:42: INFO: Overall to target  4.016 seconds (44.82 MBps)
+04:28:44: INFO: Overall to target  6.016 seconds (44.55 MBps)
+04:28:46: INFO: Overall to target  8.016 seconds (44.54 MBps)
+04:28:48: INFO: Overall to target 10.032 seconds (44.26 MBps)
+04:28:50: INFO: Overall to target 12.032 seconds (44.38 MBps)
+04:28:52: INFO: Overall to target 14.032 seconds (44.47 MBps)
+04:28:54: INFO: Overall to target 16.032 seconds (44.54 MBps)
+04:28:56: INFO: Overall to target 18.047 seconds (44.55 MBps)
+04:28:58: INFO: Overall to target 20.047 seconds (44.60 MBps)
+04:29:00: INFO: Overall to target 22.047 seconds (44.63 MBps)
+04:29:02: INFO: Overall to target 24.047 seconds (44.66 MBps)
+04:29:04: INFO: Overall to target 26.047 seconds (44.65 MBps)
+04:29:06: INFO: Overall to target 28.063 seconds (44.61 MBps)
+04:29:08: INFO: Overall to target 30.063 seconds (44.64 MBps)
+04:29:10: INFO: Overall to target 32.063 seconds (44.66 MBps)
+04:29:12: INFO: Overall to target 34.063 seconds (44.68 MBps)
+04:29:14: INFO: Overall to target 36.078 seconds (44.68 MBps)
+04:29:16: INFO: Overall to target 38.078 seconds (44.70 MBps)
+04:29:18: INFO: Overall to target 40.078 seconds (44.71 MBps)
+04:29:20: INFO: Overall to target 42.078 seconds (44.73 MBps)
+04:29:22: INFO: Overall to target 44.078 seconds (44.74 MBps)
+04:29:24: INFO: Overall to target 46.094 seconds (44.73 MBps)
+04:29:26: INFO: Overall to target 48.094 seconds (44.75 MBps)
+04:29:28: INFO: Overall to target 50.094 seconds (44.76 MBps)
+04:29:30: INFO: Overall to target 52.094 seconds (44.77 MBps)
+04:29:32: INFO: Overall to target 54.110 seconds (44.76 MBps)
+04:29:34: INFO: Overall to target 56.110 seconds (44.77 MBps)
+04:29:36: INFO: Overall to target 58.125 seconds (44.77 MBps)
+04:29:38: INFO: Overall to target 60.125 seconds (44.77 MBps)
+04:29:40: INFO: Overall to target 62.125 seconds (44.75 MBps)
+04:29:42: INFO: Overall to target 64.141 seconds (44.73 MBps)
+04:29:44: INFO: Overall to target 66.141 seconds (44.71 MBps)
+04:29:46: INFO: Overall to target 68.141 seconds (44.72 MBps)
+04:29:48: INFO: Overall to target 70.141 seconds (44.71 MBps)
+04:29:50: INFO: Overall to target 72.141 seconds (44.70 MBps)
+04:29:52: INFO: Overall to target 74.157 seconds (44.70 MBps)
+04:29:54: INFO: Overall to target 76.172 seconds (44.70 MBps)
+04:29:56: INFO: Overall to target 78.172 seconds (44.71 MBps)
+04:29:58: INFO: Overall to target 80.172 seconds (44.72 MBps)
+04:30:00: INFO: Overall to target 82.172 seconds (44.72 MBps)
+04:30:02: INFO: Overall to target 84.188 seconds (44.72 MBps)
+04:30:04: INFO: Overall to target 86.203 seconds (44.73 MBps)
+04:30:06: INFO: Overall to target 88.219 seconds (44.73 MBps)
+04:30:08: INFO: Overall to target 90.235 seconds (44.73 MBps)
+04:30:10: INFO: Overall to target 92.235 seconds (44.73 MBps)
+04:30:12: INFO: Overall to target 94.235 seconds (44.74 MBps)
+04:30:14: INFO: Overall to target 96.235 seconds (44.74 MBps)
+04:30:16: INFO: Overall to target 98.250 seconds (44.74 MBps)
+04:30:18: INFO: Overall to target 100.250 seconds (44.75 MBps)
+04:30:20: INFO: Overall to target 102.266 seconds (44.76 MBps)
+04:30:22: INFO: Overall to target 104.282 seconds (44.75 MBps)
+04:30:24: INFO: Overall to target 106.282 seconds (44.76 MBps)
+04:30:26: INFO: Overall to target 108.297 seconds (44.77 MBps)
+04:30:28: INFO: Overall to target 110.297 seconds (44.78 MBps)
+04:30:30: INFO: Overall to target 112.297 seconds (44.78 MBps)
+04:30:32: INFO: Overall to target 114.297 seconds (44.79 MBps)
+04:30:34: INFO: Overall to target 116.297 seconds (44.79 MBps)
+04:30:36: INFO: Overall to target 118.297 seconds (44.79 MBps)
+04:30:38: INFO: Overall to target 120.297 seconds (44.79 MBps)
+04:30:40: INFO: Overall to target 122.297 seconds (44.79 MBps)
+04:30:42: INFO: Overall to target 124.313 seconds (44.79 MBps)
+04:30:44: INFO: Overall to target 126.313 seconds (44.79 MBps)
+04:30:46: INFO: Overall to target 128.313 seconds (44.80 MBps)
+04:30:48: INFO: Overall to target 130.313 seconds (44.80 MBps)
+04:30:50: INFO: Overall to target 132.313 seconds (44.80 MBps)
+04:30:52: INFO: Overall to target 134.313 seconds (44.81 MBps)
+04:30:54: INFO: Overall to target 136.313 seconds (44.82 MBps)
+04:30:56: INFO: Overall to target 138.313 seconds (44.82 MBps)
+04:30:58: INFO: Overall to target 140.313 seconds (44.82 MBps)
+04:31:00: INFO: Overall to target 142.313 seconds (44.82 MBps)
+04:31:02: INFO: Overall to target 144.328 seconds (44.83 MBps)
+04:31:04: INFO: Overall to target 146.328 seconds (44.83 MBps)
+04:31:06: INFO: Overall to target 148.328 seconds (44.83 MBps)
+04:31:08: INFO: Overall to target 150.328 seconds (44.84 MBps)
+04:31:10: INFO: Overall to target 152.344 seconds (44.84 MBps)
+04:31:12: INFO: Overall to target 154.344 seconds (44.84 MBps)
+04:31:14: INFO: Overall to target 156.344 seconds (44.84 MBps)
+04:31:16: INFO: Overall to target 158.344 seconds (44.85 MBps)
+04:31:18: INFO: Overall to target 160.344 seconds (44.85 MBps)
+04:31:20: INFO: Overall to target 162.344 seconds (44.85 MBps)
+04:31:22: INFO: Overall to target 164.344 seconds (44.85 MBps)
+04:31:24: INFO: Overall to target 166.360 seconds (44.85 MBps)
+04:31:26: INFO: Overall to target 168.360 seconds (44.86 MBps)
+04:31:28: INFO: Overall to target 170.360 seconds (44.86 MBps)
+04:31:30: INFO: Overall to target 172.360 seconds (44.86 MBps)
+04:31:32: INFO: Overall to target 174.360 seconds (44.86 MBps)
+04:31:34: INFO: Overall to target 176.360 seconds (44.86 MBps)
+04:31:36: INFO: Overall to target 178.360 seconds (44.86 MBps)
+04:31:38: INFO: Overall to target 180.375 seconds (44.86 MBps)
+04:31:40: INFO: Overall to target 182.375 seconds (44.86 MBps)
+04:31:42: INFO: Overall to target 184.391 seconds (44.87 MBps)
+04:31:44: INFO: Overall to target 186.407 seconds (44.87 MBps)
+04:31:46: INFO: Overall to target 188.407 seconds (44.87 MBps)
+04:31:48: INFO: Overall to target 190.422 seconds (44.87 MBps)
+04:31:50: INFO: Overall to target 192.422 seconds (44.88 MBps)
+04:31:52: INFO: Overall to target 194.422 seconds (44.88 MBps)
+04:31:54: INFO: Overall to target 196.422 seconds (44.88 MBps)
+04:31:56: INFO: Overall to target 198.422 seconds (44.88 MBps)
+04:31:58: INFO: Overall to target 200.422 seconds (44.88 MBps)
+04:32:00: INFO: Overall to target 202.422 seconds (44.88 MBps)
+04:32:02: INFO: Overall to target 204.438 seconds (44.88 MBps)
+04:32:04: INFO: Overall to target 206.438 seconds (44.88 MBps)
+04:32:06: INFO: Overall to target 208.438 seconds (44.88 MBps)
+04:32:08: INFO: Overall to target 210.453 seconds (44.88 MBps)
+04:32:10: INFO: Overall to target 212.453 seconds (44.88 MBps)
+04:32:12: INFO: Overall to target 214.469 seconds (44.88 MBps)
+04:32:14: INFO: Overall to target 216.469 seconds (44.88 MBps)
+04:32:16: INFO: Overall to target 218.469 seconds (44.88 MBps)
+04:32:18: INFO: Overall to target 220.485 seconds (44.88 MBps)
+04:32:20: INFO: Overall to target 222.485 seconds (44.88 MBps)
+04:32:22: INFO: Overall to target 224.500 seconds (44.88 MBps)
+04:32:24: INFO: Overall to target 226.500 seconds (44.88 MBps)
+04:32:26: INFO: Overall to target 228.516 seconds (44.88 MBps)
+04:32:28: INFO: Overall to target 230.516 seconds (44.88 MBps)
+04:32:30: INFO: Overall to target 232.516 seconds (44.88 MBps)
+04:32:32: INFO: Overall to target 234.532 seconds (44.88 MBps)
+04:32:34: INFO: Overall to target 236.532 seconds (44.88 MBps)
+04:32:36: INFO: Overall to target 238.547 seconds (44.88 MBps)
+04:32:38: INFO: Overall to target 240.547 seconds (44.88 MBps)
+04:32:40: INFO: Overall to target 242.547 seconds (44.88 MBps)
+04:32:42: INFO: Overall to target 244.547 seconds (44.88 MBps)
+04:32:44: INFO: Overall to target 246.547 seconds (44.88 MBps)
+04:32:46: INFO: Overall to target 248.563 seconds (44.88 MBps)
+04:32:48: INFO: Overall to target 250.563 seconds (44.88 MBps)
+04:32:50: INFO: Overall to target 252.563 seconds (44.88 MBps)
+04:32:52: INFO: Overall to target 254.578 seconds (44.88 MBps)
+04:32:54: INFO: Overall to target 256.578 seconds (44.88 MBps)
+04:32:56: INFO: Overall to target 258.578 seconds (44.88 MBps)
+04:32:58: INFO: Overall to target 260.594 seconds (44.88 MBps)
+04:33:00: INFO: Overall to target 262.594 seconds (44.88 MBps)
+04:33:02: INFO: Overall to target 264.594 seconds (44.88 MBps)
+04:33:04: INFO: Overall to target 266.594 seconds (44.88 MBps)
+04:33:06: INFO: Overall to target 268.594 seconds (44.88 MBps)
+04:33:08: INFO: Overall to target 270.594 seconds (44.88 MBps)
+04:33:10: INFO: Overall to target 272.594 seconds (44.88 MBps)
+04:33:12: INFO: Overall to target 274.594 seconds (44.88 MBps)
+04:33:14: INFO: Overall to target 276.594 seconds (44.89 MBps)
+04:33:16: INFO: Overall to target 278.594 seconds (44.89 MBps)
+04:33:18: INFO: Overall to target 280.594 seconds (44.89 MBps)
+04:33:20: INFO: Overall to target 282.594 seconds (44.89 MBps)
+04:33:22: INFO: Overall to target 284.594 seconds (44.89 MBps)
+04:33:24: INFO: Overall to target 286.594 seconds (44.89 MBps)
+04:33:26: INFO: Overall to target 288.610 seconds (44.89 MBps)
+04:33:28: INFO: Overall to target 290.625 seconds (44.90 MBps)
+04:33:30: INFO: Overall to target 292.625 seconds (44.90 MBps)
+04:33:32: INFO: Overall to target 294.625 seconds (44.90 MBps)
+04:33:34: INFO: Overall to target 296.625 seconds (44.90 MBps)
+04:33:36: INFO: Overall to target 298.625 seconds (44.90 MBps)
+04:33:38: INFO: Overall to target 300.641 seconds (44.90 MBps)
+04:33:40: INFO: Overall to target 302.641 seconds (44.90 MBps)
+04:33:42: INFO: Overall to target 304.641 seconds (44.90 MBps)
+04:33:44: INFO: Overall to target 306.641 seconds (44.90 MBps)
+04:33:46: INFO: Overall to target 308.641 seconds (44.90 MBps)
+04:33:48: INFO: Overall to target 310.641 seconds (44.90 MBps)
+04:33:50: INFO: Overall to target 312.641 seconds (44.90 MBps)
+04:33:52: INFO: Overall to target 314.641 seconds (44.90 MBps)
+04:33:54: INFO: Overall to target 316.657 seconds (44.90 MBps)
+04:33:56: INFO: Overall to target 318.657 seconds (44.90 MBps)
+04:33:58: INFO: Overall to target 320.672 seconds (44.90 MBps)
+04:34:00: INFO: Overall to target 322.672 seconds (44.90 MBps)
+04:34:02: INFO: Overall to target 324.672 seconds (44.90 MBps)
+04:34:04: INFO: Overall to target 326.672 seconds (44.90 MBps)
+04:34:06: INFO: Overall to target 328.688 seconds (44.90 MBps)
+04:34:08: INFO: Overall to target 330.688 seconds (44.90 MBps)
+04:34:10: INFO: Overall to target 332.688 seconds (44.89 MBps)
+04:34:12: INFO: Overall to target 334.688 seconds (44.90 MBps)
+04:34:14: INFO: Overall to target 336.688 seconds (44.90 MBps)
+04:34:16: INFO: Overall to target 338.703 seconds (44.89 MBps)
+04:34:18: INFO: Overall to target 340.703 seconds (44.90 MBps)
+04:34:20: INFO: Overall to target 342.703 seconds (44.90 MBps)
+04:34:22: INFO: Overall to target 344.703 seconds (44.90 MBps)
+04:34:24: INFO: Overall to target 346.719 seconds (44.90 MBps)
+04:34:26: INFO: Overall to target 348.719 seconds (44.90 MBps)
+04:34:28: INFO: Overall to target 350.735 seconds (44.90 MBps)
+04:34:30: INFO: Overall to target 352.735 seconds (44.90 MBps)
+04:34:32: INFO: Overall to target 354.735 seconds (44.90 MBps)
+04:34:34: INFO: Overall to target 356.750 seconds (44.90 MBps)
+04:34:36: INFO: Overall to target 358.750 seconds (44.90 MBps)
+04:34:38: INFO: Overall to target 360.750 seconds (44.90 MBps)
+04:34:40: INFO: Overall to target 362.750 seconds (44.90 MBps)
+04:34:42: INFO: Overall to target 364.750 seconds (44.90 MBps)
+04:34:44: INFO: Overall to target 366.766 seconds (44.90 MBps)
+04:34:46: INFO: Overall to target 368.766 seconds (44.90 MBps)
+04:34:48: INFO: Overall to target 370.766 seconds (44.90 MBps)
+04:34:50: INFO: Overall to target 372.766 seconds (44.90 MBps)
+04:34:52: INFO: Overall to target 374.766 seconds (44.91 MBps)
+04:34:54: INFO: Overall to target 376.782 seconds (44.91 MBps)
+04:34:56: INFO: Overall to target 378.782 seconds (44.91 MBps)
+04:34:58: INFO: Overall to target 380.782 seconds (44.91 MBps)
+04:35:00: INFO: Overall to target 382.797 seconds (44.91 MBps)
+04:35:02: INFO: Overall to target 384.813 seconds (44.91 MBps)
+04:35:04: INFO: Overall to target 386.828 seconds (44.91 MBps)
+04:35:06: INFO: Overall to target 388.828 seconds (44.91 MBps)
+04:35:08: INFO: Overall to target 390.828 seconds (44.91 MBps)
+04:35:11: INFO: Overall to target 392.860 seconds (44.91 MBps)
+04:35:13: INFO: Overall to target 394.875 seconds (44.92 MBps)
+04:35:15: INFO: Overall to target 396.875 seconds (44.92 MBps)
+04:35:17: INFO: Overall to target 398.891 seconds (44.92 MBps)
+04:35:19: INFO: Overall to target 400.907 seconds (44.92 MBps)
+04:35:21: INFO: Overall to target 402.922 seconds (44.92 MBps)
+04:35:23: INFO: Overall to target 404.922 seconds (44.92 MBps)
+04:35:25: INFO: Overall to target 406.922 seconds (44.92 MBps)
+04:35:27: INFO: Overall to target 408.922 seconds (44.92 MBps)
+04:35:29: INFO: Overall to target 410.938 seconds (44.92 MBps)
+04:35:31: INFO: Overall to target 412.953 seconds (44.92 MBps)
+04:35:33: INFO: Overall to target 414.953 seconds (44.93 MBps)
+04:35:35: INFO: Overall to target 416.953 seconds (44.93 MBps)
+04:35:37: INFO: Overall to target 418.953 seconds (44.93 MBps)
+04:35:39: INFO: Overall to target 420.953 seconds (44.93 MBps)
+04:35:41: INFO: Overall to target 422.953 seconds (44.93 MBps)
+04:35:43: INFO: Overall to target 424.953 seconds (44.93 MBps)
+04:35:45: INFO: Overall to target 426.953 seconds (44.93 MBps)
+04:35:47: INFO: Overall to target 428.969 seconds (44.93 MBps)
+04:35:49: INFO: Overall to target 430.985 seconds (44.93 MBps)
+04:35:51: INFO: Overall to target 432.985 seconds (44.93 MBps)
+04:35:53: INFO: Overall to target 434.985 seconds (44.93 MBps)
+04:35:55: INFO: Overall to target 436.985 seconds (44.93 MBps)
+04:35:57: INFO: Overall to target 438.985 seconds (44.93 MBps)
+04:35:59: INFO: Overall to target 440.985 seconds (44.93 MBps)
+04:36:01: INFO: Overall to target 442.985 seconds (44.93 MBps)
+04:36:03: INFO: Overall to target 444.985 seconds (44.93 MBps)
+04:36:05: INFO: Overall to target 446.985 seconds (44.93 MBps)
+04:36:07: INFO: Overall to target 448.985 seconds (44.93 MBps)
+04:36:09: INFO: Overall to target 451.000 seconds (44.93 MBps)
+04:36:11: INFO: Overall to target 453.000 seconds (44.93 MBps)
+04:36:13: INFO: Overall to target 455.016 seconds (44.93 MBps)
+04:36:13: INFO: Overall to target 455.828 seconds (44.93 MBps)
+04:36:14: INFO: 
+04:36:14: INFO: =======================================================
+04:36:14: INFO: ==================== {SUCCESS} ========================
+04:36:14: INFO: =======================================================
+
+
+04:36:14: INFO: In handleProgram('vbmeta_system_a.img')
+04:36:14: INFO: Looking for file 'vbmeta_system_a.img'
+04:36:14: INFO: =======================================================
+04:36:14: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/vbmeta_system_a.img'}
+04:36:14: INFO: {<program> (64.00 KB) 16 sectors needed at location 5251848 on LUN 0}
+04:36:14: INFO: =======================================================
+
+
+04:36:14: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:14: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:36:14: INFO: 
+04:36:14: INFO: =======================================================
+04:36:14: INFO: ==================== {SUCCESS} ========================
+04:36:14: INFO: =======================================================
+
+
+04:36:14: INFO: In handleProgram('vbmeta_system_b.img')
+04:36:14: INFO: Looking for file 'vbmeta_system_b.img'
+04:36:14: INFO: =======================================================
+04:36:14: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/vbmeta_system_b.img'}
+04:36:14: INFO: {<program> (64.00 KB) 16 sectors needed at location 5251864 on LUN 0}
+04:36:14: INFO: =======================================================
+
+
+04:36:14: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:14: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:36:14: INFO: 
+04:36:14: INFO: =======================================================
+04:36:14: INFO: ==================== {SUCCESS} ========================
+04:36:14: INFO: =======================================================
+
+
+04:36:14: INFO: In handleProgram('dataext_a.img')
+04:36:14: INFO: Looking for file 'dataext_a.img'
+04:36:14: INFO: =======================================================
+04:36:14: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/dataext_a.img'}
+04:36:14: INFO: {<program> (512.00 MB) 131072 sectors needed at location 5399336 on LUN 0}
+04:36:14: INFO: =======================================================
+
+
+04:36:14: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:16: INFO: Overall to target  2.016 seconds (45.14 MBps)
+04:36:18: INFO: Overall to target  4.016 seconds (45.07 MBps)
+04:36:20: INFO: Overall to target  6.016 seconds (45.05 MBps)
+04:36:22: INFO: Overall to target  8.016 seconds (45.03 MBps)
+04:36:24: INFO: Overall to target 10.031 seconds (44.96 MBps)
+04:36:25: INFO: Overall to target 11.406 seconds (44.89 MBps)
+04:36:25: INFO: 
+04:36:25: INFO: =======================================================
+04:36:25: INFO: ==================== {SUCCESS} ========================
+04:36:25: INFO: =======================================================
+
+
+04:36:25: INFO: In handleProgram('dataext_b.img')
+04:36:25: INFO: Looking for file 'dataext_b.img'
+04:36:25: INFO: =======================================================
+04:36:25: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/dataext_b.img'}
+04:36:25: INFO: {<program> (512.00 MB) 131072 sectors needed at location 5530408 on LUN 0}
+04:36:25: INFO: =======================================================
+
+
+04:36:25: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:27: INFO: Overall to target  2.000 seconds (45.50 MBps)
+04:36:29: INFO: Overall to target  4.000 seconds (45.25 MBps)
+04:36:31: INFO: Overall to target  6.015 seconds (45.05 MBps)
+04:36:33: INFO: Overall to target  8.015 seconds (45.04 MBps)
+04:36:35: INFO: Overall to target 10.015 seconds (45.03 MBps)
+04:36:37: INFO: Overall to target 11.390 seconds (44.95 MBps)
+04:36:37: INFO: 
+04:36:37: INFO: =======================================================
+04:36:37: INFO: ==================== {SUCCESS} ========================
+04:36:37: INFO: =======================================================
+
+
+04:36:37: INFO: ==============================================================
+04:36:37: INFO: Files used and their paths
+04:36:37: INFO:   1 './/port_trace.txt'
+04:36:37: INFO:   2 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/rawprogram0.xml'
+04:36:37: INFO:   3 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/ssd.img'
+04:36:37: INFO:   4 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/misc.img'
+04:36:37: INFO:   5 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/keystore.img'
+04:36:37: INFO:   6 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/frp.img'
+04:36:37: INFO:   7 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/super.img'
+04:36:37: INFO:   8 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/vbmeta_system_a.img'
+04:36:37: INFO:   9 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/vbmeta_system_b.img'
+04:36:37: INFO:  10 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/dataext_a.img'
+04:36:37: INFO:  11 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/dataext_b.img'
+
+04:36:37: INFO:      _             (done)
+04:36:37: INFO:     | |                 
+04:36:37: INFO:   __| | ___  _ __   ___ 
+04:36:37: INFO:  / _` |/ _ \| '_ \ / _ \
+04:36:37: INFO: | (_| | (_) | | | |  __/
+04:36:37: INFO:  \__,_|\___/|_| |_|\___|
+04:36:37: INFO: {All Finished Successfully}
+
+04:36:37: INFO: Overall to target 479.329 seconds (44.87 MBps)
+
+Writing log, might take a minute
+
+
+Log at 'D:\Ai Work\Y700ֲColorOS\03_űģ\port_trace.txt'
+
+-- 写入 rawprogram1.xml
++ D:/Ai Work/Y700五代移植ColorOS/00_救生包/tools/violet-cli/fh_loader.exe --port=\\.\COM5 --sendxml=rawprogram1.xml --search_path=D:/Ai Work/Y700五代移植ColorOS/00_救生包/C17_ColorOS17移植包/image --memoryname=ufs --zlpawarehost=1 --noprompt
+
+Base Version: 23.06.20.17.11
+Binary build date: Nov 19 2025 @ 01:16:43
+Incremental Build version: 25.11.19.01.16.43
+
+04:36:37: INFO: Output Dir Already exists ./
+04:36:37: INFO: 1. Calling fopen('.//port_trace.txt') with AccessMode='w'
+04:36:37: INFO: FH_LOADER WAS CALLED EXACTLY LIKE THIS
+************************************************
+D:\Ai Work\Y700ֲColorOS\00_\tools\violet-cli\fh_loader.exe --port=\\.\COM5 --sendxml=rawprogram1.xml --search_path=D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image --memoryname=ufs --zlpawarehost=1 --noprompt 
+************************************************
+
+04:36:37: INFO: Current working dir (cwd): D:\Ai Work\Y700ֲColorOS\03_űģ\
+04:36:37: INFO: Showing network mappings to allow debugging
+04:36:37: INFO: 
+
+
+
+04:36:37: INFO: Trying to store 'rawprogram1.xml' in string table
+04:36:37: INFO: Looking for file 'rawprogram1.xml'
+04:36:37: INFO: User wants to talk to port '\\.\COM5'
+04:36:37: INFO: Took       0.00000000 seconds to open port
+04:36:37: INFO: Sorting TAGS to ensure order is <configure>,<erase>, others, <patch>,<power>
+04:36:37: INFO: Sending <configure>
+
+04:36:37: INFO: TARGET SAID: 'INFO: Calling handler for configure'
+
+04:36:37: INFO: TARGET SAID: 'INFO: Storage type set to value UFS'
+04:36:37: INFO: fh.attrs.MaxPayloadSizeToTargetInBytes = 1048576
+04:36:37: INFO: fh.attrs.MaxPayloadSizeToTargetInBytesSupported = 1048576
+04:36:37: INFO: In handleProgram('xbl_a.img')
+04:36:37: INFO: Looking for file 'xbl_a.img'
+04:36:37: INFO: =======================================================
+04:36:37: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/xbl_a.img'}
+04:36:37: INFO: {<program> (3.50 MB) 896 sectors needed at location 6 on LUN 1}
+04:36:37: INFO: =======================================================
+
+
+04:36:37: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:37: INFO: TARGET SAID: 'ERROR: did found any entry.'
+
+04:36:37: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:37: INFO: Overall to target  0.078 seconds (44.87 MBps)
+04:36:37: INFO: 
+04:36:37: INFO: =======================================================
+04:36:37: INFO: ==================== {SUCCESS} ========================
+04:36:37: INFO: =======================================================
+
+
+04:36:37: INFO: In handleProgram('xbl_config_a.img')
+04:36:37: INFO: Looking for file 'xbl_config_a.img'
+04:36:37: INFO: =======================================================
+04:36:37: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/xbl_config_a.img'}
+04:36:37: INFO: {<program> (460.00 KB) 115 sectors needed at location 902 on LUN 1}
+04:36:37: INFO: =======================================================
+
+
+04:36:37: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:37: INFO: TARGET SAID: 'ERROR: did found any entry.'
+
+04:36:37: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:37: INFO: Overall to target  0.015 seconds (29.95 MBps)
+04:36:37: INFO: 
+04:36:37: INFO: =======================================================
+04:36:37: INFO: ==================== {SUCCESS} ========================
+04:36:37: INFO: =======================================================
+
+
+04:36:37: INFO: In handleProgram('multiimgqti_a.img')
+04:36:37: INFO: Looking for file 'multiimgqti_a.img'
+04:36:37: INFO: =======================================================
+04:36:37: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/multiimgqti_a.img'}
+04:36:37: INFO: {<program> (32.00 KB) 8 sectors needed at location 1017 on LUN 1}
+04:36:37: INFO: =======================================================
+
+
+04:36:37: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:37: INFO: TARGET SAID: 'ERROR: did found any entry.'
+
+04:36:37: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:37: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:36:37: INFO: 
+04:36:37: INFO: =======================================================
+04:36:37: INFO: ==================== {SUCCESS} ========================
+04:36:37: INFO: =======================================================
+
+
+04:36:37: INFO: In handleProgram('multiimgoem_a.img')
+04:36:37: INFO: Looking for file 'multiimgoem_a.img'
+04:36:37: INFO: =======================================================
+04:36:37: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/multiimgoem_a.img'}
+04:36:37: INFO: {<program> (32.00 KB) 8 sectors needed at location 1025 on LUN 1}
+04:36:37: INFO: =======================================================
+
+
+04:36:37: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:37: INFO: TARGET SAID: 'ERROR: did found any entry.'
+
+04:36:37: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:37: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:36:37: INFO: 
+04:36:37: INFO: =======================================================
+04:36:37: INFO: ==================== {SUCCESS} ========================
+04:36:37: INFO: =======================================================
+
+
+04:36:37: INFO: In handleProgram('apdp.img')
+04:36:37: INFO: Looking for file 'apdp.img'
+04:36:37: INFO: =======================================================
+04:36:37: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/apdp.img'}
+04:36:37: INFO: {<program> (256.00 KB) 64 sectors needed at location 1033 on LUN 1}
+04:36:37: INFO: =======================================================
+
+
+04:36:37: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:37: INFO: TARGET SAID: 'ERROR: did found any entry.'
+
+04:36:37: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:37: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:36:37: INFO: 
+04:36:37: INFO: =======================================================
+04:36:37: INFO: ==================== {SUCCESS} ========================
+04:36:37: INFO: =======================================================
+
+
+04:36:37: INFO: In handleProgram('tme_seq_patch_a.img')
+04:36:37: INFO: Looking for file 'tme_seq_patch_a.img'
+04:36:37: INFO: =======================================================
+04:36:37: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/tme_seq_patch_a.img'}
+04:36:37: INFO: {<program> (8.00 KB) 2 sectors needed at location 1097 on LUN 1}
+04:36:37: INFO: =======================================================
+
+
+04:36:37: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:37: INFO: TARGET SAID: 'ERROR: did found any entry.'
+
+04:36:37: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:37: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:36:37: INFO: 
+04:36:37: INFO: =======================================================
+04:36:37: INFO: ==================== {SUCCESS} ========================
+04:36:37: INFO: =======================================================
+
+
+04:36:37: INFO: In handleProgram('tme_fw_a.img')
+04:36:37: INFO: Looking for file 'tme_fw_a.img'
+04:36:37: INFO: =======================================================
+04:36:37: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/tme_fw_a.img'}
+04:36:37: INFO: {<program> (1.00 MB) 256 sectors needed at location 1099 on LUN 1}
+04:36:37: INFO: =======================================================
+
+
+04:36:37: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:37: INFO: TARGET SAID: 'ERROR: did found any entry.'
+
+04:36:37: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:37: INFO: Overall to target  0.016 seconds (62.50 MBps)
+04:36:37: INFO: 
+04:36:37: INFO: =======================================================
+04:36:37: INFO: ==================== {SUCCESS} ========================
+04:36:37: INFO: =======================================================
+
+
+04:36:37: INFO: In handleProgram('tme_config_a.img')
+04:36:37: INFO: Looking for file 'tme_config_a.img'
+04:36:37: INFO: =======================================================
+04:36:37: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/tme_config_a.img'}
+04:36:37: INFO: {<program> (128.00 KB) 32 sectors needed at location 1355 on LUN 1}
+04:36:37: INFO: =======================================================
+
+
+04:36:37: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:37: INFO: TARGET SAID: 'ERROR: did found any entry.'
+
+04:36:37: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:37: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:36:37: INFO: 
+04:36:37: INFO: =======================================================
+04:36:37: INFO: ==================== {SUCCESS} ========================
+04:36:37: INFO: =======================================================
+
+
+04:36:37: INFO: In handleProgram('xbl_ac_config_a.img')
+04:36:37: INFO: Looking for file 'xbl_ac_config_a.img'
+04:36:37: INFO: =======================================================
+04:36:37: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/xbl_ac_config_a.img'}
+04:36:37: INFO: {<program> (128.00 KB) 32 sectors needed at location 1387 on LUN 1}
+04:36:37: INFO: =======================================================
+
+
+04:36:37: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:37: INFO: TARGET SAID: 'ERROR: did found any entry.'
+
+04:36:37: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:37: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:36:37: INFO: 
+04:36:37: INFO: =======================================================
+04:36:37: INFO: ==================== {SUCCESS} ========================
+04:36:37: INFO: =======================================================
+
+
+04:36:37: INFO: ==============================================================
+04:36:37: INFO: Files used and their paths
+04:36:37: INFO:   1 './/port_trace.txt'
+04:36:37: INFO:   2 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/rawprogram1.xml'
+04:36:37: INFO:   3 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/xbl_a.img'
+04:36:37: INFO:   4 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/xbl_config_a.img'
+04:36:37: INFO:   5 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/multiimgqti_a.img'
+04:36:37: INFO:   6 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/multiimgoem_a.img'
+04:36:37: INFO:   7 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/apdp.img'
+04:36:37: INFO:   8 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/tme_seq_patch_a.img'
+04:36:37: INFO:   9 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/tme_fw_a.img'
+04:36:37: INFO:  10 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/tme_config_a.img'
+04:36:37: INFO:  11 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/xbl_ac_config_a.img'
+
+04:36:37: INFO:      _             (done)
+04:36:37: INFO:     | |                 
+04:36:37: INFO:   __| | ___  _ __   ___ 
+04:36:37: INFO:  / _` |/ _ \| '_ \ / _ \
+04:36:37: INFO: | (_| | (_) | | | |  __/
+04:36:37: INFO:  \__,_|\___/|_| |_|\___|
+04:36:37: INFO: {All Finished Successfully}
+
+04:36:37: INFO: Overall to target  0.718 seconds (7.69 MBps)
+
+Writing log, might take a minute
+
+
+Log at 'D:\Ai Work\Y700ֲColorOS\03_űģ\port_trace.txt'
+
+-- 写入 rawprogram2.xml
++ D:/Ai Work/Y700五代移植ColorOS/00_救生包/tools/violet-cli/fh_loader.exe --port=\\.\COM5 --sendxml=rawprogram2.xml --search_path=D:/Ai Work/Y700五代移植ColorOS/00_救生包/C17_ColorOS17移植包/image --memoryname=ufs --zlpawarehost=1 --noprompt
+
+Base Version: 23.06.20.17.11
+Binary build date: Nov 19 2025 @ 01:16:43
+Incremental Build version: 25.11.19.01.16.43
+
+04:36:37: INFO: Output Dir Already exists ./
+04:36:37: INFO: 1. Calling fopen('.//port_trace.txt') with AccessMode='w'
+04:36:37: INFO: FH_LOADER WAS CALLED EXACTLY LIKE THIS
+************************************************
+D:\Ai Work\Y700ֲColorOS\00_\tools\violet-cli\fh_loader.exe --port=\\.\COM5 --sendxml=rawprogram2.xml --search_path=D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image --memoryname=ufs --zlpawarehost=1 --noprompt 
+************************************************
+
+04:36:37: INFO: Current working dir (cwd): D:\Ai Work\Y700ֲColorOS\03_űģ\
+04:36:37: INFO: Showing network mappings to allow debugging
+04:36:37: INFO: 
+
+
+
+04:36:37: INFO: Trying to store 'rawprogram2.xml' in string table
+04:36:37: INFO: Looking for file 'rawprogram2.xml'
+04:36:37: INFO: User wants to talk to port '\\.\COM5'
+04:36:37: INFO: Took       0.00000000 seconds to open port
+04:36:37: INFO: Sorting TAGS to ensure order is <configure>,<erase>, others, <patch>,<power>
+04:36:37: INFO: Sending <configure>
+
+04:36:37: INFO: TARGET SAID: 'INFO: Calling handler for configure'
+
+04:36:37: INFO: TARGET SAID: 'INFO: Storage type set to value UFS'
+04:36:37: INFO: fh.attrs.MaxPayloadSizeToTargetInBytes = 1048576
+04:36:37: INFO: fh.attrs.MaxPayloadSizeToTargetInBytesSupported = 1048576
+04:36:37: INFO: In handleProgram('xbl_b.img')
+04:36:37: INFO: Looking for file 'xbl_b.img'
+04:36:37: INFO: =======================================================
+04:36:37: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/xbl_b.img'}
+04:36:37: INFO: {<program> (3.50 MB) 896 sectors needed at location 6 on LUN 2}
+04:36:37: INFO: =======================================================
+
+
+04:36:37: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:37: INFO: TARGET SAID: 'ERROR: did found any entry.'
+
+04:36:37: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:38: INFO: Overall to target  0.078 seconds (44.87 MBps)
+04:36:38: INFO: 
+04:36:38: INFO: =======================================================
+04:36:38: INFO: ==================== {SUCCESS} ========================
+04:36:38: INFO: =======================================================
+
+
+04:36:38: INFO: In handleProgram('xbl_config_b.img')
+04:36:38: INFO: Looking for file 'xbl_config_b.img'
+04:36:38: INFO: =======================================================
+04:36:38: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/xbl_config_b.img'}
+04:36:38: INFO: {<program> (460.00 KB) 115 sectors needed at location 902 on LUN 2}
+04:36:38: INFO: =======================================================
+
+
+04:36:38: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:38: INFO: TARGET SAID: 'ERROR: did found any entry.'
+
+04:36:38: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:38: INFO: Overall to target  0.015 seconds (29.95 MBps)
+04:36:38: INFO: 
+04:36:38: INFO: =======================================================
+04:36:38: INFO: ==================== {SUCCESS} ========================
+04:36:38: INFO: =======================================================
+
+
+04:36:38: INFO: In handleProgram('multiimgqti_b.img')
+04:36:38: INFO: Looking for file 'multiimgqti_b.img'
+04:36:38: INFO: =======================================================
+04:36:38: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/multiimgqti_b.img'}
+04:36:38: INFO: {<program> (32.00 KB) 8 sectors needed at location 1017 on LUN 2}
+04:36:38: INFO: =======================================================
+
+
+04:36:38: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:38: INFO: TARGET SAID: 'ERROR: did found any entry.'
+
+04:36:38: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:38: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:36:38: INFO: 
+04:36:38: INFO: =======================================================
+04:36:38: INFO: ==================== {SUCCESS} ========================
+04:36:38: INFO: =======================================================
+
+
+04:36:38: INFO: In handleProgram('multiimgoem_b.img')
+04:36:38: INFO: Looking for file 'multiimgoem_b.img'
+04:36:38: INFO: =======================================================
+04:36:38: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/multiimgoem_b.img'}
+04:36:38: INFO: {<program> (32.00 KB) 8 sectors needed at location 1025 on LUN 2}
+04:36:38: INFO: =======================================================
+
+
+04:36:38: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:38: INFO: TARGET SAID: 'ERROR: did found any entry.'
+
+04:36:38: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:38: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:36:38: INFO: 
+04:36:38: INFO: =======================================================
+04:36:38: INFO: ==================== {SUCCESS} ========================
+04:36:38: INFO: =======================================================
+
+
+04:36:38: INFO: In handleProgram('apdpb.img')
+04:36:38: INFO: Looking for file 'apdpb.img'
+04:36:38: INFO: =======================================================
+04:36:38: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/apdpb.img'}
+04:36:38: INFO: {<program> (256.00 KB) 64 sectors needed at location 1033 on LUN 2}
+04:36:38: INFO: =======================================================
+
+
+04:36:38: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:38: INFO: TARGET SAID: 'ERROR: did found any entry.'
+
+04:36:38: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:38: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:36:38: INFO: 
+04:36:38: INFO: =======================================================
+04:36:38: INFO: ==================== {SUCCESS} ========================
+04:36:38: INFO: =======================================================
+
+
+04:36:38: INFO: In handleProgram('tme_seq_patch_b.img')
+04:36:38: INFO: Looking for file 'tme_seq_patch_b.img'
+04:36:38: INFO: =======================================================
+04:36:38: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/tme_seq_patch_b.img'}
+04:36:38: INFO: {<program> (8.00 KB) 2 sectors needed at location 1097 on LUN 2}
+04:36:38: INFO: =======================================================
+
+
+04:36:38: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:38: INFO: TARGET SAID: 'ERROR: did found any entry.'
+
+04:36:38: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:38: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:36:38: INFO: 
+04:36:38: INFO: =======================================================
+04:36:38: INFO: ==================== {SUCCESS} ========================
+04:36:38: INFO: =======================================================
+
+
+04:36:38: INFO: In handleProgram('tme_fw_b.img')
+04:36:38: INFO: Looking for file 'tme_fw_b.img'
+04:36:38: INFO: =======================================================
+04:36:38: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/tme_fw_b.img'}
+04:36:38: INFO: {<program> (1.00 MB) 256 sectors needed at location 1099 on LUN 2}
+04:36:38: INFO: =======================================================
+
+
+04:36:38: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:38: INFO: TARGET SAID: 'ERROR: did found any entry.'
+
+04:36:38: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:38: INFO: Overall to target  0.015 seconds (66.67 MBps)
+04:36:38: INFO: 
+04:36:38: INFO: =======================================================
+04:36:38: INFO: ==================== {SUCCESS} ========================
+04:36:38: INFO: =======================================================
+
+
+04:36:38: INFO: In handleProgram('tme_config_b.img')
+04:36:38: INFO: Looking for file 'tme_config_b.img'
+04:36:38: INFO: =======================================================
+04:36:38: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/tme_config_b.img'}
+04:36:38: INFO: {<program> (128.00 KB) 32 sectors needed at location 1355 on LUN 2}
+04:36:38: INFO: =======================================================
+
+
+04:36:38: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:38: INFO: TARGET SAID: 'ERROR: did found any entry.'
+
+04:36:38: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:38: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:36:38: INFO: 
+04:36:38: INFO: =======================================================
+04:36:38: INFO: ==================== {SUCCESS} ========================
+04:36:38: INFO: =======================================================
+
+
+04:36:38: INFO: In handleProgram('xbl_ac_config_b.img')
+04:36:38: INFO: Looking for file 'xbl_ac_config_b.img'
+04:36:38: INFO: =======================================================
+04:36:38: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/xbl_ac_config_b.img'}
+04:36:38: INFO: {<program> (128.00 KB) 32 sectors needed at location 1387 on LUN 2}
+04:36:38: INFO: =======================================================
+
+
+04:36:38: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:38: INFO: TARGET SAID: 'ERROR: did found any entry.'
+
+04:36:38: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:38: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:36:38: INFO: 
+04:36:38: INFO: =======================================================
+04:36:38: INFO: ==================== {SUCCESS} ========================
+04:36:38: INFO: =======================================================
+
+
+04:36:38: INFO: ==============================================================
+04:36:38: INFO: Files used and their paths
+04:36:38: INFO:   1 './/port_trace.txt'
+04:36:38: INFO:   2 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/rawprogram2.xml'
+04:36:38: INFO:   3 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/xbl_b.img'
+04:36:38: INFO:   4 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/xbl_config_b.img'
+04:36:38: INFO:   5 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/multiimgqti_b.img'
+04:36:38: INFO:   6 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/multiimgoem_b.img'
+04:36:38: INFO:   7 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/apdpb.img'
+04:36:38: INFO:   8 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/tme_seq_patch_b.img'
+04:36:38: INFO:   9 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/tme_fw_b.img'
+04:36:38: INFO:  10 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/tme_config_b.img'
+04:36:38: INFO:  11 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/xbl_ac_config_b.img'
+
+04:36:38: INFO:      _             (done)
+04:36:38: INFO:     | |                 
+04:36:38: INFO:   __| | ___  _ __   ___ 
+04:36:38: INFO:  / _` |/ _ \| '_ \ / _ \
+04:36:38: INFO: | (_| | (_) | | | |  __/
+04:36:38: INFO:  \__,_|\___/|_| |_|\___|
+04:36:38: INFO: {All Finished Successfully}
+
+04:36:38: INFO: Overall to target  0.734 seconds (7.52 MBps)
+
+Writing log, might take a minute
+
+
+Log at 'D:\Ai Work\Y700ֲColorOS\03_űģ\port_trace.txt'
+
+-- 写入 rawprogram3.xml
++ D:/Ai Work/Y700五代移植ColorOS/00_救生包/tools/violet-cli/fh_loader.exe --port=\\.\COM5 --sendxml=rawprogram3.xml --search_path=D:/Ai Work/Y700五代移植ColorOS/00_救生包/C17_ColorOS17移植包/image --memoryname=ufs --zlpawarehost=1 --noprompt
+
+Base Version: 23.06.20.17.11
+Binary build date: Nov 19 2025 @ 01:16:43
+Incremental Build version: 25.11.19.01.16.43
+
+04:36:38: INFO: Output Dir Already exists ./
+04:36:38: INFO: 1. Calling fopen('.//port_trace.txt') with AccessMode='w'
+04:36:38: INFO: FH_LOADER WAS CALLED EXACTLY LIKE THIS
+************************************************
+D:\Ai Work\Y700ֲColorOS\00_\tools\violet-cli\fh_loader.exe --port=\\.\COM5 --sendxml=rawprogram3.xml --search_path=D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image --memoryname=ufs --zlpawarehost=1 --noprompt 
+************************************************
+
+04:36:38: INFO: Current working dir (cwd): D:\Ai Work\Y700ֲColorOS\03_űģ\
+04:36:38: INFO: Showing network mappings to allow debugging
+04:36:38: INFO: 
+
+
+
+04:36:38: INFO: Trying to store 'rawprogram3.xml' in string table
+04:36:38: INFO: Looking for file 'rawprogram3.xml'
+04:36:38: INFO: User wants to talk to port '\\.\COM5'
+04:36:38: INFO: Took       0.01500000 seconds to open port
+04:36:38: INFO: Sorting TAGS to ensure order is <configure>,<erase>, others, <patch>,<power>
+04:36:38: INFO: Sending <configure>
+
+04:36:38: INFO: TARGET SAID: 'INFO: Calling handler for configure'
+
+04:36:38: INFO: TARGET SAID: 'INFO: Storage type set to value UFS'
+04:36:38: INFO: fh.attrs.MaxPayloadSizeToTargetInBytes = 1048576
+04:36:38: INFO: fh.attrs.MaxPayloadSizeToTargetInBytesSupported = 1048576
+04:36:38: INFO: In handleProgram('ALIGN_TO_128K_1.img')
+04:36:38: INFO: Looking for file 'ALIGN_TO_128K_1.img'
+04:36:38: INFO: =======================================================
+04:36:38: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/ALIGN_TO_128K_1.img'}
+04:36:38: INFO: {<program> (104.00 KB) 26 sectors needed at location 6 on LUN 3}
+04:36:38: INFO: =======================================================
+
+
+04:36:38: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:38: INFO: TARGET SAID: 'ERROR: did found any entry.'
+
+04:36:38: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:38: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:36:38: INFO: 
+04:36:38: INFO: =======================================================
+04:36:38: INFO: ==================== {SUCCESS} ========================
+04:36:38: INFO: =======================================================
+
+
+04:36:38: INFO: In handleProgram('cdt.img')
+04:36:38: INFO: Looking for file 'cdt.img'
+04:36:38: INFO: =======================================================
+04:36:38: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/cdt.img'}
+04:36:38: INFO: {<program> (128.00 KB) 32 sectors needed at location 32 on LUN 3}
+04:36:38: INFO: =======================================================
+
+
+04:36:38: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:38: INFO: TARGET SAID: 'ERROR: did found any entry.'
+
+04:36:38: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:38: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:36:38: INFO: 
+04:36:38: INFO: =======================================================
+04:36:38: INFO: ==================== {SUCCESS} ========================
+04:36:38: INFO: =======================================================
+
+
+04:36:38: INFO: In handleProgram('ddr.img')
+04:36:38: INFO: Looking for file 'ddr.img'
+04:36:38: INFO: =======================================================
+04:36:38: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/ddr.img'}
+04:36:38: INFO: {<program> (1.00 MB) 256 sectors needed at location 64 on LUN 3}
+04:36:38: INFO: =======================================================
+
+
+04:36:38: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:38: INFO: TARGET SAID: 'ERROR: did found any entry.'
+
+04:36:38: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:38: INFO: Overall to target  0.016 seconds (62.50 MBps)
+04:36:38: INFO: 
+04:36:38: INFO: =======================================================
+04:36:38: INFO: ==================== {SUCCESS} ========================
+04:36:38: INFO: =======================================================
+
+
+04:36:38: INFO: ==============================================================
+04:36:38: INFO: Files used and their paths
+04:36:38: INFO:   1 './/port_trace.txt'
+04:36:38: INFO:   2 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/rawprogram3.xml'
+04:36:38: INFO:   3 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/ALIGN_TO_128K_1.img'
+04:36:38: INFO:   4 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/cdt.img'
+04:36:38: INFO:   5 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/ddr.img'
+
+04:36:38: INFO:      _             (done)
+04:36:38: INFO:     | |                 
+04:36:38: INFO:   __| | ___  _ __   ___ 
+04:36:38: INFO:  / _` |/ _ \| '_ \ / _ \
+04:36:38: INFO: | (_| | (_) | | | |  __/
+04:36:38: INFO:  \__,_|\___/|_| |_|\___|
+04:36:38: INFO: {All Finished Successfully}
+
+04:36:38: INFO: Overall to target  0.250 seconds (4.91 MBps)
+
+Writing log, might take a minute
+
+
+Log at 'D:\Ai Work\Y700ֲColorOS\03_űģ\port_trace.txt'
+
+-- 写入 rawprogram4.xml
++ D:/Ai Work/Y700五代移植ColorOS/00_救生包/tools/violet-cli/fh_loader.exe --port=\\.\COM5 --sendxml=rawprogram4.xml --search_path=D:/Ai Work/Y700五代移植ColorOS/00_救生包/C17_ColorOS17移植包/image --memoryname=ufs --zlpawarehost=1 --noprompt
+
+Base Version: 23.06.20.17.11
+Binary build date: Nov 19 2025 @ 01:16:43
+Incremental Build version: 25.11.19.01.16.43
+
+04:36:38: INFO: Output Dir Already exists ./
+04:36:38: INFO: 1. Calling fopen('.//port_trace.txt') with AccessMode='w'
+04:36:38: INFO: FH_LOADER WAS CALLED EXACTLY LIKE THIS
+************************************************
+D:\Ai Work\Y700ֲColorOS\00_\tools\violet-cli\fh_loader.exe --port=\\.\COM5 --sendxml=rawprogram4.xml --search_path=D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image --memoryname=ufs --zlpawarehost=1 --noprompt 
+************************************************
+
+04:36:38: INFO: Current working dir (cwd): D:\Ai Work\Y700ֲColorOS\03_űģ\
+04:36:38: INFO: Showing network mappings to allow debugging
+04:36:39: INFO: 
+
+
+
+04:36:39: INFO: Trying to store 'rawprogram4.xml' in string table
+04:36:39: INFO: Looking for file 'rawprogram4.xml'
+04:36:39: INFO: User wants to talk to port '\\.\COM5'
+04:36:39: INFO: Took       0.00000000 seconds to open port
+04:36:39: INFO: Sorting TAGS to ensure order is <configure>,<erase>, others, <patch>,<power>
+04:36:39: INFO: Sending <configure>
+
+04:36:39: INFO: TARGET SAID: 'INFO: Calling handler for configure'
+
+04:36:39: INFO: TARGET SAID: 'INFO: Storage type set to value UFS'
+04:36:39: INFO: fh.attrs.MaxPayloadSizeToTargetInBytes = 1048576
+04:36:39: INFO: fh.attrs.MaxPayloadSizeToTargetInBytesSupported = 1048576
+04:36:39: INFO: In handleProgram('uefi_a.img')
+04:36:39: INFO: Looking for file 'uefi_a.img'
+04:36:39: INFO: =======================================================
+04:36:39: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/uefi_a.img'}
+04:36:39: INFO: {<program> (5.00 MB) 1280 sectors needed at location 6 on LUN 4}
+04:36:39: INFO: =======================================================
+
+
+04:36:39: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:39: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:36:39: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:39: INFO: Overall to target  0.109 seconds (45.87 MBps)
+04:36:39: INFO: 
+04:36:39: INFO: =======================================================
+04:36:39: INFO: ==================== {SUCCESS} ========================
+04:36:39: INFO: =======================================================
+
+
+04:36:39: INFO: In handleProgram('aop_a.img')
+04:36:39: INFO: Looking for file 'aop_a.img'
+04:36:39: INFO: =======================================================
+04:36:39: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/aop_a.img'}
+04:36:39: INFO: {<program> (512.00 KB) 128 sectors needed at location 1286 on LUN 4}
+04:36:39: INFO: =======================================================
+
+
+04:36:39: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:39: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:36:39: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:39: INFO: Overall to target  0.015 seconds (33.33 MBps)
+04:36:39: INFO: 
+04:36:39: INFO: =======================================================
+04:36:39: INFO: ==================== {SUCCESS} ========================
+04:36:39: INFO: =======================================================
+
+
+04:36:39: INFO: In handleProgram('aop_config_a.img')
+04:36:39: INFO: Looking for file 'aop_config_a.img'
+04:36:39: INFO: =======================================================
+04:36:39: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/aop_config_a.img'}
+04:36:39: INFO: {<program> (512.00 KB) 128 sectors needed at location 1414 on LUN 4}
+04:36:39: INFO: =======================================================
+
+
+04:36:39: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:39: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:36:39: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:39: INFO: Overall to target  0.015 seconds (33.33 MBps)
+04:36:39: INFO: 
+04:36:39: INFO: =======================================================
+04:36:39: INFO: ==================== {SUCCESS} ========================
+04:36:39: INFO: =======================================================
+
+
+04:36:39: INFO: In handleProgram('tz_a.img')
+04:36:39: INFO: Looking for file 'tz_a.img'
+04:36:39: INFO: =======================================================
+04:36:39: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/tz_a.img'}
+04:36:39: INFO: {<program> (8.00 MB) 2048 sectors needed at location 1542 on LUN 4}
+04:36:39: INFO: =======================================================
+
+
+04:36:39: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:39: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:36:39: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:39: INFO: Overall to target  0.172 seconds (46.51 MBps)
+04:36:39: INFO: 
+04:36:39: INFO: =======================================================
+04:36:39: INFO: ==================== {SUCCESS} ========================
+04:36:39: INFO: =======================================================
+
+
+04:36:39: INFO: In handleProgram('hyp_a.img')
+04:36:39: INFO: Looking for file 'hyp_a.img'
+04:36:39: INFO: =======================================================
+04:36:39: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/hyp_a.img'}
+04:36:39: INFO: {<program> (8.00 MB) 2048 sectors needed at location 3590 on LUN 4}
+04:36:39: INFO: =======================================================
+
+
+04:36:39: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:39: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:36:39: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:39: INFO: Overall to target  0.172 seconds (46.51 MBps)
+04:36:39: INFO: 
+04:36:39: INFO: =======================================================
+04:36:39: INFO: ==================== {SUCCESS} ========================
+04:36:39: INFO: =======================================================
+
+
+04:36:39: INFO: In handleProgram('modem_a.img')
+04:36:39: INFO: Looking for file 'modem_a.img'
+04:36:39: INFO: =======================================================
+04:36:39: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/modem_a.img'}
+04:36:39: INFO: {<program> (350.00 MB) 89600 sectors needed at location 5638 on LUN 4}
+04:36:39: INFO: =======================================================
+
+
+04:36:39: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:39: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:36:39: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:41: INFO: Overall to target  2.000 seconds (45.00 MBps)
+04:36:43: INFO: Overall to target  4.000 seconds (44.75 MBps)
+04:36:45: INFO: Overall to target  6.015 seconds (44.89 MBps)
+04:36:47: INFO: Overall to target  7.812 seconds (44.80 MBps)
+04:36:47: INFO: 
+04:36:47: INFO: =======================================================
+04:36:47: INFO: ==================== {SUCCESS} ========================
+04:36:47: INFO: =======================================================
+
+
+04:36:47: INFO: In handleProgram('bluetooth_a.img')
+04:36:47: INFO: Looking for file 'bluetooth_a.img'
+04:36:47: INFO: =======================================================
+04:36:47: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/bluetooth_a.img'}
+04:36:47: INFO: {<program> (8.00 MB) 2048 sectors needed at location 95238 on LUN 4}
+04:36:47: INFO: =======================================================
+
+
+04:36:47: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:47: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:36:47: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:48: INFO: Overall to target  0.187 seconds (42.78 MBps)
+04:36:48: INFO: 
+04:36:48: INFO: =======================================================
+04:36:48: INFO: ==================== {SUCCESS} ========================
+04:36:48: INFO: =======================================================
+
+
+04:36:48: INFO: In handleProgram('abl_a.img')
+04:36:48: INFO: Looking for file 'abl_a.img'
+04:36:48: INFO: =======================================================
+04:36:48: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/abl_a.img'}
+04:36:48: INFO: {<program> (1.00 MB) 256 sectors needed at location 97286 on LUN 4}
+04:36:48: INFO: =======================================================
+
+
+04:36:48: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:48: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:36:48: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:48: INFO: Overall to target  0.031 seconds (32.26 MBps)
+04:36:48: INFO: 
+04:36:48: INFO: =======================================================
+04:36:48: INFO: ==================== {SUCCESS} ========================
+04:36:48: INFO: =======================================================
+
+
+04:36:48: INFO: In handleProgram('dsp_a.img')
+04:36:48: INFO: Looking for file 'dsp_a.img'
+04:36:48: INFO: =======================================================
+04:36:48: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/dsp_a.img'}
+04:36:48: INFO: {<program> (74.00 MB) 18944 sectors needed at location 97542 on LUN 4}
+04:36:48: INFO: =======================================================
+
+
+04:36:48: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:48: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:36:48: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:49: INFO: Overall to target  1.656 seconds (44.69 MBps)
+04:36:49: INFO: 
+04:36:49: INFO: =======================================================
+04:36:49: INFO: ==================== {SUCCESS} ========================
+04:36:49: INFO: =======================================================
+
+
+04:36:49: INFO: In handleProgram('keymaster_a.img')
+04:36:49: INFO: Looking for file 'keymaster_a.img'
+04:36:49: INFO: =======================================================
+04:36:49: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/keymaster_a.img'}
+04:36:49: INFO: {<program> (10.00 MB) 2560 sectors needed at location 116486 on LUN 4}
+04:36:49: INFO: =======================================================
+
+
+04:36:49: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:49: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:36:49: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:50: INFO: Overall to target  0.219 seconds (45.66 MBps)
+04:36:50: INFO: 
+04:36:50: INFO: =======================================================
+04:36:50: INFO: ==================== {SUCCESS} ========================
+04:36:50: INFO: =======================================================
+
+
+04:36:50: INFO: In handleProgram('spuservice_a.img')
+04:36:50: INFO: Looking for file 'spuservice_a.img'
+04:36:50: INFO: =======================================================
+04:36:50: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/spuservice_a.img'}
+04:36:50: INFO: {<program> (128.00 KB) 32 sectors needed at location 119046 on LUN 4}
+04:36:50: INFO: =======================================================
+
+
+04:36:50: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:50: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:36:50: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:50: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:36:50: INFO: 
+04:36:50: INFO: =======================================================
+04:36:50: INFO: ==================== {SUCCESS} ========================
+04:36:50: INFO: =======================================================
+
+
+04:36:50: INFO: In handleProgram('boot_a.img')
+04:36:50: INFO: Looking for file 'boot_a.img'
+04:36:50: INFO: =======================================================
+04:36:50: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/boot_a.img'}
+04:36:50: INFO: {<program> (96.00 MB) 24576 sectors needed at location 119078 on LUN 4}
+04:36:50: INFO: =======================================================
+
+
+04:36:50: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:50: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:36:50: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:52: INFO: Overall to target  2.000 seconds (45.00 MBps)
+04:36:52: INFO: Overall to target  2.156 seconds (44.53 MBps)
+04:36:52: INFO: 
+04:36:52: INFO: =======================================================
+04:36:52: INFO: ==================== {SUCCESS} ========================
+04:36:52: INFO: =======================================================
+
+
+04:36:52: INFO: In handleProgram('devcfg_a.img')
+04:36:52: INFO: Looking for file 'devcfg_a.img'
+04:36:52: INFO: =======================================================
+04:36:52: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/devcfg_a.img'}
+04:36:52: INFO: {<program> (128.00 KB) 32 sectors needed at location 143654 on LUN 4}
+04:36:52: INFO: =======================================================
+
+
+04:36:52: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:52: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:36:52: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:52: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:36:52: INFO: 
+04:36:52: INFO: =======================================================
+04:36:52: INFO: ==================== {SUCCESS} ========================
+04:36:52: INFO: =======================================================
+
+
+04:36:52: INFO: In handleProgram('qupfw_a.img')
+04:36:52: INFO: Looking for file 'qupfw_a.img'
+04:36:52: INFO: =======================================================
+04:36:52: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/qupfw_a.img'}
+04:36:52: INFO: {<program> (80.00 KB) 20 sectors needed at location 143686 on LUN 4}
+04:36:52: INFO: =======================================================
+
+
+04:36:52: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:52: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:36:52: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:52: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:36:52: INFO: 
+04:36:52: INFO: =======================================================
+04:36:52: INFO: ==================== {SUCCESS} ========================
+04:36:52: INFO: =======================================================
+
+
+04:36:52: INFO: In handleProgram('vbmeta_a.img')
+04:36:52: INFO: Looking for file 'vbmeta_a.img'
+04:36:52: INFO: =======================================================
+04:36:52: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/vbmeta_a.img'}
+04:36:52: INFO: {<program> (64.00 KB) 16 sectors needed at location 143706 on LUN 4}
+04:36:52: INFO: =======================================================
+
+
+04:36:52: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:52: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:36:52: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:52: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:36:52: INFO: 
+04:36:52: INFO: =======================================================
+04:36:52: INFO: ==================== {SUCCESS} ========================
+04:36:52: INFO: =======================================================
+
+
+04:36:52: INFO: In handleProgram('dtbo_a.img')
+04:36:52: INFO: Looking for file 'dtbo_a.img'
+04:36:52: INFO: =======================================================
+04:36:52: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/dtbo_a.img'}
+04:36:52: INFO: {<program> (72.00 MB) 18432 sectors needed at location 143722 on LUN 4}
+04:36:52: INFO: =======================================================
+
+
+04:36:52: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:52: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:36:52: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:54: INFO: Overall to target  1.610 seconds (44.72 MBps)
+04:36:54: INFO: 
+04:36:54: INFO: =======================================================
+04:36:54: INFO: ==================== {SUCCESS} ========================
+04:36:54: INFO: =======================================================
+
+
+04:36:54: INFO: In handleProgram('uefisecapp_a.img')
+04:36:54: INFO: Looking for file 'uefisecapp_a.img'
+04:36:54: INFO: =======================================================
+04:36:54: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/uefisecapp_a.img'}
+04:36:54: INFO: {<program> (2.00 MB) 512 sectors needed at location 162154 on LUN 4}
+04:36:54: INFO: =======================================================
+
+
+04:36:54: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:54: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:36:54: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:54: INFO: Overall to target  0.047 seconds (42.55 MBps)
+04:36:54: INFO: 
+04:36:54: INFO: =======================================================
+04:36:54: INFO: ==================== {SUCCESS} ========================
+04:36:54: INFO: =======================================================
+
+
+04:36:54: INFO: In handleProgram('imagefv_a.img')
+04:36:54: INFO: Looking for file 'imagefv_a.img'
+04:36:54: INFO: =======================================================
+04:36:54: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/imagefv_a.img'}
+04:36:54: INFO: {<program> (2.00 MB) 512 sectors needed at location 162666 on LUN 4}
+04:36:54: INFO: =======================================================
+
+
+04:36:54: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:54: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:36:54: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:54: INFO: Overall to target  0.046 seconds (43.48 MBps)
+04:36:54: INFO: 
+04:36:54: INFO: =======================================================
+04:36:54: INFO: ==================== {SUCCESS} ========================
+04:36:54: INFO: =======================================================
+
+
+04:36:54: INFO: In handleProgram('shrm_a.img')
+04:36:54: INFO: Looking for file 'shrm_a.img'
+04:36:54: INFO: =======================================================
+04:36:54: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/shrm_a.img'}
+04:36:54: INFO: {<program> (256.00 KB) 64 sectors needed at location 163178 on LUN 4}
+04:36:54: INFO: =======================================================
+
+
+04:36:54: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:54: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:36:54: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:54: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:36:54: INFO: 
+04:36:54: INFO: =======================================================
+04:36:54: INFO: ==================== {SUCCESS} ========================
+04:36:54: INFO: =======================================================
+
+
+04:36:54: INFO: In handleProgram('vm-bootsys_a.img')
+04:36:54: INFO: Looking for file 'vm-bootsys_a.img'
+04:36:54: INFO: =======================================================
+04:36:54: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/vm-bootsys_a.img'}
+04:36:54: INFO: {<program> (537.11 MB) 137500 sectors needed at location 163242 on LUN 4}
+04:36:54: INFO: =======================================================
+
+
+04:36:54: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:36:54: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:36:54: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:36:56: INFO: Overall to target  2.000 seconds (45.50 MBps)
+04:36:58: INFO: Overall to target  4.000 seconds (45.25 MBps)
+04:37:00: INFO: Overall to target  6.000 seconds (45.17 MBps)
+04:37:02: INFO: Overall to target  8.000 seconds (45.12 MBps)
+04:37:04: INFO: Overall to target 10.000 seconds (45.10 MBps)
+04:37:06: INFO: Overall to target 11.938 seconds (44.99 MBps)
+04:37:06: INFO: 
+04:37:06: INFO: =======================================================
+04:37:06: INFO: ==================== {SUCCESS} ========================
+04:37:06: INFO: =======================================================
+
+
+04:37:06: INFO: In handleProgram('qtvm_dtbo_a.img')
+04:37:06: INFO: Looking for file 'qtvm_dtbo_a.img'
+04:37:06: INFO: =======================================================
+04:37:06: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/qtvm_dtbo_a.img'}
+04:37:06: INFO: {<program> (5.00 MB) 1280 sectors needed at location 300742 on LUN 4}
+04:37:06: INFO: =======================================================
+
+
+04:37:06: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:06: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:06: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:06: INFO: Overall to target  0.110 seconds (45.45 MBps)
+04:37:06: INFO: 
+04:37:06: INFO: =======================================================
+04:37:06: INFO: ==================== {SUCCESS} ========================
+04:37:06: INFO: =======================================================
+
+
+04:37:06: INFO: In handleProgram('cpucp_a.img')
+04:37:06: INFO: Looking for file 'cpucp_a.img'
+04:37:06: INFO: =======================================================
+04:37:06: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/cpucp_a.img'}
+04:37:06: INFO: {<program> (1.00 MB) 256 sectors needed at location 302022 on LUN 4}
+04:37:06: INFO: =======================================================
+
+
+04:37:06: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:06: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:06: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:06: INFO: Overall to target  0.032 seconds (31.25 MBps)
+04:37:06: INFO: 
+04:37:06: INFO: =======================================================
+04:37:06: INFO: ==================== {SUCCESS} ========================
+04:37:06: INFO: =======================================================
+
+
+04:37:06: INFO: In handleProgram('featenabler_a.img')
+04:37:06: INFO: Looking for file 'featenabler_a.img'
+04:37:06: INFO: =======================================================
+04:37:06: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/featenabler_a.img'}
+04:37:06: INFO: {<program> (128.00 KB) 32 sectors needed at location 302278 on LUN 4}
+04:37:06: INFO: =======================================================
+
+
+04:37:06: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:06: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:06: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:06: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:37:06: INFO: 
+04:37:06: INFO: =======================================================
+04:37:06: INFO: ==================== {SUCCESS} ========================
+04:37:06: INFO: =======================================================
+
+
+04:37:06: INFO: In handleProgram('vendor_boot_a.img')
+04:37:06: INFO: Looking for file 'vendor_boot_a.img'
+04:37:06: INFO: =======================================================
+04:37:06: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/vendor_boot_a.img'}
+04:37:06: INFO: {<program> (96.00 MB) 24576 sectors needed at location 302310 on LUN 4}
+04:37:06: INFO: =======================================================
+
+
+04:37:06: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:06: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:06: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:08: INFO: Overall to target  2.000 seconds (45.50 MBps)
+04:37:09: INFO: Overall to target  2.140 seconds (44.86 MBps)
+04:37:09: INFO: 
+04:37:09: INFO: =======================================================
+04:37:09: INFO: ==================== {SUCCESS} ========================
+04:37:09: INFO: =======================================================
+
+
+04:37:09: INFO: In handleProgram('qmcs.img')
+04:37:09: INFO: Looking for file 'qmcs.img'
+04:37:09: INFO: =======================================================
+04:37:09: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/qmcs.img'}
+04:37:09: INFO: {<program> (30.00 MB) 7680 sectors needed at location 326886 on LUN 4}
+04:37:09: INFO: =======================================================
+
+
+04:37:09: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:09: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:09: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:09: INFO: Overall to target  0.656 seconds (45.73 MBps)
+04:37:09: INFO: 
+04:37:09: INFO: =======================================================
+04:37:09: INFO: ==================== {SUCCESS} ========================
+04:37:09: INFO: =======================================================
+
+
+04:37:09: INFO: In handleProgram('qweslicstore_a.img')
+04:37:09: INFO: Looking for file 'qweslicstore_a.img'
+04:37:09: INFO: =======================================================
+04:37:09: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/qweslicstore_a.img'}
+04:37:09: INFO: {<program> (256.00 KB) 64 sectors needed at location 334566 on LUN 4}
+04:37:09: INFO: =======================================================
+
+
+04:37:09: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:09: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:09: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:09: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:37:09: INFO: 
+04:37:09: INFO: =======================================================
+04:37:09: INFO: ==================== {SUCCESS} ========================
+04:37:09: INFO: =======================================================
+
+
+04:37:09: INFO: In handleProgram('recovery_a.img')
+04:37:09: INFO: Looking for file 'recovery_a.img'
+04:37:09: INFO: =======================================================
+04:37:09: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/recovery_a.img'}
+04:37:09: INFO: {<program> (100.00 MB) 25600 sectors needed at location 334630 on LUN 4}
+04:37:09: INFO: =======================================================
+
+
+04:37:09: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:09: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:09: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:11: INFO: Overall to target  2.000 seconds (45.50 MBps)
+04:37:12: INFO: Overall to target  2.218 seconds (45.09 MBps)
+04:37:12: INFO: 
+04:37:12: INFO: =======================================================
+04:37:12: INFO: ==================== {SUCCESS} ========================
+04:37:12: INFO: =======================================================
+
+
+04:37:12: INFO: In handleProgram('xbl_ramdump_a.img')
+04:37:12: INFO: Looking for file 'xbl_ramdump_a.img'
+04:37:12: INFO: =======================================================
+04:37:12: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/xbl_ramdump_a.img'}
+04:37:12: INFO: {<program> (2.00 MB) 512 sectors needed at location 360230 on LUN 4}
+04:37:12: INFO: =======================================================
+
+
+04:37:12: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:12: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:12: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:12: INFO: Overall to target  0.047 seconds (42.55 MBps)
+04:37:12: INFO: 
+04:37:12: INFO: =======================================================
+04:37:12: INFO: ==================== {SUCCESS} ========================
+04:37:12: INFO: =======================================================
+
+
+04:37:12: INFO: In handleProgram('init_boot_a.img')
+04:37:12: INFO: Looking for file 'init_boot_a.img'
+04:37:12: INFO: =======================================================
+04:37:12: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/init_boot_a.img'}
+04:37:12: INFO: {<program> (8.00 MB) 2048 sectors needed at location 360742 on LUN 4}
+04:37:12: INFO: =======================================================
+
+
+04:37:12: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:12: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:12: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:12: INFO: Overall to target  0.188 seconds (42.55 MBps)
+04:37:12: INFO: 
+04:37:12: INFO: =======================================================
+04:37:12: INFO: ==================== {SUCCESS} ========================
+04:37:12: INFO: =======================================================
+
+
+04:37:12: INFO: In handleProgram('cpucp_dtb_a.img')
+04:37:12: INFO: Looking for file 'cpucp_dtb_a.img'
+04:37:12: INFO: =======================================================
+04:37:12: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/cpucp_dtb_a.img'}
+04:37:12: INFO: {<program> (64.00 KB) 16 sectors needed at location 362790 on LUN 4}
+04:37:12: INFO: =======================================================
+
+
+04:37:12: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:12: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:12: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:12: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:37:12: INFO: 
+04:37:12: INFO: =======================================================
+04:37:12: INFO: ==================== {SUCCESS} ========================
+04:37:12: INFO: =======================================================
+
+
+04:37:12: INFO: In handleProgram('pvmfw_a.img')
+04:37:12: INFO: Looking for file 'pvmfw_a.img'
+04:37:12: INFO: =======================================================
+04:37:12: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/pvmfw_a.img'}
+04:37:12: INFO: {<program> (1.00 MB) 256 sectors needed at location 362806 on LUN 4}
+04:37:12: INFO: =======================================================
+
+
+04:37:12: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:12: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:12: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:12: INFO: Overall to target  0.031 seconds (32.26 MBps)
+04:37:12: INFO: 
+04:37:12: INFO: =======================================================
+04:37:12: INFO: ==================== {SUCCESS} ========================
+04:37:12: INFO: =======================================================
+
+
+04:37:12: INFO: In handleProgram('soccp_a.img')
+04:37:12: INFO: Looking for file 'soccp_a.img'
+04:37:12: INFO: =======================================================
+04:37:12: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/soccp_a.img'}
+04:37:12: INFO: {<program> (8.00 MB) 2048 sectors needed at location 363062 on LUN 4}
+04:37:12: INFO: =======================================================
+
+
+04:37:12: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:12: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:12: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:12: INFO: Overall to target  0.187 seconds (42.78 MBps)
+04:37:12: INFO: 
+04:37:12: INFO: =======================================================
+04:37:12: INFO: ==================== {SUCCESS} ========================
+04:37:12: INFO: =======================================================
+
+
+04:37:12: INFO: In handleProgram('soccp_debug_a.img')
+04:37:12: INFO: Looking for file 'soccp_debug_a.img'
+04:37:12: INFO: =======================================================
+04:37:12: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/soccp_debug_a.img'}
+04:37:12: INFO: {<program> (512.00 KB) 128 sectors needed at location 365110 on LUN 4}
+04:37:12: INFO: =======================================================
+
+
+04:37:12: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:12: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:12: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:12: INFO: Overall to target  0.016 seconds (31.25 MBps)
+04:37:12: INFO: 
+04:37:12: INFO: =======================================================
+04:37:12: INFO: ==================== {SUCCESS} ========================
+04:37:12: INFO: =======================================================
+
+
+04:37:12: INFO: In handleProgram('soccp_dcd_a.img')
+04:37:12: INFO: Looking for file 'soccp_dcd_a.img'
+04:37:12: INFO: =======================================================
+04:37:12: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/soccp_dcd_a.img'}
+04:37:12: INFO: {<program> (24.00 KB) 6 sectors needed at location 365238 on LUN 4}
+04:37:12: INFO: =======================================================
+
+
+04:37:13: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:13: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:13: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:13: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:37:13: INFO: 
+04:37:13: INFO: =======================================================
+04:37:13: INFO: ==================== {SUCCESS} ========================
+04:37:13: INFO: =======================================================
+
+
+04:37:13: INFO: In handleProgram('pdp_a.img')
+04:37:13: INFO: Looking for file 'pdp_a.img'
+04:37:13: INFO: =======================================================
+04:37:13: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/pdp_a.img'}
+04:37:13: INFO: {<program> (512.00 KB) 128 sectors needed at location 365244 on LUN 4}
+04:37:13: INFO: =======================================================
+
+
+04:37:13: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:13: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:13: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:13: INFO: Overall to target  0.015 seconds (33.33 MBps)
+04:37:13: INFO: 
+04:37:13: INFO: =======================================================
+04:37:13: INFO: ==================== {SUCCESS} ========================
+04:37:13: INFO: =======================================================
+
+
+04:37:13: INFO: In handleProgram('pdp_cdb_a.img')
+04:37:13: INFO: Looking for file 'pdp_cdb_a.img'
+04:37:13: INFO: =======================================================
+04:37:13: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/pdp_cdb_a.img'}
+04:37:13: INFO: {<program> (128.00 KB) 32 sectors needed at location 365372 on LUN 4}
+04:37:13: INFO: =======================================================
+
+
+04:37:13: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:13: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:13: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:13: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:37:13: INFO: 
+04:37:13: INFO: =======================================================
+04:37:13: INFO: ==================== {SUCCESS} ========================
+04:37:13: INFO: =======================================================
+
+
+04:37:13: INFO: In handleProgram('tz_ac_config_a.img')
+04:37:13: INFO: Looking for file 'tz_ac_config_a.img'
+04:37:13: INFO: =======================================================
+04:37:13: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/tz_ac_config_a.img'}
+04:37:13: INFO: {<program> (256.00 KB) 64 sectors needed at location 365404 on LUN 4}
+04:37:13: INFO: =======================================================
+
+
+04:37:13: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:13: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:13: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:13: INFO: Overall to target  0.016 seconds (15.62 MBps)
+04:37:13: INFO: 
+04:37:13: INFO: =======================================================
+04:37:13: INFO: ==================== {SUCCESS} ========================
+04:37:13: INFO: =======================================================
+
+
+04:37:13: INFO: In handleProgram('hyp_ac_config_a.img')
+04:37:13: INFO: Looking for file 'hyp_ac_config_a.img'
+04:37:13: INFO: =======================================================
+04:37:13: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/hyp_ac_config_a.img'}
+04:37:13: INFO: {<program> (256.00 KB) 64 sectors needed at location 365468 on LUN 4}
+04:37:13: INFO: =======================================================
+
+
+04:37:13: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:13: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:13: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:13: INFO: Overall to target  0.016 seconds (15.62 MBps)
+04:37:13: INFO: 
+04:37:13: INFO: =======================================================
+04:37:13: INFO: ==================== {SUCCESS} ========================
+04:37:13: INFO: =======================================================
+
+
+04:37:13: INFO: In handleProgram('dcp_a.img')
+04:37:13: INFO: Looking for file 'dcp_a.img'
+04:37:13: INFO: =======================================================
+04:37:13: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/dcp_a.img'}
+04:37:13: INFO: {<program> (8.00 MB) 2048 sectors needed at location 365532 on LUN 4}
+04:37:13: INFO: =======================================================
+
+
+04:37:13: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:13: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:13: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:13: INFO: Overall to target  0.188 seconds (42.55 MBps)
+04:37:13: INFO: 
+04:37:13: INFO: =======================================================
+04:37:13: INFO: ==================== {SUCCESS} ========================
+04:37:13: INFO: =======================================================
+
+
+04:37:13: INFO: In handleProgram('tz_qti_config_a.img')
+04:37:13: INFO: Looking for file 'tz_qti_config_a.img'
+04:37:13: INFO: =======================================================
+04:37:13: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/tz_qti_config_a.img'}
+04:37:13: INFO: {<program> (200.00 KB) 50 sectors needed at location 367580 on LUN 4}
+04:37:13: INFO: =======================================================
+
+
+04:37:13: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:13: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:13: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:13: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:37:13: INFO: 
+04:37:13: INFO: =======================================================
+04:37:13: INFO: ==================== {SUCCESS} ========================
+04:37:13: INFO: =======================================================
+
+
+04:37:13: INFO: In handleProgram('secretkeeper_a.img')
+04:37:13: INFO: Looking for file 'secretkeeper_a.img'
+04:37:13: INFO: =======================================================
+04:37:13: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/secretkeeper_a.img'}
+04:37:13: INFO: {<program> (8.00 MB) 2048 sectors needed at location 367630 on LUN 4}
+04:37:13: INFO: =======================================================
+
+
+04:37:13: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:13: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:13: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:13: INFO: Overall to target  0.187 seconds (42.78 MBps)
+04:37:13: INFO: 
+04:37:13: INFO: =======================================================
+04:37:13: INFO: ==================== {SUCCESS} ========================
+04:37:13: INFO: =======================================================
+
+
+04:37:13: INFO: In handleProgram('pvmfw_signed_a.img')
+04:37:13: INFO: Looking for file 'pvmfw_signed_a.img'
+04:37:13: INFO: =======================================================
+04:37:13: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/pvmfw_signed_a.img'}
+04:37:13: INFO: {<program> (1.00 MB) 256 sectors needed at location 369678 on LUN 4}
+04:37:13: INFO: =======================================================
+
+
+04:37:13: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:13: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:13: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:13: INFO: Overall to target  0.031 seconds (32.26 MBps)
+04:37:13: INFO: 
+04:37:13: INFO: =======================================================
+04:37:13: INFO: ==================== {SUCCESS} ========================
+04:37:13: INFO: =======================================================
+
+
+04:37:13: INFO: In handleProgram('uefi_b.img')
+04:37:13: INFO: Looking for file 'uefi_b.img'
+04:37:13: INFO: =======================================================
+04:37:13: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/uefi_b.img'}
+04:37:13: INFO: {<program> (5.00 MB) 1280 sectors needed at location 369934 on LUN 4}
+04:37:13: INFO: =======================================================
+
+
+04:37:14: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:14: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:14: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:14: INFO: Overall to target  0.109 seconds (45.87 MBps)
+04:37:14: INFO: 
+04:37:14: INFO: =======================================================
+04:37:14: INFO: ==================== {SUCCESS} ========================
+04:37:14: INFO: =======================================================
+
+
+04:37:14: INFO: In handleProgram('aop_b.img')
+04:37:14: INFO: Looking for file 'aop_b.img'
+04:37:14: INFO: =======================================================
+04:37:14: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/aop_b.img'}
+04:37:14: INFO: {<program> (512.00 KB) 128 sectors needed at location 371214 on LUN 4}
+04:37:14: INFO: =======================================================
+
+
+04:37:14: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:14: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:14: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:14: INFO: Overall to target  0.015 seconds (33.33 MBps)
+04:37:14: INFO: 
+04:37:14: INFO: =======================================================
+04:37:14: INFO: ==================== {SUCCESS} ========================
+04:37:14: INFO: =======================================================
+
+
+04:37:14: INFO: In handleProgram('aop_config_b.img')
+04:37:14: INFO: Looking for file 'aop_config_b.img'
+04:37:14: INFO: =======================================================
+04:37:14: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/aop_config_b.img'}
+04:37:14: INFO: {<program> (512.00 KB) 128 sectors needed at location 371342 on LUN 4}
+04:37:14: INFO: =======================================================
+
+
+04:37:14: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:14: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:14: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:14: INFO: Overall to target  0.015 seconds (33.33 MBps)
+04:37:14: INFO: 
+04:37:14: INFO: =======================================================
+04:37:14: INFO: ==================== {SUCCESS} ========================
+04:37:14: INFO: =======================================================
+
+
+04:37:14: INFO: In handleProgram('tz_b.img')
+04:37:14: INFO: Looking for file 'tz_b.img'
+04:37:14: INFO: =======================================================
+04:37:14: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/tz_b.img'}
+04:37:14: INFO: {<program> (8.00 MB) 2048 sectors needed at location 371470 on LUN 4}
+04:37:14: INFO: =======================================================
+
+
+04:37:14: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:14: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:14: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:14: INFO: Overall to target  0.172 seconds (46.51 MBps)
+04:37:14: INFO: 
+04:37:14: INFO: =======================================================
+04:37:14: INFO: ==================== {SUCCESS} ========================
+04:37:14: INFO: =======================================================
+
+
+04:37:14: INFO: In handleProgram('hyp_b.img')
+04:37:14: INFO: Looking for file 'hyp_b.img'
+04:37:14: INFO: =======================================================
+04:37:14: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/hyp_b.img'}
+04:37:14: INFO: {<program> (8.00 MB) 2048 sectors needed at location 373518 on LUN 4}
+04:37:14: INFO: =======================================================
+
+
+04:37:14: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:14: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:14: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:14: INFO: Overall to target  0.172 seconds (46.51 MBps)
+04:37:14: INFO: 
+04:37:14: INFO: =======================================================
+04:37:14: INFO: ==================== {SUCCESS} ========================
+04:37:14: INFO: =======================================================
+
+
+04:37:14: INFO: In handleProgram('modem_b.img')
+04:37:14: INFO: Looking for file 'modem_b.img'
+04:37:14: INFO: =======================================================
+04:37:14: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/modem_b.img'}
+04:37:14: INFO: {<program> (350.00 MB) 89600 sectors needed at location 375566 on LUN 4}
+04:37:14: INFO: =======================================================
+
+
+04:37:14: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:14: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:14: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:16: INFO: Overall to target  2.000 seconds (45.50 MBps)
+04:37:18: INFO: Overall to target  4.016 seconds (45.32 MBps)
+04:37:20: INFO: Overall to target  6.031 seconds (45.27 MBps)
+04:37:22: INFO: Overall to target  7.750 seconds (45.16 MBps)
+04:37:22: INFO: 
+04:37:22: INFO: =======================================================
+04:37:22: INFO: ==================== {SUCCESS} ========================
+04:37:22: INFO: =======================================================
+
+
+04:37:22: INFO: In handleProgram('bluetooth_b.img')
+04:37:22: INFO: Looking for file 'bluetooth_b.img'
+04:37:22: INFO: =======================================================
+04:37:22: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/bluetooth_b.img'}
+04:37:22: INFO: {<program> (8.00 MB) 2048 sectors needed at location 465166 on LUN 4}
+04:37:22: INFO: =======================================================
+
+
+04:37:22: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:22: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:22: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:22: INFO: Overall to target  0.172 seconds (46.51 MBps)
+04:37:22: INFO: 
+04:37:22: INFO: =======================================================
+04:37:22: INFO: ==================== {SUCCESS} ========================
+04:37:22: INFO: =======================================================
+
+
+04:37:22: INFO: In handleProgram('abl_b.img')
+04:37:22: INFO: Looking for file 'abl_b.img'
+04:37:22: INFO: =======================================================
+04:37:22: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/abl_b.img'}
+04:37:22: INFO: {<program> (1.00 MB) 256 sectors needed at location 467214 on LUN 4}
+04:37:22: INFO: =======================================================
+
+
+04:37:22: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:22: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:22: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:22: INFO: Overall to target  0.015 seconds (66.67 MBps)
+04:37:22: INFO: 
+04:37:22: INFO: =======================================================
+04:37:22: INFO: ==================== {SUCCESS} ========================
+04:37:22: INFO: =======================================================
+
+
+04:37:22: INFO: In handleProgram('dsp_b.img')
+04:37:22: INFO: Looking for file 'dsp_b.img'
+04:37:22: INFO: =======================================================
+04:37:22: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/dsp_b.img'}
+04:37:22: INFO: {<program> (74.00 MB) 18944 sectors needed at location 467470 on LUN 4}
+04:37:22: INFO: =======================================================
+
+
+04:37:22: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:22: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:22: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:24: INFO: Overall to target  1.641 seconds (45.09 MBps)
+04:37:24: INFO: 
+04:37:24: INFO: =======================================================
+04:37:24: INFO: ==================== {SUCCESS} ========================
+04:37:24: INFO: =======================================================
+
+
+04:37:24: INFO: In handleProgram('keymaster_b.img')
+04:37:24: INFO: Looking for file 'keymaster_b.img'
+04:37:24: INFO: =======================================================
+04:37:24: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/keymaster_b.img'}
+04:37:24: INFO: {<program> (10.00 MB) 2560 sectors needed at location 486414 on LUN 4}
+04:37:24: INFO: =======================================================
+
+
+04:37:24: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:24: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:24: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:24: INFO: Overall to target  0.234 seconds (42.74 MBps)
+04:37:24: INFO: 
+04:37:24: INFO: =======================================================
+04:37:24: INFO: ==================== {SUCCESS} ========================
+04:37:24: INFO: =======================================================
+
+
+04:37:24: INFO: In handleProgram('spuservice_b.img')
+04:37:24: INFO: Looking for file 'spuservice_b.img'
+04:37:24: INFO: =======================================================
+04:37:24: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/spuservice_b.img'}
+04:37:24: INFO: {<program> (128.00 KB) 32 sectors needed at location 488974 on LUN 4}
+04:37:24: INFO: =======================================================
+
+
+04:37:24: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:24: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:24: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:24: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:37:24: INFO: 
+04:37:24: INFO: =======================================================
+04:37:24: INFO: ==================== {SUCCESS} ========================
+04:37:24: INFO: =======================================================
+
+
+04:37:24: INFO: In handleProgram('boot_b.img')
+04:37:24: INFO: Looking for file 'boot_b.img'
+04:37:24: INFO: =======================================================
+04:37:24: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/boot_b.img'}
+04:37:24: INFO: {<program> (96.00 MB) 24576 sectors needed at location 489006 on LUN 4}
+04:37:24: INFO: =======================================================
+
+
+04:37:25: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:25: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:25: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:26: INFO: Overall to target  2.000 seconds (45.00 MBps)
+04:37:27: INFO: Overall to target  2.140 seconds (44.86 MBps)
+04:37:27: INFO: 
+04:37:27: INFO: =======================================================
+04:37:27: INFO: ==================== {SUCCESS} ========================
+04:37:27: INFO: =======================================================
+
+
+04:37:27: INFO: In handleProgram('devcfg_b.img')
+04:37:27: INFO: Looking for file 'devcfg_b.img'
+04:37:27: INFO: =======================================================
+04:37:27: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/devcfg_b.img'}
+04:37:27: INFO: {<program> (128.00 KB) 32 sectors needed at location 513582 on LUN 4}
+04:37:27: INFO: =======================================================
+
+
+04:37:27: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:27: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:27: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:27: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:37:27: INFO: 
+04:37:27: INFO: =======================================================
+04:37:27: INFO: ==================== {SUCCESS} ========================
+04:37:27: INFO: =======================================================
+
+
+04:37:27: INFO: In handleProgram('qupfw_b.img')
+04:37:27: INFO: Looking for file 'qupfw_b.img'
+04:37:27: INFO: =======================================================
+04:37:27: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/qupfw_b.img'}
+04:37:27: INFO: {<program> (80.00 KB) 20 sectors needed at location 513614 on LUN 4}
+04:37:27: INFO: =======================================================
+
+
+04:37:27: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:27: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:27: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:27: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:37:27: INFO: 
+04:37:27: INFO: =======================================================
+04:37:27: INFO: ==================== {SUCCESS} ========================
+04:37:27: INFO: =======================================================
+
+
+04:37:27: INFO: In handleProgram('vbmeta_b.img')
+04:37:27: INFO: Looking for file 'vbmeta_b.img'
+04:37:27: INFO: =======================================================
+04:37:27: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/vbmeta_b.img'}
+04:37:27: INFO: {<program> (64.00 KB) 16 sectors needed at location 513634 on LUN 4}
+04:37:27: INFO: =======================================================
+
+
+04:37:27: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:27: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:27: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:27: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:37:27: INFO: 
+04:37:27: INFO: =======================================================
+04:37:27: INFO: ==================== {SUCCESS} ========================
+04:37:27: INFO: =======================================================
+
+
+04:37:27: INFO: In handleProgram('dtbo_b.img')
+04:37:27: INFO: Looking for file 'dtbo_b.img'
+04:37:27: INFO: =======================================================
+04:37:27: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/dtbo_b.img'}
+04:37:27: INFO: {<program> (72.00 MB) 18432 sectors needed at location 513650 on LUN 4}
+04:37:27: INFO: =======================================================
+
+
+04:37:27: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:27: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:27: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:28: INFO: Overall to target  1.610 seconds (44.72 MBps)
+04:37:29: INFO: 
+04:37:29: INFO: =======================================================
+04:37:29: INFO: ==================== {SUCCESS} ========================
+04:37:29: INFO: =======================================================
+
+
+04:37:29: INFO: In handleProgram('uefisecapp_b.img')
+04:37:29: INFO: Looking for file 'uefisecapp_b.img'
+04:37:29: INFO: =======================================================
+04:37:29: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/uefisecapp_b.img'}
+04:37:29: INFO: {<program> (2.00 MB) 512 sectors needed at location 532082 on LUN 4}
+04:37:29: INFO: =======================================================
+
+
+04:37:29: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:29: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:29: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:29: INFO: Overall to target  0.047 seconds (42.55 MBps)
+04:37:29: INFO: 
+04:37:29: INFO: =======================================================
+04:37:29: INFO: ==================== {SUCCESS} ========================
+04:37:29: INFO: =======================================================
+
+
+04:37:29: INFO: In handleProgram('imagefv_b.img')
+04:37:29: INFO: Looking for file 'imagefv_b.img'
+04:37:29: INFO: =======================================================
+04:37:29: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/imagefv_b.img'}
+04:37:29: INFO: {<program> (2.00 MB) 512 sectors needed at location 532594 on LUN 4}
+04:37:29: INFO: =======================================================
+
+
+04:37:29: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:29: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:29: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:29: INFO: Overall to target  0.046 seconds (43.48 MBps)
+04:37:29: INFO: 
+04:37:29: INFO: =======================================================
+04:37:29: INFO: ==================== {SUCCESS} ========================
+04:37:29: INFO: =======================================================
+
+
+04:37:29: INFO: In handleProgram('shrm_b.img')
+04:37:29: INFO: Looking for file 'shrm_b.img'
+04:37:29: INFO: =======================================================
+04:37:29: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/shrm_b.img'}
+04:37:29: INFO: {<program> (256.00 KB) 64 sectors needed at location 533106 on LUN 4}
+04:37:29: INFO: =======================================================
+
+
+04:37:29: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:29: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:29: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:29: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:37:29: INFO: 
+04:37:29: INFO: =======================================================
+04:37:29: INFO: ==================== {SUCCESS} ========================
+04:37:29: INFO: =======================================================
+
+
+04:37:29: INFO: In handleProgram('vm-bootsys_b.img')
+04:37:29: INFO: Looking for file 'vm-bootsys_b.img'
+04:37:29: INFO: =======================================================
+04:37:29: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/vm-bootsys_b.img'}
+04:37:29: INFO: {<program> (537.11 MB) 137500 sectors needed at location 533170 on LUN 4}
+04:37:29: INFO: =======================================================
+
+
+04:37:29: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:29: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:29: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:31: INFO: Overall to target  2.000 seconds (45.50 MBps)
+04:37:33: INFO: Overall to target  4.000 seconds (45.25 MBps)
+04:37:35: INFO: Overall to target  6.000 seconds (45.00 MBps)
+04:37:37: INFO: Overall to target  8.000 seconds (45.00 MBps)
+04:37:39: INFO: Overall to target 10.000 seconds (45.00 MBps)
+04:37:41: INFO: Overall to target 11.954 seconds (44.93 MBps)
+04:37:41: INFO: 
+04:37:41: INFO: =======================================================
+04:37:41: INFO: ==================== {SUCCESS} ========================
+04:37:41: INFO: =======================================================
+
+
+04:37:41: INFO: In handleProgram('qtvm_dtbo_b.img')
+04:37:41: INFO: Looking for file 'qtvm_dtbo_b.img'
+04:37:41: INFO: =======================================================
+04:37:41: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/qtvm_dtbo_b.img'}
+04:37:41: INFO: {<program> (5.00 MB) 1280 sectors needed at location 670670 on LUN 4}
+04:37:41: INFO: =======================================================
+
+
+04:37:41: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:41: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:41: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:41: INFO: Overall to target  0.109 seconds (45.87 MBps)
+04:37:41: INFO: 
+04:37:41: INFO: =======================================================
+04:37:41: INFO: ==================== {SUCCESS} ========================
+04:37:41: INFO: =======================================================
+
+
+04:37:41: INFO: In handleProgram('cpucp_b.img')
+04:37:41: INFO: Looking for file 'cpucp_b.img'
+04:37:41: INFO: =======================================================
+04:37:41: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/cpucp_b.img'}
+04:37:41: INFO: {<program> (1.00 MB) 256 sectors needed at location 671950 on LUN 4}
+04:37:41: INFO: =======================================================
+
+
+04:37:41: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:41: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:41: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:41: INFO: Overall to target  0.031 seconds (32.26 MBps)
+04:37:41: INFO: 
+04:37:41: INFO: =======================================================
+04:37:41: INFO: ==================== {SUCCESS} ========================
+04:37:41: INFO: =======================================================
+
+
+04:37:41: INFO: In handleProgram('featenabler_b.img')
+04:37:41: INFO: Looking for file 'featenabler_b.img'
+04:37:41: INFO: =======================================================
+04:37:41: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/featenabler_b.img'}
+04:37:41: INFO: {<program> (128.00 KB) 32 sectors needed at location 672206 on LUN 4}
+04:37:41: INFO: =======================================================
+
+
+04:37:41: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:41: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:41: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:41: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:37:41: INFO: 
+04:37:41: INFO: =======================================================
+04:37:41: INFO: ==================== {SUCCESS} ========================
+04:37:41: INFO: =======================================================
+
+
+04:37:41: INFO: In handleProgram('vendor_boot_b.img')
+04:37:41: INFO: Looking for file 'vendor_boot_b.img'
+04:37:41: INFO: =======================================================
+04:37:41: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/vendor_boot_b.img'}
+04:37:41: INFO: {<program> (96.00 MB) 24576 sectors needed at location 672238 on LUN 4}
+04:37:41: INFO: =======================================================
+
+
+04:37:41: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:41: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:41: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:43: INFO: Overall to target  2.000 seconds (45.50 MBps)
+04:37:43: INFO: Overall to target  2.141 seconds (44.84 MBps)
+04:37:43: INFO: 
+04:37:43: INFO: =======================================================
+04:37:43: INFO: ==================== {SUCCESS} ========================
+04:37:43: INFO: =======================================================
+
+
+04:37:43: INFO: In handleProgram('qweslicstore_b.img')
+04:37:43: INFO: Looking for file 'qweslicstore_b.img'
+04:37:43: INFO: =======================================================
+04:37:43: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/qweslicstore_b.img'}
+04:37:43: INFO: {<program> (256.00 KB) 64 sectors needed at location 696814 on LUN 4}
+04:37:43: INFO: =======================================================
+
+
+04:37:43: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:43: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:43: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:43: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:37:43: INFO: 
+04:37:43: INFO: =======================================================
+04:37:43: INFO: ==================== {SUCCESS} ========================
+04:37:43: INFO: =======================================================
+
+
+04:37:43: INFO: In handleProgram('recovery_b.img')
+04:37:43: INFO: Looking for file 'recovery_b.img'
+04:37:43: INFO: =======================================================
+04:37:43: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/recovery_b.img'}
+04:37:43: INFO: {<program> (100.00 MB) 25600 sectors needed at location 696878 on LUN 4}
+04:37:43: INFO: =======================================================
+
+
+04:37:43: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:43: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:43: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:45: INFO: Overall to target  2.015 seconds (45.16 MBps)
+04:37:46: INFO: Overall to target  2.234 seconds (44.76 MBps)
+04:37:46: INFO: 
+04:37:46: INFO: =======================================================
+04:37:46: INFO: ==================== {SUCCESS} ========================
+04:37:46: INFO: =======================================================
+
+
+04:37:46: INFO: In handleProgram('xbl_ramdump_b.img')
+04:37:46: INFO: Looking for file 'xbl_ramdump_b.img'
+04:37:46: INFO: =======================================================
+04:37:46: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/xbl_ramdump_b.img'}
+04:37:46: INFO: {<program> (2.00 MB) 512 sectors needed at location 722478 on LUN 4}
+04:37:46: INFO: =======================================================
+
+
+04:37:46: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:46: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:46: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:46: INFO: Overall to target  0.047 seconds (42.55 MBps)
+04:37:46: INFO: 
+04:37:46: INFO: =======================================================
+04:37:46: INFO: ==================== {SUCCESS} ========================
+04:37:46: INFO: =======================================================
+
+
+04:37:46: INFO: In handleProgram('init_boot_b.img')
+04:37:46: INFO: Looking for file 'init_boot_b.img'
+04:37:46: INFO: =======================================================
+04:37:46: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/init_boot_b.img'}
+04:37:46: INFO: {<program> (8.00 MB) 2048 sectors needed at location 722990 on LUN 4}
+04:37:46: INFO: =======================================================
+
+
+04:37:46: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:46: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:46: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:46: INFO: Overall to target  0.188 seconds (42.55 MBps)
+04:37:46: INFO: 
+04:37:46: INFO: =======================================================
+04:37:46: INFO: ==================== {SUCCESS} ========================
+04:37:46: INFO: =======================================================
+
+
+04:37:46: INFO: In handleProgram('cpucp_dtb_b.img')
+04:37:46: INFO: Looking for file 'cpucp_dtb_b.img'
+04:37:46: INFO: =======================================================
+04:37:46: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/cpucp_dtb_b.img'}
+04:37:46: INFO: {<program> (64.00 KB) 16 sectors needed at location 725038 on LUN 4}
+04:37:46: INFO: =======================================================
+
+
+04:37:46: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:46: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:46: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:46: INFO: Overall to target  0.016 seconds (3.91 MBps)
+04:37:46: INFO: 
+04:37:46: INFO: =======================================================
+04:37:46: INFO: ==================== {SUCCESS} ========================
+04:37:46: INFO: =======================================================
+
+
+04:37:46: INFO: In handleProgram('pvmfw_b.img')
+04:37:46: INFO: Looking for file 'pvmfw_b.img'
+04:37:46: INFO: =======================================================
+04:37:46: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/pvmfw_b.img'}
+04:37:46: INFO: {<program> (1.00 MB) 256 sectors needed at location 725054 on LUN 4}
+04:37:46: INFO: =======================================================
+
+
+04:37:46: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:46: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:46: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:46: INFO: Overall to target  0.031 seconds (32.26 MBps)
+04:37:46: INFO: 
+04:37:46: INFO: =======================================================
+04:37:46: INFO: ==================== {SUCCESS} ========================
+04:37:46: INFO: =======================================================
+
+
+04:37:46: INFO: In handleProgram('soccp_b.img')
+04:37:46: INFO: Looking for file 'soccp_b.img'
+04:37:46: INFO: =======================================================
+04:37:46: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/soccp_b.img'}
+04:37:46: INFO: {<program> (8.00 MB) 2048 sectors needed at location 725310 on LUN 4}
+04:37:46: INFO: =======================================================
+
+
+04:37:46: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:46: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:46: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:46: INFO: Overall to target  0.187 seconds (42.78 MBps)
+04:37:46: INFO: 
+04:37:46: INFO: =======================================================
+04:37:46: INFO: ==================== {SUCCESS} ========================
+04:37:46: INFO: =======================================================
+
+
+04:37:46: INFO: In handleProgram('soccp_debug_b.img')
+04:37:46: INFO: Looking for file 'soccp_debug_b.img'
+04:37:46: INFO: =======================================================
+04:37:46: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/soccp_debug_b.img'}
+04:37:46: INFO: {<program> (512.00 KB) 128 sectors needed at location 727358 on LUN 4}
+04:37:46: INFO: =======================================================
+
+
+04:37:46: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:46: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:46: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:47: INFO: Overall to target  0.016 seconds (31.25 MBps)
+04:37:47: INFO: 
+04:37:47: INFO: =======================================================
+04:37:47: INFO: ==================== {SUCCESS} ========================
+04:37:47: INFO: =======================================================
+
+
+04:37:47: INFO: In handleProgram('soccp_dcd_b.img')
+04:37:47: INFO: Looking for file 'soccp_dcd_b.img'
+04:37:47: INFO: =======================================================
+04:37:47: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/soccp_dcd_b.img'}
+04:37:47: INFO: {<program> (24.00 KB) 6 sectors needed at location 727486 on LUN 4}
+04:37:47: INFO: =======================================================
+
+
+04:37:47: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:47: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:47: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:47: INFO: Overall to target  0.016 seconds (1.46 MBps)
+04:37:47: INFO: 
+04:37:47: INFO: =======================================================
+04:37:47: INFO: ==================== {SUCCESS} ========================
+04:37:47: INFO: =======================================================
+
+
+04:37:47: INFO: In handleProgram('pdp_b.img')
+04:37:47: INFO: Looking for file 'pdp_b.img'
+04:37:47: INFO: =======================================================
+04:37:47: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/pdp_b.img'}
+04:37:47: INFO: {<program> (512.00 KB) 128 sectors needed at location 727492 on LUN 4}
+04:37:47: INFO: =======================================================
+
+
+04:37:47: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:47: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:47: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:47: INFO: Overall to target  0.015 seconds (33.33 MBps)
+04:37:47: INFO: 
+04:37:47: INFO: =======================================================
+04:37:47: INFO: ==================== {SUCCESS} ========================
+04:37:47: INFO: =======================================================
+
+
+04:37:47: INFO: In handleProgram('pdp_cdb_b.img')
+04:37:47: INFO: Looking for file 'pdp_cdb_b.img'
+04:37:47: INFO: =======================================================
+04:37:47: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/pdp_cdb_b.img'}
+04:37:47: INFO: {<program> (128.00 KB) 32 sectors needed at location 727620 on LUN 4}
+04:37:47: INFO: =======================================================
+
+
+04:37:47: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:47: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:47: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:47: INFO: Overall to target  0.015 seconds (8.33 MBps)
+04:37:47: INFO: 
+04:37:47: INFO: =======================================================
+04:37:47: INFO: ==================== {SUCCESS} ========================
+04:37:47: INFO: =======================================================
+
+
+04:37:47: INFO: In handleProgram('tz_ac_config_b.img')
+04:37:47: INFO: Looking for file 'tz_ac_config_b.img'
+04:37:47: INFO: =======================================================
+04:37:47: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/tz_ac_config_b.img'}
+04:37:47: INFO: {<program> (256.00 KB) 64 sectors needed at location 727652 on LUN 4}
+04:37:47: INFO: =======================================================
+
+
+04:37:47: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:47: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:47: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:47: INFO: Overall to target  0.016 seconds (15.62 MBps)
+04:37:47: INFO: 
+04:37:47: INFO: =======================================================
+04:37:47: INFO: ==================== {SUCCESS} ========================
+04:37:47: INFO: =======================================================
+
+
+04:37:47: INFO: In handleProgram('hyp_ac_config_b.img')
+04:37:47: INFO: Looking for file 'hyp_ac_config_b.img'
+04:37:47: INFO: =======================================================
+04:37:47: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/hyp_ac_config_b.img'}
+04:37:47: INFO: {<program> (256.00 KB) 64 sectors needed at location 727716 on LUN 4}
+04:37:47: INFO: =======================================================
+
+
+04:37:47: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:47: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:47: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:47: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:37:47: INFO: 
+04:37:47: INFO: =======================================================
+04:37:47: INFO: ==================== {SUCCESS} ========================
+04:37:47: INFO: =======================================================
+
+
+04:37:47: INFO: In handleProgram('dcp_b.img')
+04:37:47: INFO: Looking for file 'dcp_b.img'
+04:37:47: INFO: =======================================================
+04:37:47: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/dcp_b.img'}
+04:37:47: INFO: {<program> (8.00 MB) 2048 sectors needed at location 727780 on LUN 4}
+04:37:47: INFO: =======================================================
+
+
+04:37:47: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:47: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:47: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:47: INFO: Overall to target  0.172 seconds (46.51 MBps)
+04:37:47: INFO: 
+04:37:47: INFO: =======================================================
+04:37:47: INFO: ==================== {SUCCESS} ========================
+04:37:47: INFO: =======================================================
+
+
+04:37:47: INFO: In handleProgram('tz_qti_config_b.img')
+04:37:47: INFO: Looking for file 'tz_qti_config_b.img'
+04:37:47: INFO: =======================================================
+04:37:47: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/tz_qti_config_b.img'}
+04:37:47: INFO: {<program> (200.00 KB) 50 sectors needed at location 729828 on LUN 4}
+04:37:47: INFO: =======================================================
+
+
+04:37:47: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:47: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:47: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:47: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:37:47: INFO: 
+04:37:47: INFO: =======================================================
+04:37:47: INFO: ==================== {SUCCESS} ========================
+04:37:47: INFO: =======================================================
+
+
+04:37:47: INFO: In handleProgram('secretkeeper_b.img')
+04:37:47: INFO: Looking for file 'secretkeeper_b.img'
+04:37:47: INFO: =======================================================
+04:37:47: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/secretkeeper_b.img'}
+04:37:47: INFO: {<program> (8.00 MB) 2048 sectors needed at location 729878 on LUN 4}
+04:37:47: INFO: =======================================================
+
+
+04:37:47: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:47: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:47: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:47: INFO: Overall to target  0.172 seconds (46.51 MBps)
+04:37:47: INFO: 
+04:37:47: INFO: =======================================================
+04:37:47: INFO: ==================== {SUCCESS} ========================
+04:37:47: INFO: =======================================================
+
+
+04:37:47: INFO: In handleProgram('pvmfw_signed_b.img')
+04:37:47: INFO: Looking for file 'pvmfw_signed_b.img'
+04:37:47: INFO: =======================================================
+04:37:47: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/pvmfw_signed_b.img'}
+04:37:47: INFO: {<program> (1.00 MB) 256 sectors needed at location 731926 on LUN 4}
+04:37:47: INFO: =======================================================
+
+
+04:37:47: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:47: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:47: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:47: INFO: Overall to target  0.031 seconds (32.26 MBps)
+04:37:47: INFO: 
+04:37:47: INFO: =======================================================
+04:37:47: INFO: ==================== {SUCCESS} ========================
+04:37:47: INFO: =======================================================
+
+
+04:37:47: INFO: In handleProgram('efisp.img')
+04:37:47: INFO: Looking for file 'efisp.img'
+04:37:47: INFO: =======================================================
+04:37:47: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/efisp.img'}
+04:37:47: INFO: {<program> (3.00 MB) 768 sectors needed at location 732182 on LUN 4}
+04:37:47: INFO: =======================================================
+
+
+04:37:48: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:48: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:48: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:48: INFO: Overall to target  0.078 seconds (38.46 MBps)
+04:37:48: INFO: 
+04:37:48: INFO: =======================================================
+04:37:48: INFO: ==================== {SUCCESS} ========================
+04:37:48: INFO: =======================================================
+
+
+04:37:48: INFO: In handleProgram('toolsfv.img')
+04:37:48: INFO: Looking for file 'toolsfv.img'
+04:37:48: INFO: =======================================================
+04:37:48: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/toolsfv.img'}
+04:37:48: INFO: {<program> (1.00 MB) 256 sectors needed at location 732951 on LUN 4}
+04:37:48: INFO: =======================================================
+
+
+04:37:48: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:48: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:48: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:48: INFO: Overall to target  0.016 seconds (62.50 MBps)
+04:37:48: INFO: 
+04:37:48: INFO: =======================================================
+04:37:48: INFO: ==================== {SUCCESS} ========================
+04:37:48: INFO: =======================================================
+
+
+04:37:48: INFO: In handleProgram('logfs.img')
+04:37:48: INFO: Looking for file 'logfs.img'
+04:37:48: INFO: =======================================================
+04:37:48: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/logfs.img'}
+04:37:48: INFO: {<program> (8.00 MB) 2048 sectors needed at location 733207 on LUN 4}
+04:37:48: INFO: =======================================================
+
+
+04:37:48: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:48: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:48: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:48: INFO: Overall to target  0.172 seconds (46.51 MBps)
+04:37:48: INFO: 
+04:37:48: INFO: =======================================================
+04:37:48: INFO: ==================== {SUCCESS} ========================
+04:37:48: INFO: =======================================================
+
+
+04:37:48: INFO: In handleProgram('logdump.img')
+04:37:48: INFO: Looking for file 'logdump.img'
+04:37:48: INFO: =======================================================
+04:37:48: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/logdump.img'}
+04:37:48: INFO: {<program> (512.00 MB) 131072 sectors needed at location 735255 on LUN 4}
+04:37:48: INFO: =======================================================
+
+
+04:37:48: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:48: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:48: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:50: INFO: Overall to target  2.000 seconds (45.50 MBps)
+04:37:52: INFO: Overall to target  4.016 seconds (45.07 MBps)
+04:37:54: INFO: Overall to target  6.016 seconds (45.05 MBps)
+04:37:56: INFO: Overall to target  8.016 seconds (45.03 MBps)
+04:37:58: INFO: Overall to target 10.032 seconds (44.96 MBps)
+04:37:59: INFO: Overall to target 11.391 seconds (44.95 MBps)
+04:37:59: INFO: 
+04:37:59: INFO: =======================================================
+04:37:59: INFO: ==================== {SUCCESS} ========================
+04:37:59: INFO: =======================================================
+
+
+04:37:59: INFO: In handleProgram('storsec.img')
+04:37:59: INFO: Looking for file 'storsec.img'
+04:37:59: INFO: =======================================================
+04:37:59: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/storsec.img'}
+04:37:59: INFO: {<program> (128.00 KB) 32 sectors needed at location 866327 on LUN 4}
+04:37:59: INFO: =======================================================
+
+
+04:37:59: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:59: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:59: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:37:59: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:37:59: INFO: 
+04:37:59: INFO: =======================================================
+04:37:59: INFO: ==================== {SUCCESS} ========================
+04:37:59: INFO: =======================================================
+
+
+04:37:59: INFO: In handleProgram('uefivarstore.img')
+04:37:59: INFO: Looking for file 'uefivarstore.img'
+04:37:59: INFO: =======================================================
+04:37:59: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/uefivarstore.img'}
+04:37:59: INFO: {<program> (512.00 KB) 128 sectors needed at location 866359 on LUN 4}
+04:37:59: INFO: =======================================================
+
+
+04:37:59: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:37:59: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:37:59: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:38:00: INFO: Overall to target  0.016 seconds (31.25 MBps)
+04:38:00: INFO: 
+04:38:00: INFO: =======================================================
+04:38:00: INFO: ==================== {SUCCESS} ========================
+04:38:00: INFO: =======================================================
+
+
+04:38:00: INFO: In handleProgram('secdata.img')
+04:38:00: INFO: Looking for file 'secdata.img'
+04:38:00: INFO: =======================================================
+04:38:00: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/secdata.img'}
+04:38:00: INFO: {<program> (28.00 KB) 7 sectors needed at location 866487 on LUN 4}
+04:38:00: INFO: =======================================================
+
+
+04:38:00: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:38:00: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:38:00: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:38:00: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:38:00: INFO: 
+04:38:00: INFO: =======================================================
+04:38:00: INFO: ==================== {SUCCESS} ========================
+04:38:00: INFO: =======================================================
+
+
+04:38:00: INFO: In handleProgram('vm-persist.img')
+04:38:00: INFO: Looking for file 'vm-persist.img'
+04:38:00: INFO: =======================================================
+04:38:00: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/vm-persist.img'}
+04:38:00: INFO: {<program> (230.00 MB) 58880 sectors needed at location 866494 on LUN 4}
+04:38:00: INFO: =======================================================
+
+
+04:38:00: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:38:00: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:38:00: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:38:02: INFO: Overall to target  2.000 seconds (45.50 MBps)
+04:38:04: INFO: Overall to target  4.000 seconds (45.25 MBps)
+04:38:05: INFO: Overall to target  5.109 seconds (45.02 MBps)
+04:38:05: INFO: 
+04:38:05: INFO: =======================================================
+04:38:05: INFO: ==================== {SUCCESS} ========================
+04:38:05: INFO: =======================================================
+
+
+04:38:05: INFO: In handleProgram('mdcompress.img')
+04:38:05: INFO: Looking for file 'mdcompress.img'
+04:38:05: INFO: =======================================================
+04:38:05: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/mdcompress.img'}
+04:38:05: INFO: {<program> (20.00 MB) 5120 sectors needed at location 925374 on LUN 4}
+04:38:05: INFO: =======================================================
+
+
+04:38:05: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:38:05: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:38:05: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:38:05: INFO: Overall to target  0.453 seconds (44.15 MBps)
+04:38:05: INFO: 
+04:38:05: INFO: =======================================================
+04:38:05: INFO: ==================== {SUCCESS} ========================
+04:38:05: INFO: =======================================================
+
+
+04:38:05: INFO: In handleProgram('connsec.img')
+04:38:05: INFO: Looking for file 'connsec.img'
+04:38:05: INFO: =======================================================
+04:38:05: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/connsec.img'}
+04:38:05: INFO: {<program> (128.00 KB) 32 sectors needed at location 930494 on LUN 4}
+04:38:05: INFO: =======================================================
+
+
+04:38:05: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:38:05: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:38:05: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:38:05: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:38:05: INFO: 
+04:38:05: INFO: =======================================================
+04:38:05: INFO: ==================== {SUCCESS} ========================
+04:38:05: INFO: =======================================================
+
+
+04:38:05: INFO: In handleProgram('tzsc.img')
+04:38:05: INFO: Looking for file 'tzsc.img'
+04:38:05: INFO: =======================================================
+04:38:05: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/tzsc.img'}
+04:38:05: INFO: {<program> (128.00 KB) 32 sectors needed at location 930526 on LUN 4}
+04:38:05: INFO: =======================================================
+
+
+04:38:05: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:38:05: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:38:05: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:38:05: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:38:05: INFO: 
+04:38:05: INFO: =======================================================
+04:38:05: INFO: ==================== {SUCCESS} ========================
+04:38:05: INFO: =======================================================
+
+
+04:38:05: INFO: In handleProgram('spunvm.img')
+04:38:05: INFO: Looking for file 'spunvm.img'
+04:38:05: INFO: =======================================================
+04:38:05: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/spunvm.img'}
+04:38:05: INFO: {<program> (32.00 MB) 8192 sectors needed at location 930558 on LUN 4}
+04:38:05: INFO: =======================================================
+
+
+04:38:05: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:38:05: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:38:05: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:38:06: INFO: Overall to target  0.719 seconds (44.51 MBps)
+04:38:06: INFO: 
+04:38:06: INFO: =======================================================
+04:38:06: INFO: ==================== {SUCCESS} ========================
+04:38:06: INFO: =======================================================
+
+
+04:38:06: INFO: In handleProgram('xbl_sc_test_mode.img')
+04:38:06: INFO: Looking for file 'xbl_sc_test_mode.img'
+04:38:06: INFO: =======================================================
+04:38:06: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/xbl_sc_test_mode.img'}
+04:38:06: INFO: {<program> (64.00 KB) 16 sectors needed at location 938750 on LUN 4}
+04:38:06: INFO: =======================================================
+
+
+04:38:06: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:38:06: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:38:06: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:38:06: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:38:06: INFO: 
+04:38:06: INFO: =======================================================
+04:38:06: INFO: ==================== {SUCCESS} ========================
+04:38:06: INFO: =======================================================
+
+
+04:38:06: INFO: In handleProgram('xbl_sc_logs.img')
+04:38:06: INFO: Looking for file 'xbl_sc_logs.img'
+04:38:06: INFO: =======================================================
+04:38:06: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/xbl_sc_logs.img'}
+04:38:06: INFO: {<program> (128.00 KB) 32 sectors needed at location 938766 on LUN 4}
+04:38:06: INFO: =======================================================
+
+
+04:38:06: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:38:06: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:38:06: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:38:06: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:38:06: INFO: 
+04:38:06: INFO: =======================================================
+04:38:06: INFO: ==================== {SUCCESS} ========================
+04:38:06: INFO: =======================================================
+
+
+04:38:06: INFO: In handleProgram('dpm.img')
+04:38:06: INFO: Looking for file 'dpm.img'
+04:38:06: INFO: =======================================================
+04:38:06: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/dpm.img'}
+04:38:06: INFO: {<program> (8.00 KB) 2 sectors needed at location 938798 on LUN 4}
+04:38:06: INFO: =======================================================
+
+
+04:38:06: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:38:06: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:38:06: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:38:06: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:38:06: INFO: 
+04:38:06: INFO: =======================================================
+04:38:06: INFO: ==================== {SUCCESS} ========================
+04:38:06: INFO: =======================================================
+
+
+04:38:06: INFO: ==============================================================
+04:38:06: INFO: Files used and their paths
+04:38:06: INFO:   1 './/port_trace.txt'
+04:38:06: INFO:   2 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/rawprogram4.xml'
+04:38:06: INFO:   3 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/uefi_a.img'
+04:38:06: INFO:   4 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/aop_a.img'
+04:38:06: INFO:   5 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/aop_config_a.img'
+04:38:06: INFO:   6 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/tz_a.img'
+04:38:06: INFO:   7 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/hyp_a.img'
+04:38:06: INFO:   8 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/modem_a.img'
+04:38:06: INFO:   9 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/bluetooth_a.img'
+04:38:06: INFO:  10 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/abl_a.img'
+04:38:06: INFO:  11 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/dsp_a.img'
+04:38:06: INFO:  12 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/keymaster_a.img'
+04:38:06: INFO:  13 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/spuservice_a.img'
+04:38:06: INFO:  14 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/boot_a.img'
+04:38:06: INFO:  15 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/devcfg_a.img'
+04:38:06: INFO:  16 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/qupfw_a.img'
+04:38:06: INFO:  17 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/vbmeta_a.img'
+04:38:06: INFO:  18 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/dtbo_a.img'
+04:38:06: INFO:  19 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/uefisecapp_a.img'
+04:38:06: INFO:  20 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/imagefv_a.img'
+04:38:06: INFO:  21 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/shrm_a.img'
+04:38:06: INFO:  22 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/vm-bootsys_a.img'
+04:38:06: INFO:  23 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/qtvm_dtbo_a.img'
+04:38:06: INFO:  24 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/cpucp_a.img'
+04:38:06: INFO:  25 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/featenabler_a.img'
+04:38:06: INFO:  26 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/vendor_boot_a.img'
+04:38:06: INFO:  27 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/qmcs.img'
+04:38:06: INFO:  28 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/qweslicstore_a.img'
+04:38:06: INFO:  29 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/recovery_a.img'
+04:38:06: INFO:  30 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/xbl_ramdump_a.img'
+04:38:06: INFO:  31 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/init_boot_a.img'
+04:38:06: INFO:  32 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/cpucp_dtb_a.img'
+04:38:06: INFO:  33 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/pvmfw_a.img'
+04:38:06: INFO:  34 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/soccp_a.img'
+04:38:06: INFO:  35 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/soccp_debug_a.img'
+04:38:06: INFO:  36 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/soccp_dcd_a.img'
+04:38:06: INFO:  37 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/pdp_a.img'
+04:38:06: INFO:  38 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/pdp_cdb_a.img'
+04:38:06: INFO:  39 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/tz_ac_config_a.img'
+04:38:06: INFO:  40 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/hyp_ac_config_a.img'
+04:38:06: INFO:  41 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/dcp_a.img'
+04:38:06: INFO:  42 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/tz_qti_config_a.img'
+04:38:06: INFO:  43 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/secretkeeper_a.img'
+04:38:06: INFO:  44 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/pvmfw_signed_a.img'
+04:38:06: INFO:  45 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/uefi_b.img'
+04:38:06: INFO:  46 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/aop_b.img'
+04:38:06: INFO:  47 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/aop_config_b.img'
+04:38:06: INFO:  48 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/tz_b.img'
+04:38:06: INFO:  49 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/hyp_b.img'
+04:38:06: INFO:  50 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/modem_b.img'
+04:38:06: INFO:  51 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/bluetooth_b.img'
+04:38:06: INFO:  52 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/abl_b.img'
+04:38:06: INFO:  53 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/dsp_b.img'
+04:38:06: INFO:  54 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/keymaster_b.img'
+04:38:06: INFO:  55 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/spuservice_b.img'
+04:38:06: INFO:  56 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/boot_b.img'
+04:38:06: INFO:  57 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/devcfg_b.img'
+04:38:06: INFO:  58 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/qupfw_b.img'
+04:38:06: INFO:  59 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/vbmeta_b.img'
+04:38:06: INFO:  60 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/dtbo_b.img'
+04:38:06: INFO:  61 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/uefisecapp_b.img'
+04:38:06: INFO:  62 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/imagefv_b.img'
+04:38:06: INFO:  63 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/shrm_b.img'
+04:38:06: INFO:  64 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/vm-bootsys_b.img'
+04:38:06: INFO:  65 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/qtvm_dtbo_b.img'
+04:38:06: INFO:  66 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/cpucp_b.img'
+04:38:06: INFO:  67 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/featenabler_b.img'
+04:38:06: INFO:  68 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/vendor_boot_b.img'
+04:38:06: INFO:  69 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/qweslicstore_b.img'
+04:38:06: INFO:  70 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/recovery_b.img'
+04:38:06: INFO:  71 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/xbl_ramdump_b.img'
+04:38:06: INFO:  72 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/init_boot_b.img'
+04:38:06: INFO:  73 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/cpucp_dtb_b.img'
+04:38:06: INFO:  74 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/pvmfw_b.img'
+04:38:06: INFO:  75 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/soccp_b.img'
+04:38:06: INFO:  76 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/soccp_debug_b.img'
+04:38:06: INFO:  77 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/soccp_dcd_b.img'
+04:38:06: INFO:  78 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/pdp_b.img'
+04:38:06: INFO:  79 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/pdp_cdb_b.img'
+04:38:06: INFO:  80 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/tz_ac_config_b.img'
+04:38:06: INFO:  81 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/hyp_ac_config_b.img'
+04:38:06: INFO:  82 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/dcp_b.img'
+04:38:06: INFO:  83 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/tz_qti_config_b.img'
+04:38:06: INFO:  84 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/secretkeeper_b.img'
+04:38:06: INFO:  85 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/pvmfw_signed_b.img'
+04:38:06: INFO:  86 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/efisp.img'
+04:38:06: INFO:  87 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/toolsfv.img'
+04:38:06: INFO:  88 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/logfs.img'
+04:38:06: INFO:  89 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/logdump.img'
+04:38:06: INFO:  90 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/storsec.img'
+04:38:06: INFO:  91 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/uefivarstore.img'
+04:38:06: INFO:  92 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/secdata.img'
+04:38:06: INFO:  93 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/vm-persist.img'
+04:38:06: INFO:  94 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/mdcompress.img'
+04:38:06: INFO:  95 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/connsec.img'
+04:38:06: INFO:  96 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/tzsc.img'
+04:38:06: INFO:  97 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/spunvm.img'
+04:38:06: INFO:  98 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/xbl_sc_test_mode.img'
+04:38:06: INFO:  99 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/xbl_sc_logs.img'
+04:38:06: INFO: 100 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/dpm.img'
+
+04:38:06: INFO:      _             (done)
+04:38:06: INFO:     | |                 
+04:38:06: INFO:   __| | ___  _ __   ___ 
+04:38:06: INFO:  / _` |/ _ \| '_ \ / _ \
+04:38:06: INFO: | (_| | (_) | | | |  __/
+04:38:06: INFO:  \__,_|\___/|_| |_|\___|
+04:38:06: INFO: {All Finished Successfully}
+
+04:38:06: INFO: Overall to target 87.844 seconds (41.75 MBps)
+
+Writing log, might take a minute
+
+
+Log at 'D:\Ai Work\Y700ֲColorOS\03_űģ\port_trace.txt'
+
+-- 写入 rawprogram5.xml
++ D:/Ai Work/Y700五代移植ColorOS/00_救生包/tools/violet-cli/fh_loader.exe --port=\\.\COM5 --sendxml=rawprogram5.xml --search_path=D:/Ai Work/Y700五代移植ColorOS/00_救生包/C17_ColorOS17移植包/image --memoryname=ufs --zlpawarehost=1 --noprompt
+
+Base Version: 23.06.20.17.11
+Binary build date: Nov 19 2025 @ 01:16:43
+Incremental Build version: 25.11.19.01.16.43
+
+04:38:06: INFO: Output Dir Already exists ./
+04:38:06: INFO: 1. Calling fopen('.//port_trace.txt') with AccessMode='w'
+04:38:06: INFO: FH_LOADER WAS CALLED EXACTLY LIKE THIS
+************************************************
+D:\Ai Work\Y700ֲColorOS\00_\tools\violet-cli\fh_loader.exe --port=\\.\COM5 --sendxml=rawprogram5.xml --search_path=D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image --memoryname=ufs --zlpawarehost=1 --noprompt 
+************************************************
+
+04:38:06: INFO: Current working dir (cwd): D:\Ai Work\Y700ֲColorOS\03_űģ\
+04:38:06: INFO: Showing network mappings to allow debugging
+04:38:06: INFO: 
+
+
+
+04:38:06: INFO: Trying to store 'rawprogram5.xml' in string table
+04:38:06: INFO: Looking for file 'rawprogram5.xml'
+04:38:06: INFO: User wants to talk to port '\\.\COM5'
+04:38:06: INFO: Took       0.00000000 seconds to open port
+04:38:06: INFO: Sorting TAGS to ensure order is <configure>,<erase>, others, <patch>,<power>
+04:38:06: INFO: Sending <configure>
+
+04:38:06: INFO: TARGET SAID: 'INFO: Calling handler for configure'
+
+04:38:06: INFO: TARGET SAID: 'INFO: Storage type set to value UFS'
+04:38:06: INFO: fh.attrs.MaxPayloadSizeToTargetInBytes = 1048576
+04:38:06: INFO: fh.attrs.MaxPayloadSizeToTargetInBytesSupported = 1048576
+04:38:06: INFO: In handleProgram('ALIGN_TO_128K_2.img')
+04:38:06: INFO: Looking for file 'ALIGN_TO_128K_2.img'
+04:38:06: INFO: =======================================================
+04:38:06: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/ALIGN_TO_128K_2.img'}
+04:38:06: INFO: {<program> (104.00 KB) 26 sectors needed at location 6 on LUN 5}
+04:38:06: INFO: =======================================================
+
+
+04:38:07: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:38:07: INFO: TARGET SAID: 'ERROR: did found any entry.'
+
+04:38:07: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:38:07: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:38:07: INFO: 
+04:38:07: INFO: =======================================================
+04:38:07: INFO: ==================== {SUCCESS} ========================
+04:38:07: INFO: =======================================================
+
+
+04:38:07: INFO: In handleProgram('modemst1.img')
+04:38:07: INFO: Looking for file 'modemst1.img'
+04:38:07: INFO: =======================================================
+04:38:07: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/modemst1.img'}
+04:38:07: INFO: {<program> (4.00 MB) 1024 sectors needed at location 32 on LUN 5}
+04:38:07: INFO: =======================================================
+
+
+04:38:07: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:38:07: INFO: TARGET SAID: 'ERROR: did found any entry.'
+
+04:38:07: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:38:07: INFO: Overall to target  0.094 seconds (42.55 MBps)
+04:38:07: INFO: 
+04:38:07: INFO: =======================================================
+04:38:07: INFO: ==================== {SUCCESS} ========================
+04:38:07: INFO: =======================================================
+
+
+04:38:07: INFO: In handleProgram('modemst2.img')
+04:38:07: INFO: Looking for file 'modemst2.img'
+04:38:07: INFO: =======================================================
+04:38:07: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/modemst2.img'}
+04:38:07: INFO: {<program> (4.00 MB) 1024 sectors needed at location 1056 on LUN 5}
+04:38:07: INFO: =======================================================
+
+
+04:38:07: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:38:07: INFO: TARGET SAID: 'ERROR: did found any entry.'
+
+04:38:07: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:38:07: INFO: Overall to target  0.094 seconds (42.55 MBps)
+04:38:07: INFO: 
+04:38:07: INFO: =======================================================
+04:38:07: INFO: ==================== {SUCCESS} ========================
+04:38:07: INFO: =======================================================
+
+
+04:38:07: INFO: In handleProgram('fsg.img')
+04:38:07: INFO: Looking for file 'fsg.img'
+04:38:07: INFO: =======================================================
+04:38:07: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/fsg.img'}
+04:38:07: INFO: {<program> (4.00 MB) 1024 sectors needed at location 2080 on LUN 5}
+04:38:07: INFO: =======================================================
+
+
+04:38:07: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:38:07: INFO: TARGET SAID: 'ERROR: did found any entry.'
+
+04:38:07: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:38:07: INFO: Overall to target  0.093 seconds (43.01 MBps)
+04:38:07: INFO: 
+04:38:07: INFO: =======================================================
+04:38:07: INFO: ==================== {SUCCESS} ========================
+04:38:07: INFO: =======================================================
+
+
+04:38:07: INFO: In handleProgram('fsc.img')
+04:38:07: INFO: Looking for file 'fsc.img'
+04:38:07: INFO: =======================================================
+04:38:07: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/fsc.img'}
+04:38:07: INFO: {<program> (128.00 KB) 32 sectors needed at location 3104 on LUN 5}
+04:38:07: INFO: =======================================================
+
+
+04:38:07: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:38:07: INFO: TARGET SAID: 'ERROR: did found any entry.'
+
+04:38:07: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:38:07: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:38:07: INFO: 
+04:38:07: INFO: =======================================================
+04:38:07: INFO: ==================== {SUCCESS} ========================
+04:38:07: INFO: =======================================================
+
+
+04:38:07: INFO: In handleProgram('fs_bkup.img')
+04:38:07: INFO: Looking for file 'fs_bkup.img'
+04:38:07: INFO: =======================================================
+04:38:07: INFO: {<program> FILE: 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/fs_bkup.img'}
+04:38:07: INFO: {<program> (4.00 MB) 1024 sectors needed at location 3136 on LUN 5}
+04:38:07: INFO: =======================================================
+
+
+04:38:07: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:38:07: INFO: TARGET SAID: 'ERROR: did found any entry.'
+
+04:38:07: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:38:07: INFO: Overall to target  0.094 seconds (42.55 MBps)
+04:38:07: INFO: 
+04:38:07: INFO: =======================================================
+04:38:07: INFO: ==================== {SUCCESS} ========================
+04:38:07: INFO: =======================================================
+
+
+04:38:07: INFO: ==============================================================
+04:38:07: INFO: Files used and their paths
+04:38:07: INFO:   1 './/port_trace.txt'
+04:38:07: INFO:   2 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/rawprogram5.xml'
+04:38:07: INFO:   3 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/ALIGN_TO_128K_2.img'
+04:38:07: INFO:   4 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/modemst1.img'
+04:38:07: INFO:   5 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/modemst2.img'
+04:38:07: INFO:   6 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/fsg.img'
+04:38:07: INFO:   7 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/fsc.img'
+04:38:07: INFO:   8 'D:/Ai Work/Y700ֲColorOS/00_/C17_ColorOS17ֲ/image/fs_bkup.img'
+
+04:38:07: INFO:      _             (done)
+04:38:07: INFO:     | |                 
+04:38:07: INFO:   __| | ___  _ __   ___ 
+04:38:07: INFO:  / _` |/ _ \| '_ \ / _ \
+04:38:07: INFO: | (_| | (_) | | | |  __/
+04:38:07: INFO:  \__,_|\___/|_| |_|\___|
+04:38:07: INFO: {All Finished Successfully}
+
+04:38:07: INFO: Overall to target  0.781 seconds (20.78 MBps)
+
+Writing log, might take a minute
+
+
+Log at 'D:\Ai Work\Y700ֲColorOS\03_űģ\port_trace.txt'
+
+== 完成 ==
+提示：刷完设备应自动重启；若 5 分钟无反应，按救砖SOP三键复位法处置。

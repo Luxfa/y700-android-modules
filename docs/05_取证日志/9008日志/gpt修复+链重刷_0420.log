@@ -1,0 +1,713 @@
+== 9008 刷写编排 ==
+串口:     COM5
+firehose: 00_救生包/ZUI官方包_2.5.10.055/prog_firehose_ddr.elf
+xml目录:  临时存档/c17bootchain
+xml序列:  fix_gpt.xml,patch0.xml,flash_c17chain.xml
+
+grep: 临时存档/c17bootchain/rawprogram*.xml: No such file or directory
+== 阶段1: Sahara 握手 + 上传引导链（八映射，官方bat同款） ==
++ D:/Ai Work/Y700五代移植ColorOS/00_救生包/tools/violet-cli/QSaharaServer.exe -p \\.\COM5 -s 36:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/multi_image_qti.mbn -s 37:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/multi_image.mbn -s 21:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/xbl_sc.elf -s 60:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/signed_firmware_soc_view.elf -s 59:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/sequencer_ram.elf -s 61:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/tme_config.elf -s 13:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/prog_firehose_ddr.elf -s 38:D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/xbl_config_devprg.elf -b D:/Ai Work/Y700五代移植ColorOS/00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/
+*QSaharaServer *
+: Jun  8 2025 @ 16:27:37
+ο: Jackson(ᰲ@),ĳ(ᰲ@ĳ)
+ʹñпշ,ʹڷǷΪ
+: 
+'D:\Ai Work\Y700ֲColorOS\00_\tools\violet-cli\QSaharaServer.exe -p \\.\COM5 -s 36:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/multi_image_qti.mbn -s 37:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/multi_image.mbn -s 21:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/xbl_sc.elf -s 60:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/signed_firmware_soc_view.elf -s 59:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/sequencer_ram.elf -s 61:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/tme_config.elf -s 13:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/prog_firehose_ddr.elf -s 38:D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/xbl_config_devprg.elf -b D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/ '
+Ŀ¼: D:\Ai Work\Y700ֲColorOS
+Sahara mappings:
+2: amss.mbn
+6: apps.mbn
+8: dsp1.mbn
+10: dbl.mbn
+11: osbl.mbn
+12: dsp2.mbn
+16: efs1.mbn
+17: efs2.mbn
+20: efs3.mbn
+21: D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/xbl_sc.elf
+22: sbl2.mbn
+23: rpm.mbn
+25: tz.mbn
+28: dsp3.mbn
+29: acdb.mbn
+30: wdt.mbn
+31: mba.mbn
+36: D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/multi_image_qti.mbn
+37: D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/multi_image.mbn
+60: D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/signed_firmware_soc_view.elf
+59: D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/sequencer_ram.elf
+61: D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/tme_config.elf
+13: D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/prog_firehose_ddr.elf
+38: D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/xbl_config_devprg.elf
+
+11.23.2026-04.21.58 : EVENT: ״̬ <-- SAHARA_WAIT_HELLO(ȴ豸HELLOݰ)
+
+[portstatus]sahara
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_HELLO(ܵ豸HELLOݰ)
+
+11.23.2026-04.21.58 : EVENT:  --> SAHARA_HELLO_RESPONSE(͵豸HELLOӦݰ)
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : Requested ID 59, file: "D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/sequencer_ram.elf"
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_END_IMAGE_TX()
+
+11.23.2026-04.21.58 : EVENT:  --> SAHARA_DONE(ݰ)
+
+11.23.2026-04.21.58 : 4876 bytes transferred in 0.015000 seconds (0.3100MBps)
+
+
+
+11.23.2026-04.21.58 : File transferred successfully
+
+
+
+11.23.2026-04.21.58 : EVENT: STATE <-- SAHARA_WAIT_DONE_RESP
+
+
+11.23.2026-04.21.58 : EVENT: ״̬ <-- SAHARA_WAIT_HELLO(ȴ豸HELLOݰ)
+
+[portstatus]sahara
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_HELLO(ܵ豸HELLOݰ)
+
+11.23.2026-04.21.58 : EVENT:  --> SAHARA_HELLO_RESPONSE(͵豸HELLOӦݰ)
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : Requested ID 36, file: "D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/multi_image_qti.mbn"
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_END_IMAGE_TX()
+
+11.23.2026-04.21.58 : EVENT:  --> SAHARA_DONE(ݰ)
+
+11.23.2026-04.21.58 : 5072 bytes transferred in 0.000000 seconds
+
+11.23.2026-04.21.58 : File transferred successfully
+
+
+
+11.23.2026-04.21.58 : EVENT: STATE <-- SAHARA_WAIT_DONE_RESP
+
+
+11.23.2026-04.21.58 : EVENT: ״̬ <-- SAHARA_WAIT_HELLO(ȴ豸HELLOݰ)
+
+[portstatus]sahara
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_HELLO(ܵ豸HELLOݰ)
+
+11.23.2026-04.21.58 : EVENT:  --> SAHARA_HELLO_RESPONSE(͵豸HELLOӦݰ)
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : Requested ID 37, file: "D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/multi_image.mbn"
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_END_IMAGE_TX()
+
+11.23.2026-04.21.58 : EVENT:  --> SAHARA_DONE(ݰ)
+
+11.23.2026-04.21.58 : 5352 bytes transferred in 0.000000 seconds
+
+11.23.2026-04.21.58 : File transferred successfully
+
+
+
+11.23.2026-04.21.58 : EVENT: STATE <-- SAHARA_WAIT_DONE_RESP
+
+
+11.23.2026-04.21.58 : EVENT: ״̬ <-- SAHARA_WAIT_HELLO(ȴ豸HELLOݰ)
+
+[portstatus]sahara
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_HELLO(ܵ豸HELLOݰ)
+
+11.23.2026-04.21.58 : EVENT:  --> SAHARA_HELLO_RESPONSE(͵豸HELLOӦݰ)
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : Requested ID 61, file: "D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/tme_config.elf"
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_END_IMAGE_TX()
+
+11.23.2026-04.21.58 : EVENT:  --> SAHARA_DONE(ݰ)
+
+11.23.2026-04.21.58 : 38764 bytes transferred in 0.031000 seconds (1.1925MBps)
+
+
+
+11.23.2026-04.21.58 : File transferred successfully
+
+
+
+11.23.2026-04.21.58 : EVENT: STATE <-- SAHARA_WAIT_DONE_RESP
+
+
+11.23.2026-04.21.58 : EVENT: ״̬ <-- SAHARA_WAIT_HELLO(ȴ豸HELLOݰ)
+
+[portstatus]sahara
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_HELLO(ܵ豸HELLOݰ)
+
+11.23.2026-04.21.58 : EVENT:  --> SAHARA_HELLO_RESPONSE(͵豸HELLOӦݰ)
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : Requested ID 60, file: "D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/signed_firmware_soc_view.elf"
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_END_IMAGE_TX()
+
+11.23.2026-04.21.58 : EVENT:  --> SAHARA_DONE(ݰ)
+
+11.23.2026-04.21.58 : 204256 bytes transferred in 0.047000 seconds (4.1445MBps)
+
+
+
+11.23.2026-04.21.58 : File transferred successfully
+
+
+
+11.23.2026-04.21.58 : EVENT: STATE <-- SAHARA_WAIT_DONE_RESP
+
+
+11.23.2026-04.21.58 : EVENT: ״̬ <-- SAHARA_WAIT_HELLO(ȴ豸HELLOݰ)
+
+[portstatus]sahara
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_HELLO(ܵ豸HELLOݰ)
+
+11.23.2026-04.21.58 : EVENT:  --> SAHARA_HELLO_RESPONSE(͵豸HELLOӦݰ)
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : Requested ID 21, file: "D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/xbl_sc.elf"
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_END_IMAGE_TX()
+
+11.23.2026-04.21.58 : EVENT:  --> SAHARA_DONE(ݰ)
+
+11.23.2026-04.21.58 : 1183256 bytes transferred in 0.172000 seconds (6.5607MBps)
+
+
+
+11.23.2026-04.21.58 : File transferred successfully
+
+
+
+11.23.2026-04.21.58 : EVENT: STATE <-- SAHARA_WAIT_DONE_RESP
+
+
+11.23.2026-04.21.58 : EVENT: ״̬ <-- SAHARA_WAIT_HELLO(ȴ豸HELLOݰ)
+
+[portstatus]sahara
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_HELLO(ܵ豸HELLOݰ)
+
+11.23.2026-04.21.58 : EVENT:  --> SAHARA_HELLO_RESPONSE(͵豸HELLOӦݰ)
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : Requested ID 13, file: "D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/prog_firehose_ddr.elf"
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_END_IMAGE_TX()
+
+11.23.2026-04.21.58 : EVENT:  --> SAHARA_DONE(ݰ)
+
+11.23.2026-04.21.58 : 311744 bytes transferred in 0.062000 seconds (4.7952MBps)
+
+
+
+11.23.2026-04.21.58 : File transferred successfully
+
+
+
+11.23.2026-04.21.58 : EVENT: STATE <-- SAHARA_WAIT_DONE_RESP
+
+
+11.23.2026-04.21.58 : EVENT: ״̬ <-- SAHARA_WAIT_HELLO(ȴ豸HELLOݰ)
+
+[portstatus]sahara
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_HELLO(ܵ豸HELLOݰ)
+
+11.23.2026-04.21.58 : EVENT:  --> SAHARA_HELLO_RESPONSE(͵豸HELLOӦݰ)
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : Requested ID 38, file: "D:/Ai Work/Y700ֲColorOS/00_/ZUIٷ_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool/image/xbl_config_devprg.elf"
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_READ_DATA
+
+11.23.2026-04.21.58 : EVENT:  <-- SAHARA_END_IMAGE_TX()
+
+11.23.2026-04.21.58 : EVENT:  --> SAHARA_DONE(ݰ)
+
+11.23.2026-04.21.58 : 184708 bytes transferred in 0.079000 seconds (2.2298MBps)
+
+
+
+11.23.2026-04.21.58 : File transferred successfully
+
+
+
+11.23.2026-04.21.58 : EVENT: STATE <-- SAHARA_WAIT_DONE_RESP
+
+
+11.23.2026-04.21.58 : EVENT: 
+
+Successfully uploaded all images
+
+
+11.23.2026-04.21.58 : Sahara protocol completed
+== 阶段2: Firehose 写分区 ==
+-- 写入 fix_gpt.xml
++ D:/Ai Work/Y700五代移植ColorOS/00_救生包/tools/violet-cli/fh_loader.exe --port=\\.\COM5 --sendxml=fix_gpt.xml --search_path=临时存档/c17bootchain --memoryname=ufs --zlpawarehost=1 --noprompt
+
+Base Version: 23.06.20.17.11
+Binary build date: Nov 19 2025 @ 01:16:43
+Incremental Build version: 25.11.19.01.16.43
+
+04:21:58: INFO: Output Dir Already exists ./
+04:21:58: INFO: 1. Calling fopen('.//port_trace.txt') with AccessMode='w'
+04:21:58: INFO: FH_LOADER WAS CALLED EXACTLY LIKE THIS
+************************************************
+D:\Ai Work\Y700ֲColorOS\00_\tools\violet-cli\fh_loader.exe --port=\\.\COM5 --sendxml=fix_gpt.xml --search_path=ʱ浵/c17bootchain --memoryname=ufs --zlpawarehost=1 --noprompt 
+************************************************
+
+04:21:58: INFO: Current working dir (cwd): D:\Ai Work\Y700ֲColorOS\
+04:21:58: INFO: Showing network mappings to allow debugging
+04:21:58: INFO: 'ʱ浵/c17bootchain/' changed to
+04:21:58: INFO: this 'D:\Ai Work\Y700ֲColorOS\ʱ浵/c17bootchain/'
+04:21:58: INFO: 
+
+
+
+04:21:58: INFO: Trying to store 'fix_gpt.xml' in string table
+04:21:58: INFO: Looking for file 'fix_gpt.xml'
+04:21:58: INFO: User wants to talk to port '\\.\COM5'
+04:21:59: INFO: Took       0.67100000 seconds to open port
+04:21:59: INFO: Sorting TAGS to ensure order is <configure>,<erase>, others, <patch>,<power>
+04:21:59: INFO: Sending <configure>
+
+04:21:59: INFO: TARGET SAID: 'INFO: Binary build date: Jan 20 2026 @ 16:54:11'
+
+04:21:59: INFO: TARGET SAID: 'INFO: Binary build date: Jan 20 2026 @ 16:54:11
+'
+
+04:21:59: INFO: TARGET SAID: 'INFO: Chip serial num (0xb64edd26) Chip ID (0x46a)'
+
+04:21:59: INFO: TARGET SAID: 'INFO: Supported Functions (15):'
+
+04:21:59: INFO: TARGET SAID: 'INFO: program'
+
+04:21:59: INFO: TARGET SAID: 'INFO: read'
+
+04:21:59: INFO: TARGET SAID: 'INFO: nop'
+
+04:21:59: INFO: TARGET SAID: 'INFO: patch'
+
+04:21:59: INFO: TARGET SAID: 'INFO: configure'
+
+04:21:59: INFO: TARGET SAID: 'INFO: setbootablestoragedrive'
+
+04:21:59: INFO: TARGET SAID: 'INFO: erase'
+
+04:21:59: INFO: TARGET SAID: 'INFO: power'
+
+04:21:59: INFO: TARGET SAID: 'INFO: firmwarewrite'
+
+04:21:59: INFO: TARGET SAID: 'INFO: getstorageinfo'
+
+04:21:59: INFO: TARGET SAID: 'INFO: benchmark'
+
+04:21:59: INFO: TARGET SAID: 'INFO: emmc'
+
+04:21:59: INFO: TARGET SAID: 'INFO: ufs'
+
+04:21:59: INFO: TARGET SAID: 'INFO: fixgpt'
+
+04:21:59: INFO: TARGET SAID: 'INFO: getsha256digest'
+
+04:21:59: INFO: TARGET SAID: 'INFO: End of supported functions 15'
+
+04:21:59: INFO: TARGET SAID: 'INFO: Calling handler for configure'
+
+04:21:59: INFO: TARGET SAID: 'INFO: Storage type set to value UFS'
+04:21:59: INFO: fh.attrs.MaxPayloadSizeToTargetInBytes = 1048576
+04:21:59: INFO: fh.attrs.MaxPayloadSizeToTargetInBytesSupported = 1048576
+04:21:59: INFO: In handleProgram('gpt_main0.bin')
+04:21:59: INFO: Looking for file 'gpt_main0.bin'
+04:21:59: INFO: =======================================================
+04:21:59: INFO: {<program> FILE: 'D:\Ai Work\Y700ֲColorOS\ʱ浵/c17bootchain/gpt_main0.bin'}
+04:21:59: INFO: {<program> (24.00 KB) 6 sectors needed at location 0 on LUN 0}
+04:21:59: INFO: =======================================================
+
+
+04:21:59: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:21:59: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:21:59: INFO: 
+04:21:59: INFO: =======================================================
+04:21:59: INFO: ==================== {SUCCESS} ========================
+04:21:59: INFO: =======================================================
+
+
+04:21:59: INFO: In handleProgram('gpt_backup0.bin')
+04:21:59: INFO: Looking for file 'gpt_backup0.bin'
+04:21:59: INFO: =======================================================
+04:21:59: INFO: {<program> FILE: 'D:\Ai Work\Y700ֲColorOS\ʱ浵/c17bootchain/gpt_backup0.bin'}
+04:21:59: INFO: {<program> (20.00 KB) 5 sectors needed at location 0 on LUN 0}
+04:21:59: INFO: =======================================================
+
+
+04:21:59: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:21:59: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:21:59: INFO: 
+04:21:59: INFO: =======================================================
+04:21:59: INFO: ==================== {SUCCESS} ========================
+04:21:59: INFO: =======================================================
+
+
+04:21:59: INFO: ==============================================================
+04:21:59: INFO: Files used and their paths
+04:21:59: INFO:   1 './/port_trace.txt'
+04:21:59: INFO:   2 'D:\Ai Work\Y700ֲColorOS\ʱ浵/c17bootchain/fix_gpt.xml'
+04:21:59: INFO:   3 'D:\Ai Work\Y700ֲColorOS\ʱ浵/c17bootchain/gpt_main0.bin'
+04:21:59: INFO:   4 'D:\Ai Work\Y700ֲColorOS\ʱ浵/c17bootchain/gpt_backup0.bin'
+
+04:21:59: INFO:      _             (done)
+04:21:59: INFO:     | |                 
+04:21:59: INFO:   __| | ___  _ __   ___ 
+04:21:59: INFO:  / _` |/ _ \| '_ \ / _ \
+04:21:59: INFO: | (_| | (_) | | | |  __/
+04:21:59: INFO:  \__,_|\___/|_| |_|\___|
+04:21:59: INFO: {All Finished Successfully}
+
+04:21:59: INFO: Overall to target  0.204 seconds (215.69 KBps)
+
+Writing log, might take a minute
+
+
+Log at 'D:\Ai Work\Y700ֲColorOS\port_trace.txt'
+
+-- 写入 patch0.xml
++ D:/Ai Work/Y700五代移植ColorOS/00_救生包/tools/violet-cli/fh_loader.exe --port=\\.\COM5 --sendxml=patch0.xml --search_path=临时存档/c17bootchain --memoryname=ufs --zlpawarehost=1 --noprompt
+
+Base Version: 23.06.20.17.11
+Binary build date: Nov 19 2025 @ 01:16:43
+Incremental Build version: 25.11.19.01.16.43
+
+04:21:59: INFO: Output Dir Already exists ./
+04:21:59: INFO: 1. Calling fopen('.//port_trace.txt') with AccessMode='w'
+04:21:59: INFO: FH_LOADER WAS CALLED EXACTLY LIKE THIS
+************************************************
+D:\Ai Work\Y700ֲColorOS\00_\tools\violet-cli\fh_loader.exe --port=\\.\COM5 --sendxml=patch0.xml --search_path=ʱ浵/c17bootchain --memoryname=ufs --zlpawarehost=1 --noprompt 
+************************************************
+
+04:21:59: INFO: Current working dir (cwd): D:\Ai Work\Y700ֲColorOS\
+04:21:59: INFO: Showing network mappings to allow debugging
+04:21:59: INFO: 'ʱ浵/c17bootchain/' changed to
+04:21:59: INFO: this 'D:\Ai Work\Y700ֲColorOS\ʱ浵/c17bootchain/'
+04:21:59: INFO: 
+
+
+
+04:21:59: INFO: Trying to store 'patch0.xml' in string table
+04:21:59: INFO: Looking for file 'patch0.xml'
+04:21:59: INFO: User wants to talk to port '\\.\COM5'
+04:21:59: INFO: Took       0.01600000 seconds to open port
+04:21:59: INFO: Sorting TAGS to ensure order is <configure>,<erase>, others, <patch>,<power>
+04:21:59: INFO: Sending <configure>
+
+04:21:59: INFO: TARGET SAID: 'INFO: Calling handler for configure'
+
+04:21:59: INFO: TARGET SAID: 'INFO: Storage type set to value UFS'
+04:21:59: INFO: fh.attrs.MaxPayloadSizeToTargetInBytes = 1048576
+04:21:59: INFO: fh.attrs.MaxPayloadSizeToTargetInBytesSupported = 1048576
+
+04:21:59: INFO: TARGET SAID: 'INFO: Calling handler for patch'
+
+04:21:59: INFO: TARGET SAID: 'INFO: Calling handler for patch'
+
+04:21:59: INFO: TARGET SAID: 'INFO: Calling handler for patch'
+
+04:21:59: INFO: TARGET SAID: 'INFO: Calling handler for patch'
+
+04:21:59: INFO: TARGET SAID: 'INFO: Calling handler for patch'
+
+04:21:59: INFO: TARGET SAID: 'INFO: Calling handler for patch'
+
+04:21:59: INFO: TARGET SAID: 'INFO: Calling handler for patch'
+
+04:22:00: INFO: TARGET SAID: 'INFO: Calling handler for patch'
+
+04:22:00: INFO: TARGET SAID: 'INFO: Calling handler for patch'
+
+04:22:00: INFO: TARGET SAID: 'INFO: Calling handler for patch'
+
+04:22:00: INFO: TARGET SAID: 'INFO: Calling handler for patch'
+
+04:22:00: INFO: TARGET SAID: 'INFO: Calling handler for patch'
+
+04:22:00: INFO: TARGET SAID: 'INFO: Calling handler for patch'
+04:22:00: INFO: ==============================================================
+04:22:00: INFO: Files used and their paths
+04:22:00: INFO:   1 './/port_trace.txt'
+04:22:00: INFO:   2 'D:\Ai Work\Y700ֲColorOS\ʱ浵/c17bootchain/patch0.xml'
+
+04:22:00: INFO:      _             (done)
+04:22:00: INFO:     | |                 
+04:22:00: INFO:   __| | ___  _ __   ___ 
+04:22:00: INFO:  / _` |/ _ \| '_ \ / _ \
+04:22:00: INFO: | (_| | (_) | | | |  __/
+04:22:00: INFO:  \__,_|\___/|_| |_|\___|
+04:22:00: INFO: {All Finished Successfully}
+
+04:22:00: INFO: Overall to target  0.422 seconds (0.00 Bps)
+
+Writing log, might take a minute
+
+
+Log at 'D:\Ai Work\Y700ֲColorOS\port_trace.txt'
+
+-- 写入 flash_c17chain.xml
++ D:/Ai Work/Y700五代移植ColorOS/00_救生包/tools/violet-cli/fh_loader.exe --port=\\.\COM5 --sendxml=flash_c17chain.xml --search_path=临时存档/c17bootchain --memoryname=ufs --zlpawarehost=1 --noprompt
+
+Base Version: 23.06.20.17.11
+Binary build date: Nov 19 2025 @ 01:16:43
+Incremental Build version: 25.11.19.01.16.43
+
+04:22:00: INFO: Output Dir Already exists ./
+04:22:00: INFO: 1. Calling fopen('.//port_trace.txt') with AccessMode='w'
+04:22:00: INFO: FH_LOADER WAS CALLED EXACTLY LIKE THIS
+************************************************
+D:\Ai Work\Y700ֲColorOS\00_\tools\violet-cli\fh_loader.exe --port=\\.\COM5 --sendxml=flash_c17chain.xml --search_path=ʱ浵/c17bootchain --memoryname=ufs --zlpawarehost=1 --noprompt 
+************************************************
+
+04:22:00: INFO: Current working dir (cwd): D:\Ai Work\Y700ֲColorOS\
+04:22:00: INFO: Showing network mappings to allow debugging
+04:22:00: INFO: 'ʱ浵/c17bootchain/' changed to
+04:22:00: INFO: this 'D:\Ai Work\Y700ֲColorOS\ʱ浵/c17bootchain/'
+04:22:00: INFO: 
+
+
+
+04:22:00: INFO: Trying to store 'flash_c17chain.xml' in string table
+04:22:00: INFO: Looking for file 'flash_c17chain.xml'
+04:22:00: INFO: User wants to talk to port '\\.\COM5'
+04:22:00: INFO: Took       0.01600000 seconds to open port
+04:22:00: INFO: Sorting TAGS to ensure order is <configure>,<erase>, others, <patch>,<power>
+04:22:00: INFO: Sending <configure>
+
+04:22:00: INFO: TARGET SAID: 'INFO: Calling handler for configure'
+
+04:22:00: INFO: TARGET SAID: 'INFO: Storage type set to value UFS'
+04:22:00: INFO: fh.attrs.MaxPayloadSizeToTargetInBytes = 1048576
+04:22:00: INFO: fh.attrs.MaxPayloadSizeToTargetInBytesSupported = 1048576
+04:22:00: INFO: In handleProgram('boot_a.img')
+04:22:00: INFO: Looking for file 'boot_a.img'
+04:22:00: INFO: =======================================================
+04:22:00: INFO: {<program> FILE: 'D:\Ai Work\Y700ֲColorOS\ʱ浵/c17bootchain/boot_a.img'}
+04:22:00: INFO: {<program> (96.00 MB) 24576 sectors needed at location 119078 on LUN 4}
+04:22:00: INFO: =======================================================
+
+
+04:22:00: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:22:00: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:22:00: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:22:02: INFO: Overall to target  2.000 seconds (45.00 MBps)
+04:22:02: INFO: Overall to target  2.156 seconds (44.53 MBps)
+04:22:02: INFO: 
+04:22:02: INFO: =======================================================
+04:22:02: INFO: ==================== {SUCCESS} ========================
+04:22:02: INFO: =======================================================
+
+
+04:22:02: INFO: In handleProgram('init_boot_a.img')
+04:22:02: INFO: Looking for file 'init_boot_a.img'
+04:22:02: INFO: =======================================================
+04:22:02: INFO: {<program> FILE: 'D:\Ai Work\Y700ֲColorOS\ʱ浵/c17bootchain/init_boot_a.img'}
+04:22:02: INFO: {<program> (8.00 MB) 2048 sectors needed at location 360742 on LUN 4}
+04:22:02: INFO: =======================================================
+
+
+04:22:02: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:22:02: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:22:02: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:22:02: INFO: Overall to target  0.172 seconds (46.51 MBps)
+04:22:02: INFO: 
+04:22:02: INFO: =======================================================
+04:22:02: INFO: ==================== {SUCCESS} ========================
+04:22:02: INFO: =======================================================
+
+
+04:22:02: INFO: In handleProgram('vendor_boot_a.img')
+04:22:02: INFO: Looking for file 'vendor_boot_a.img'
+04:22:02: INFO: =======================================================
+04:22:02: INFO: {<program> FILE: 'D:\Ai Work\Y700ֲColorOS\ʱ浵/c17bootchain/vendor_boot_a.img'}
+04:22:02: INFO: {<program> (96.00 MB) 24576 sectors needed at location 302310 on LUN 4}
+04:22:02: INFO: =======================================================
+
+
+04:22:02: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:22:02: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:22:02: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:22:04: INFO: Overall to target  2.000 seconds (45.50 MBps)
+04:22:04: INFO: Overall to target  2.141 seconds (44.84 MBps)
+04:22:04: INFO: 
+04:22:04: INFO: =======================================================
+04:22:04: INFO: ==================== {SUCCESS} ========================
+04:22:04: INFO: =======================================================
+
+
+04:22:04: INFO: In handleProgram('vbmeta_a.img')
+04:22:04: INFO: Looking for file 'vbmeta_a.img'
+04:22:04: INFO: =======================================================
+04:22:04: INFO: {<program> FILE: 'D:\Ai Work\Y700ֲColorOS\ʱ浵/c17bootchain/vbmeta_a.img'}
+04:22:04: INFO: {<program> (64.00 KB) 16 sectors needed at location 143706 on LUN 4}
+04:22:04: INFO: =======================================================
+
+
+04:22:04: INFO: TARGET SAID: 'INFO: Calling handler for program'
+
+04:22:04: INFO: TARGET SAID: 'ERROR: invalid gpt entry number 128 entry size 128'
+
+04:22:04: INFO: TARGET SAID: 'ERROR: fail to get custom partitiont'
+
+04:22:04: INFO: Time measurement too small --- Overall to target 0.0 seconds (0Bps)
+04:22:05: INFO: 
+04:22:05: INFO: =======================================================
+04:22:05: INFO: ==================== {SUCCESS} ========================
+04:22:05: INFO: =======================================================
+
+
+04:22:05: INFO: Sending <power>
+
+04:22:05: INFO: TARGET SAID: 'INFO: Calling handler for power'
+
+04:22:05: INFO: TARGET SAID: 'INFO: Will issue reset/power off 300000 useconds, if this hangs check if watchdog is enabled'
+
+04:22:05: INFO: TARGET SAID: 'INFO: bsp_target_reset() 1'
+04:22:05: INFO: ==============================================================
+04:22:05: INFO: Files used and their paths
+04:22:05: INFO:   1 './/port_trace.txt'
+04:22:05: INFO:   2 'D:\Ai Work\Y700ֲColorOS\ʱ浵/c17bootchain/flash_c17chain.xml'
+04:22:05: INFO:   3 'D:\Ai Work\Y700ֲColorOS\ʱ浵/c17bootchain/boot_a.img'
+04:22:05: INFO:   4 'D:\Ai Work\Y700ֲColorOS\ʱ浵/c17bootchain/init_boot_a.img'
+04:22:05: INFO:   5 'D:\Ai Work\Y700ֲColorOS\ʱ浵/c17bootchain/vendor_boot_a.img'
+04:22:05: INFO:   6 'D:\Ai Work\Y700ֲColorOS\ʱ浵/c17bootchain/vbmeta_a.img'
+
+04:22:05: INFO:      _             (done)
+04:22:05: INFO:     | |                 
+04:22:05: INFO:   __| | ___  _ __   ___ 
+04:22:05: INFO:  / _` |/ _ \| '_ \ / _ \
+04:22:05: INFO: | (_| | (_) | | | |  __/
+04:22:05: INFO:  \__,_|\___/|_| |_|\___|
+04:22:05: INFO: {All Finished Successfully}
+
+04:22:05: INFO: Overall to target  4.797 seconds (41.71 MBps)
+
+Writing log, might take a minute
+
+
+Log at 'D:\Ai Work\Y700ֲColorOS\port_trace.txt'
+
+== 完成 ==
+提示：刷完设备应自动重启；若 5 分钟无反应，按救砖SOP三键复位法处置。

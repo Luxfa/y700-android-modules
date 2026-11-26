@@ -1,0 +1,184 @@
+### 0 时间与前台
+2026-11-25 19:51:17
+  mCurrentFocus=Window{4d574e4 u0 com.tencent.tmgp.pubgmhd/com.epicgames.ue4.GameActivity}
+### 1 游戏渲染层（完整块）
+    visible reason= buffer=103177999351860 frame=3077 contentDirty
+    bounds={0,0,3040,1904} toDisplayTransform={ scale x=2.6573 y=2.6444 }
+      geomBufferSize=[0 0 1144 720] geomContentCrop=[0 0 720 1144] geomCrop=[0.000000 0.000000 -1.000000 -1.000000] geomBufferTransform=7 
+    bounds={0,0,3040,1904}
+      geomBufferSize=[0 0 -1 -1] geomContentCrop=[0 0 -1 -1] geomCrop=[0.000000 0.000000 -1.000000 -1.000000] geomBufferTransform=0 
+    visible reason= buffer=103177999351860 frame=3077 contentDirty
+    bounds={0,0,3040,1904} toDisplayTransform={ scale x=2.6573 y=2.6444 }
+      geomBufferSize=[0 0 1144 720] geomContentCrop=[0 0 720 1144] geomCrop=[0.000000 0.000000 -1.000000 -1.000000] geomBufferTransform=7 
+    bounds={0,0,3040,1904}
+      geomBufferSize=[0 0 -1 -1] geomContentCrop=[0 0 -1 -1] geomCrop=[0.000000 0.000000 -1.000000 -1.000000] geomBufferTransform=0 
+    bounds={0,0,3040,1904}
+      geomBufferSize=[0 0 -1 -1] geomContentCrop=[0 0 -1 -1] geomCrop=[0.000000 0.000000 3040.000000 1904.000000] geomBufferTransform=0 
+      isOpaque=false hasProtectedContent=false isColorspaceAgnostic=false dataspace=V0_SRGB (142671872) hdr metadata types=0 dimming enabled=true colorTransform=[[1.000,0.000,0.000,0.000][0.000,1.000,0.000,0.000][0.000,0.000,1.000,0.000][0.000,0.000,0.000,1.000]] caching hint=Enabled 
+   layerStackSpace=ProjectionSpace{bounds=Rect(0, 0, 3040, 1904), content=Rect(0, 0, 3040, 1904), orientation=ROTATION_0} 
+### 2 显示档与刷新率
+renderRate=60.00 Hz
+mActiveModeId=5
+### 3 帧计数（10 秒增量）
+frame 3077 -> 3960  delta=883
+### 4 游戏侧文件指纹（大小+mtime，营地权益落地处）
+0 2026-11-25 19:49:44.561262286 +0800 /data/data/com.tencent.tmgp.pubgmhd/cache/audio_config_fifo
+3336 2026-11-25 19:49:47.413262285 +0800 /data/data/com.tencent.tmgp.pubgmhd/files/ano_tmp/config2.dat.d4396e24
+5896 2026-11-25 19:49:47.445262285 +0800 /data/data/com.tencent.tmgp.pubgmhd/files/ano_tmp/config3.dat.e9594794
+0 2026-11-25 19:49:43.221262287 +0800 /data/data/com.tencent.tmgp.pubgmhd/files/hawk_data_init
+4618 2026-11-25 19:50:22.389262272 +0800 /data/data/com.tencent.tmgp.pubgmhd/files/hawk_data
+0 2026-11-25 19:50:12.385262276 +0800 /data/data/com.tencent.tmgp.pubgmhd/files/hawk_data_ext
+266 2026-11-24 02:09:44.956999280 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/WebViewChromiumPrefs.xml
+175 2026-11-24 01:06:37.904503879 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/com.epicgames.ue4.SplashActivity.xml
+65 2026-11-25 19:49:44.621262286 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/com.epicgames.ue4.GameActivity.xml
+305 2026-11-24 01:06:44.044503876 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/BuglySdkInfos.xml
+210 2026-11-25 19:50:03.101262279 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/GCloudCoreSP.xml
+1997 2026-11-25 19:50:21.913262272 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/itop.xml
+146 2026-11-24 01:06:39.020503878 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/MSDKPopupCommon.xml
+645 2026-11-25 19:49:44.513262286 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/tpush.vip.shareprefs.sub.xml
+280 2026-11-24 01:06:43.856503876 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/tpush.vip.service.shareprefs.xml
+4146 2026-11-25 19:49:44.621262286 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/.xg.vip.settings.xml.xml
+726 2026-11-25 19:49:43.457262287 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/tdm.xml
+624 2026-11-24 02:05:26.908999379 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/APMCfg.xml
+136 2026-11-24 01:06:41.448503877 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/crashrecord.xml
+129 2026-11-24 01:06:41.540503877 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/CS_COMMON_VALUES.xml
+138 2026-11-24 02:05:27.000999379 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/lastUserId.xml
+987 2026-11-25 19:50:01.365262280 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/tgpa.xml
+3942 2026-11-25 12:34:32.211381893 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/QV1com.tencent.tdm.qimei.sdk.QimeiSDKc2009844da43a85e.xml
+486 2026-11-25 19:49:45.033262286 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/lastBufferedMaps.xml
+1152 2026-11-24 01:06:42.872503877 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/MNA_CONFIG_SP.xml
+264 2026-11-24 01:06:42.872503877 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/tpush.vip.shareprefs.xml
+196 2026-11-24 01:06:43.532503876 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/device_id.vip.xml
+196 2026-11-24 01:06:43.636503876 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/.tpns.vip.service.xml.xml
+65 2026-11-24 02:05:29.592999378 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/wzry.xml
+65 2026-11-24 02:05:29.592999378 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/temp.xml
+396 2026-11-24 02:05:29.720999378 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/tga_live_plugin_sp.xml
+136 2026-11-24 02:05:29.752999378 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/UUID_TAG.xml
+390 2026-11-25 18:32:36.857264052 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/qm_global_sp.xml
+557 2026-11-25 19:50:03.225262279 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/new_b_log_ID_com.tencent.tmgp.pubgmhd:tgaPlugin_000000CYDQ3IT5FF.xml
+557 2026-11-25 19:50:03.225262279 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/new_b_log_ID_com.tencent.tmgp.pubgmhd:tgaPlugin_00000GODBG3702Y1.xml
+146 2026-11-24 02:05:30.212999378 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/tgaPlugin_crashrecord.xml
+155 2026-11-24 02:05:30.304999378 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/crashsight_sp.xml
+129 2026-11-24 02:05:30.308999378 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/tgaPlugin_CS_COMMON_VALUES.xml
+138 2026-11-24 02:05:30.308999378 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/tgaPlugin_lastUserId.xml
+110 2026-11-24 02:05:30.640999378 +0800 /data/data/com.tencent.tmgp.pubgmhd/shared_prefs/tgaPlugin_lastBufferedMaps.xml
+### 5 营地侧文件指纹
+11730 2026-11-25 19:39:49.957000000 +0800 /data/data/com.tencent.gamehelper.pg/cache/LocalCache/1814266049
+52 2026-11-25 19:39:49.955000000 +0800 /data/data/com.tencent.gamehelper.pg/cache/LocalCache/-1937707464
+808 2026-11-25 19:36:39.616000000 +0800 /data/data/com.tencent.gamehelper.pg/cache/LocalCache/312605458
+356 2026-11-25 19:36:39.616000000 +0800 /data/data/com.tencent.gamehelper.pg/cache/LocalCache/-1749238835
+260 2026-11-25 19:36:39.617000000 +0800 /data/data/com.tencent.gamehelper.pg/cache/LocalCache/184814892
+58 2026-11-25 19:40:01.087000000 +0800 /data/data/com.tencent.gamehelper.pg/cache/TPReportCache_key/-552913102
+24448 2026-11-25 19:26:44.469262813 +0800 /data/data/com.tencent.gamehelper.pg/cache/WebView/font_unique_name_table.pb
+50913 2026-11-25 19:50:23.053262272 +0800 /data/data/com.tencent.gamehelper.pg/shared_prefs/TGT_GLOBAL_SPF_NEW.xml
+333 2026-11-25 19:27:23.777262798 +0800 /data/data/com.tencent.gamehelper.pg/shared_prefs/com.tencent.gamehelper.pg_global_preference.xml
+219 2026-11-25 19:24:39.845262860 +0800 /data/data/com.tencent.gamehelper.pg/shared_prefs/crashrecord.xml
+3331 2026-11-25 19:24:29.165262864 +0800 /data/data/com.tencent.gamehelper.pg/shared_prefs/SP_AROUTER_CACHE.xml
+218 2026-11-25 19:24:29.165262864 +0800 /data/data/com.tencent.gamehelper.pg/shared_prefs/CS_COMMON_VALUES.xml
+211 2026-11-25 19:24:29.169262864 +0800 /data/data/com.tencent.gamehelper.pg/shared_prefs/com.liteav.persist.storage.xml
+216 2026-11-25 19:36:30.697262589 +0800 /data/data/com.tencent.gamehelper.pg/shared_prefs/BuglySdkInfos.xml
+551 2026-11-25 19:24:33.937262863 +0800 /data/data/com.tencent.gamehelper.pg/shared_prefs/KEYSTORE_SETTING.xml
+118 2026-11-25 19:24:38.453262861 +0800 /data/data/com.tencent.gamehelper.pg/shared_prefs/device_info_file.xml
+655 2026-11-25 19:39:49.845262513 +0800 /data/data/com.tencent.gamehelper.pg/shared_prefs/kcsdk.xml
+136 2026-11-25 19:24:38.465262861 +0800 /data/data/com.tencent.gamehelper.pg/shared_prefs/UUID_TAG.xml
+2140 2026-11-25 19:39:49.901262513 +0800 /data/data/com.tencent.gamehelper.pg/shared_prefs/tbs_download_config.xml
+112 2026-11-25 19:24:38.493262861 +0800 /data/data/com.tencent.gamehelper.pg/shared_prefs/uifa.xml
+110 2026-11-25 19:24:38.493262861 +0800 /data/data/com.tencent.gamehelper.pg/shared_prefs/sai.xml
+144 2026-11-25 19:24:38.493262861 +0800 /data/data/com.tencent.gamehelper.pg/shared_prefs/tsui.xml
+112 2026-11-25 19:24:38.509262861 +0800 /data/data/com.tencent.gamehelper.pg/shared_prefs/AsmHookManager.xml
+4064 2026-11-25 19:39:51.229262513 +0800 /data/data/com.tencent.gamehelper.pg/shared_prefs/.xg.vip.settings.xml.xml
+244 2026-11-25 19:39:50.177262513 +0800 /data/data/com.tencent.gamehelper.pg/shared_prefs/b_log_ID_com.tencent.gamehelper.pg_000000CYDQ3IT5FF.xml
+245 2026-11-25 19:40:01.145262509 +0800 /data/data/com.tencent.gamehelper.pg/shared_prefs/b_log_ID_com.tencent.gamehelper.pg_00000GODBG3702Y1.xml
+174 2026-11-25 19:39:50.025262513 +0800 /data/data/com.tencent.gamehelper.pg/shared_prefs/beacon_so_beacon.xml
+246 2026-11-25 19:50:25.309262271 +0800 /data/data/com.tencent.gamehelper.pg/shared_prefs/b_log_ID_com.tencent.gamehelper.pg_0AND0ZKXT34MSHGZ.xml
+2097 2026-11-25 19:41:55.997262465 +0800 /data/data/com.tencent.gamehelper.pg/shared_prefs/sk_com.tencent.gamehelper.pg_KcSdk.xml
+65 2026-11-25 19:39:50.081262513 +0800 /data/data/com.tencent.gamehelper.pg/shared_prefs/CrashProSp.xml
+### 6 游戏与营地的版本/uid/flags
+    versionName=1.39.13
+    versionName=3.39.2.1680
+### 7 相关 settings 键
+app_auto_resolution = null / null
+oplus_games_auto_resolution_switch_key = null / null
+screen_brightness_mode = 1 / null
+### 8 相关属性（含游戏/画质/帧率关键字）
+54
+[debug.graphics.game_default_frame_rate.disabled]: [1]
+[graphics.gpu.profiler.support]: [true]
+[init.svc.gpu]: [running]
+[init.svc_debug_pid.gpu]: [1900]
+[ro.boot.vendor.qspa.gpu]: [enabled]
+[ro.boottime.gpu]: [3994770466]
+[ro.gfx.driver.1]: [com.qualcomm.qti.gpudrivers.canoe.api36]
+[ro.surface_flinger.enable_frame_rate_override]: [false]
+[ro.surface_flinger.game_default_frame_rate_override]: [60]
+[sys.mmdisplay.gpudump]: [1]
+[vendor.display.enable_hdr10_gpu_target]: [1]
+### 9 游戏进程与线程 CPU（当前负载）
+24023 u0_a338      10 -10  14G 2.0G 508M S  144  19.0   1:55.32 com.tencent.tmgp.pubgmhd
+26438 root         20   0 2.0G 5.1M 4.5M S  0.0   0.0   0:00.00 grep -a -E pubgmhd|GameThread|RenderThread
+24105 u0_a338      20   0 8.7G 126M  85M S  0.0   1.1   0:00.20 com.tencent.tmgp.pubgmhd:xg_vip_service
+### 10 近期日志中的画质/档位关键词
+11-25 19:51:26.128 24023 24239 I GCloudVoice: [2026-11-25 19:51:26 128] | Info | [GCloudVoice] |24239| GCloudVoiceEngine.cpp:2459 |UpdateCoordinate| GCloudVoiceEngine::UpdateCoordinate
+11-25 19:51:26.320  9343  9367 W MTS_NetworkMonitor: [m]event:10 is not EVENT_WIFI_LINK_QUALITY
+11-25 19:51:27.030 24023 24023 I DynamicFramerate [AnimationSpeedAware]: onEventHandled: info: InputEventInfo: mX = 0, mY = 0, mAction = 1, mVsyncTime = 10157532, mIsMoving = false, mUpdated = true
+11-25 19:51:27.128 24023 24239 I GCloudVoice: [2026-11-25 19:51:27 128] | Info | [GCloudVoice] |24239| GCloudVoiceEngine.cpp:2459 |UpdateCoordinate| GCloudVoiceEngine::UpdateCoordinate
+11-25 19:51:27.200 24023 24023 I DynamicFramerate [AnimationSpeedAware]: onEventHandled: info: InputEventInfo: mX = 0, mY = 0, mAction = 0, mVsyncTime = 10157702, mIsMoving = true, mUpdated = true
+11-25 19:51:27.421 24023 24023 I DynamicFramerate [AnimationSpeedAware]: onEventHandled: info: InputEventInfo: mX = 0, mY = 0, mAction = 1, mVsyncTime = 10157924, mIsMoving = false, mUpdated = true
+11-25 19:51:27.677 15831 15831 W log     : type=1400 audit(0.0:75134): avc:  denied  { read } for  name="sdcard" dev="tmpfs" ino=33 scontext=u:r:untrusted_app_30:s0:c86,c257,c512,c768 tcontext=u:object_r:mnt_sdcard_file:s0 tclass=lnk_file permissive=0 app=com.tencent.gamehelper.pg
+11-25 19:51:27.677 15831 15831 W log     : type=1400 audit(0.0:75135): avc:  denied  { read } for  name="sdcard" dev="tmpfs" ino=33 scontext=u:r:untrusted_app_30:s0:c86,c257,c512,c768 tcontext=u:object_r:mnt_sdcard_file:s0 tclass=lnk_file permissive=0 app=com.tencent.gamehelper.pg
+11-25 19:51:28.130 24023 24239 I GCloudVoice: [2026-11-25 19:51:28 130] | Info | [GCloudVoice] |24239| GCloudVoiceEngine.cpp:2459 |UpdateCoordinate| GCloudVoiceEngine::UpdateCoordinate
+11-25 19:51:28.601 24023 24845 I GCloudVoice: [2026-11-25 19:51:28 601] | Info | [GCloudVoice] |24845| small_room_agent.cpp:2053 |Tick| [SmallRoomAgent]:Tick CMD Do Once *1000 
+11-25 19:51:29.006 24023 24845 I GCloudVoice: [2026-11-25 19:51:29 006] | Info | [GCloudVoice] |24845| small_room_agent.cpp:1965 |SendRtcpMemSync| client send memsync, csaction:0, clienstatus:531, wantmemeid:-1,ver:9
+### 11 温度快照
+51500
+52700
+54300
+27000
+27000
+27000
+27000
+27000
+27000
+50400
+50000
+52700
+53500
+50800
+51500
+54300
+55000
+53500
+50000
+53900
+53500
+53100
+53900
+53100
+55400
+53100
+55400
+46300
+45900
+50000
+45900
+45900
+46700
+47100
+47500
+47800
+46700
+46700
+47100
+46300
+50400
+47100
+46300
+47900
+47900
+47900
+48300
+47100
+48700
+46900
+
+### END

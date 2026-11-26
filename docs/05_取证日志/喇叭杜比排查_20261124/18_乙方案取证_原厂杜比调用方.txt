@@ -1,0 +1,78 @@
+乙方案取证：原厂 ZUI 里"谁挂载杜比"的完整答案（2026-11-24 22:4x–23:0x，全程离线只读，设备零改动）
+================================================================================
+源包：00_救生包/ZUI官方包_2.5.10.055/TB323_ZUXOS_2.5.10.055_Tool.7z（密码记在 02_调研/20261122_官方包2.5.10.055解剖.md）
+分片↔分区对应关系（由 super_1.img 的 LP 元数据解出，`临时存档/zui_dolby/zui_lp.json`）：
+  super_1=元数据  super_2=odm_a  super_3=product_a  **super_4=system_a(13.2G)**  super_5=system_dlkm_a
+  **super_6=system_ext_a(572M)**  super_7=vendor_a  super_8=vendor_dlkm_a
+三个镜像都是 **ext4**（magic 0xEF53），7-Zip 26.06 可直接列目录与抽单文件，不必整包解出、不必解析文件系统。
+
+一、原厂杜比的调用方 = 系统侧的 Dolby 官方服务应用（不是配置文件）
+
+  ZUI system_ext（super_6）:
+    priv-app/daxService/daxService.apk        3,495,554 B   ← 包名 com.dolby.daxservice
+    etc/permissions/com.dolby.daxservice.xml        877 B   ← privapp 授权（INTERACT_ACROSS_USERS / MANAGE_USERS / WRITE_SECURE_SETTINGS）
+  ZUI system（super_4）:
+    app/DolbyVisionService/DolbyVisionService.apk   246,853 B（视频侧，与音效无关）
+    lib64/libdolbyeffect.so                 996,008 B
+    lib64/libdolbyproxyandroid.so           268,808 B
+    lib64/libdolbyui.so                      52,456 B
+    etc/dolby_vision.cfg                      1,276 B
+  ZUI 的 /system/etc/audio_effects.xml（7,544 B）**是 AOSP 默认版，里面没有任何杜比登记**；
+  原厂 vendor 的 sku_canoe/audio_effects_config.xml 也只 apply `dlb_music_listener`，**从不 apply `dap`**。
+  ⇒ 结论：**原厂从来不通过配置文件挂载杜比 DAP，而是由 daxService 这个应用来创建。**
+
+二、daxService 干了什么（classes.dex 1,978,092 B 字符串取证，逐条原文）
+
+  1) 创建方式——**挂在全局输出混音上，只建一个实例**：
+       "Creating a DolbyAudioEffect to global output mix!"
+       "Dolby service client initialized, create and enable global effect."
+       "initDaxSettings(): Create the effect with control priority 1"
+       "setDaxSettingsForUser(): Create the effect with control priority 1"
+     类：Lcom/dolby/dax/DolbyAudioEffect;  Landroid/media/audiofx/AudioEffect;
+     ⇒ 与我们那次"每个播放会话各建一份 DAP"完全不同：**原厂是 session 0 全局单实例**。
+
+  2) **自带 audioserver 看门狗，重启时先释放再重建**（这正是我们缺的那一步）：
+       Lcom/dolby/daxservice/AudioServerWatchDog;
+       "audio_server_started::dolbyAudio.release()"
+       "initDaxSettings::dolbyAudio.release()"
+       "Dax effect recreate successfully"
+       manifest 里注册的广播：audio_server_restarted、com.dolby.intent.ACTION_RELOAD_TUNING、com.dolby.intent.action.DAP_PARAMS_UPDATE
+       "Dolby service has died, try to reconnect 1s later." / "Reconnect Dolby service reached MAX retry times, abort..."
+       "Dolby audio effect is out of control in audio_server_started"
+     ⇒ 原厂把"效果对象生命周期"当成一等事务管：**音频服务一起来就 release()，再按需 recreate**，
+       绝不让效果对象在会话销毁后悬着——我们的配置挂载法做不到这一点（生命周期归框架）。
+
+  3) 档位与调教走**原厂通道**，不是我们改的 sqlite 库：
+       "content://settings/global/dolby_dap_profile"
+       "content://settings/global/dolby_effect_equalizer"
+       "dolby_on_off default_internal_speaker"
+       "setSelectedTuningDevice speaker_game" / "headphone_game" / "default_headphone" / "default_internal_speaker"
+       "/vendor/etc/dolby/dax_geq.xml"（均衡器参数文件，读不到也容忍）
+     ⇒ **之前查"横竖屏/游戏调教没人调用"的答案出来了：调用方就是 daxService 的 setSelectedTuningDevice()。**
+     ⇒ C17 上 `settings get global dolby_dap_profile` 与 `dolby_effect_equalizer` 都是 **null**（ColorOS 不写这两个键）。
+
+  4) 它对接 DMS HAL（AIDL 与 HIDL 两条都试）：
+       Lcom/dolby/daxservice/hal/DmsHal; /DmsHalAidl;/DmsHalHidl;  Lvendor/dolby/dms/IDms$Stub$Proxy;
+       "Cannot get AIDL DMS" / "Cannot get HIDL DMS" / "Cannot create DMS HAL instance via either AIDL or HIDL impl."
+
+三、C17 上这条路的缺件与在位件（设备只读核对）
+
+  在位（可直接复用）：
+    /vendor/lib64/soundfx/libswdapaidl.so、libdlbvolaidl.so
+    /vendor/etc/dolby/dax-default.xml（107,914 B，9 档）
+    DMS 服务在册：`service check vendor.dolby.dms.IDms/default` → **found**（进程 vendor.dolby.dms.service，pid 25857）
+    /system_ext/framework/audiosphere.jar、lib64/libhoaeffects.qti.so、liblistensoundmodel2.qti.so（高通 AudioSphere，另一套引擎，原厂也没挂）
+  缺失（ZUI 有、C17 无）：
+    priv-app/daxService/daxService.apk + etc/permissions/com.dolby.daxservice.xml
+    /system/lib64/libdolbyeffect.so、libdolbyproxyandroid.so、libdolbyui.so
+    /vendor/etc/dolby/dax_geq.xml（原厂也没有这个文件，应用侧容忍）
+  ⇒ **缺的全是系统侧件，且已全部从原包取到本地**（临时存档/zui_dolby/{dax,sys,se}）。
+
+四、这条路与我们上次崩溃的关系（为什么值得一试）
+
+  上次的死法：配置法让框架**按会话**创建 DAP，会话一销毁框架就调 close()，而 DAP 的工作线程停在
+  一次性 `EventFlag::wait` 上叫不醒（见 16_机器码复核），于是 join 不返回 → 看门狗杀 audioserver。
+  原厂法：全局单实例 + 音频服务重启即 release/recreate ⇒ **销毁时机由应用掌控，且实例数恒为 1**。
+  同一套 vendor 库在原厂 ZUI 上长期不崩，说明原厂这条路径是**被验证过的安全形态**。
+  风险（不得隐瞒）：C17 的系统侧是 ColorOS，daxService 与 ColorOS 的 AudioEffectCenter 可能抢同一个
+  全局会话；装系统 priv-app 本身是比配置挂载更重的改动；仍需真机验证（含抖音高频切流）。

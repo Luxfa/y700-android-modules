@@ -1,0 +1,23 @@
+## 饱和度旋钮验证 2026-11-24 18:31:27
+### 0) 基线：Global saturation 状态
+Global saturation:
+    Activated: false
+App Saturation: 
+### 1) 设 set-saturation 50
+--- 设后 dumpsys
+Global saturation:
+    Activated: true
+App Saturation: 
+--- 设后是否有非单位矩阵
+      isOpaque=false hasProtectedContent=false isColorspaceAgnostic=false dataspace=DISPLAY_P3 (143261696) hdr metadata types=0 dimming enabled=true colorTransform=[[1.000,0.000,0.000,0.000][0.000,1.000,0.000,0.000][0.000,0.000,1.000,0.000][0.000,0.000,0.000,1.000]] caching hint=Enabled 
+      isOpaque=false hasProtectedContent=false isColorspaceAgnostic=false dataspace=V0_SRGB (142671872) hdr metadata types=0 dimming enabled=true colorTransform=[[1.000,0.000,0.000,0.000][0.000,1.000,0.000,0.000][0.000,0.000,1.000,0.000][0.000,0.000,0.000,1.000]] caching hint=Enabled 
+      isOpaque=true hasProtectedContent=false isColorspaceAgnostic=false dataspace=V0_SRGB (142671872) hdr metadata types=0 dimming enabled=true colorTransform=[[1.000,0.000,0.000,0.000][0.000,1.000,0.000,0.000][0.000,0.000,1.000,0.000][0.000,0.000,0.000,1.000]] caching hint=Enabled 
+### 2) 复原 set-saturation 100
+--- 复原后 dumpsys
+Global saturation:
+    Activated: false
+App Saturation: 
+--- 复原后矩阵
+      isOpaque=false hasProtectedContent=false isColorspaceAgnostic=false dataspace=DISPLAY_P3 (143261696) hdr metadata types=0 dimming enabled=true colorTransform=[[1.000,0.000,0.000,0.000][0.000,1.000,0.000,0.000][0.000,0.000,1.000,0.000][0.000,0.000,0.000,1.000]] caching hint=Enabled 
+      isOpaque=false hasProtectedContent=false isColorspaceAgnostic=false dataspace=V0_SRGB (142671872) hdr metadata types=0 dimming enabled=true colorTransform=[[1.000,0.000,0.000,0.000][0.000,1.000,0.000,0.000][0.000,0.000,1.000,0.000][0.000,0.000,0.000,1.000]] caching hint=Enabled 
+      isOpaque=true hasProtectedContent=false isColorspaceAgnostic=false dataspace=V0_SRGB (142671872) hdr metadata types=0 dimming enabled=true colorTransform=[[1.000,0.000,0.000,0.000][0.000,1.000,0.000,0.000][0.000,0.000,1.000,0.000][0.000,0.000,0.000,1.000]] caching hint=Enabled 

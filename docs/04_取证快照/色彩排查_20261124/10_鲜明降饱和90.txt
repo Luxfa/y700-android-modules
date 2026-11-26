@@ -1,0 +1,13 @@
+## 鲜明档 + 全局饱和度 90（降 10%）2026-11-24 18:33:36
+oplus_last_color_mode = 12  (12=鲜明)
+### Global saturation
+Global saturation:
+    Activated: true
+App Saturation: 
+### 非单位色彩矩阵层（有则说明软件降饱和在生效）
+### 复原命令：cmd color_display set-saturation 100
+    232 [[1.000,0.000,0.000,0.000][0.000,1.000,0.000,0.000][0.000,0.000,1.000,0.000][0.000,0.000,0.000,1.000]]
+
+## 结论：这条命令没实际生效（自我更正）
+- `set-saturation 90` 只把服务状态位翻成 `Activated: true`，但 SF 全量 **232 个图层的 colorTransform 全部是单位矩阵**（uniq -c 计数 232/1 种）⇒ 没有产生任何色彩变换。
+- 已 `set-saturation 100` 复原（Activated 回到 false）。

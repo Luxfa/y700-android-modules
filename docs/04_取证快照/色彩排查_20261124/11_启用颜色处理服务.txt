@@ -1,0 +1,14 @@
+## 启用被厂商关闭的颜色处理服务 2026-11-24 19:06:08
+### 启动前
+Service vendor.qti.hardware.display.color.IDisplayColor/default: not found
+### 执行 ctl.start
+### 启动后进程
+system       22430     1    2236056   7196 binder_thread_read  0 S vendor.qti.hardware.display.color-service
+### 启动后服务状态
+[init.svc.vendor.qti.hardware.display.color-service]: [running]
+[init.svc_debug_pid.vendor.qti.hardware.display.color-service]: [22430]
+[ro.boottime.vendor.qti.hardware.display.color-service]: [10891603419431]
+### 接口注册
+vendor.qti.hardware.display.color.IDisplayColor/default    found
+vendor.qti.hardware.display.postproc.IDisplayPostproc/default found
+### SELinux 是否拦

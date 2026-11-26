@@ -1,0 +1,46 @@
+## ColorDisplayService（OPLUS 版）关键状态
+    Activated: false
+    Color temp: 2850
+    Activated: false
+    Activated: false
+      [0] OplusFeatureAmbientColor
+      OplusFeatureAmbientColor:
+      [1] OplusFeatureAmbientEyeprotect
+      OplusFeatureAmbientEyeprotect:
+      [2] OplusFeatureCustomEyeProtect
+      OplusFeatureCustomEyeProtect:
+        needCancelCurrentCctAnimation=false
+        needCancelCurrentRgbAnimation=false
+      [3] OplusFeatureRgbBall
+      OplusFeatureRgbBall:
+
+## 色彩/护眼/亮度相关 settings 现值
+Row: 31 name=eyeprotect_progress_value, value=58
+Row: 112 name=oplus_customize_eyeprotect_saved_level, value=0.7452538
+Row: 113 name=eyeprotect_cct, value=7900,0,7900,4296,1
+Row: 114 name=eyeprotect_rgb, value=1000,1000,1000,1,1
+Row: 122 name=eyeprotect_default_cct, value=7900
+Row: 177 name=color_temperate_ball_mode, value=2
+Row: 245 name=eyeprotect_saved_default, value=7900
+Row: 257 name=com.oplus.eyeprotect.OplusEyeProtectSearchProvider2_nonIndexKey, value=key_normal,key_saturation,key_group_saturation_new,key_fixed_time_open_new,color_temperature_new,key_category_single_pulse,preference_eye_protect_single_pulse_jump,preference_eye_protect_single_pulse_rm_switch,key_preference_eye_protect_dc_rm_jump,key_category_rm_single_pulse,key_eye_protect_mode_screen_adjust,open_protect_eye_time_raw,close_protect_eye_time_raw,key_smart,key_custom,key_ai_eye_protect_preference,key_ai_eye_protect_category,Key_smart_eye_protect_category,key_visual_distance_reminder,key_wink_reminder,key_immediately_open,key_fixed_time_open,color_temperature,key_group_saturation,key_category_color_temperature,key_category_partner_display,key_preference_read_mode_light_color,key_preference_read_mode_black_and_white
+Row: 271 name=access_color_setting, value=-1
+Row: 282 name=oplus_last_color_mode, value=12
+Row: 323 name=video_color_enhance_switch, value=0
+Row: 414 name=eyeprotect_display_cct, value=7900
+Row: 423 name=oplus_customize_eyeprotect_start_level, value=0.39346153
+Row: 472 name=display_color_mode, value=307
+Row: 13 name=night_display_auto_mode, value=0
+Row: 144 name=ui_night_mode_custom_type, value=-1
+Row: 160 name=ui_night_mode_override_off, value=0
+Row: 219 name=oplus_customize_wcg_support, value=0
+Row: 359 name=ui_night_mode, value=0
+Row: 368 name=ui_night_mode_last_computed, value=1
+Row: 424 name=ui_night_mode_override_on, value=0
+
+## 背光与亮度
+835
+0
+0
+4095
+1
+2086

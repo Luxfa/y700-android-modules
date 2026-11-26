@@ -1,0 +1,5 @@
+## 补齐 UI 等价状态（ball_mode 3）2026-11-24 19:43:27
+  你在设置里拖的时候，系统还把 color_temperate_ball_mode 从 2 改成了 3（我这次只写了 rgb，没动它）⇒ 可能这个才是'自定义色温生效'的开关。
+  现在: ball_mode=3  rgb=1000,985,930,1,1
+  服务侧: eyeProtectRGB=RGB{red=1000,green=985,blue=930,protectCoeff=0} rgb=RGB{red=1000,green=985,blue=930,protectCoeff=0}
+### 观感判据待用户回报（硬件层变化截图/矩阵都看不到，只能你眼睛）

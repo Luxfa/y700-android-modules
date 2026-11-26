@@ -1,0 +1,29 @@
+## IDisplayColor AIDL v1 接口方法全表 2026-11-24 19:06:34
+deInitEiiPNS
+getInterfaceHashEPNSt
+getInterfaceVersionEPi
+getRenderIntentsMapEiPNSt
+getSPRModeEiiPNS
+initEiPi
+setSPRModeEiiRKNS
+toggleSocketServiceEb
+### 接口描述符
+vendor.qti.hardware.display.color.IDisplayColor
+vendor.qti.hardware.display.color.SprModeInfo
+### HIDL 1.5 侧方法（老接口，看有没有 HSIC）
+castFromERKN
+debugERKN
+descriptorE
+getDebugInfoENSt
+getHashChainENSt
+getServiceERKNSt
+interfaceChainENSt
+interfaceDescriptorENSt
+linkToDeathERKN
+notifySyspropsChangedEv
+pingEv
+registerAsServiceERKNSt
+registerForNotificationsERKNSt
+setHALInstrumentationEv
+tryGetServiceERKNSt
+unlinkToDeathERKN

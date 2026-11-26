@@ -1,0 +1,81 @@
+丙阶段第二轮复现证据（2026-11-24 22:00–22:11，操作人 hutao / AI 驱动，设备 192.0.2.10:5555）
+================================================================================
+
+一、本轮做了什么（全程可撤销，测完已回退）
+  1. 22:00 解除模块 disabled → bind mount v6 配置（md5 2028052bed5e）→ 重启 vendor.audio-hal-aidl + audioserver。
+  2. 22:02 用 adb 划动抖音 3 次（进入推荐流视频），此后**完全无人操作设备**，只做只读采样与截图。
+  3. 22:03:30 起音频服务开始崩溃，每 20–40 秒一次，共观测 4 轮（22:03:30 / 22:03:48 / 22:04:25 / 22:04:47）。
+  4. 22:05:0x 立即回退（档回 0 + umount + 重启服务 + 重新 disabled），22:05:45–22:07:08 连续 9 次采样进程号不变；
+     22:10:35–22:11:37 再连续 6 次采样不变，抖音有声。设备处于安全态。
+
+二、崩溃循环的原始记录（crash 缓冲，节选）
+  11-24 22:03:44  pid 16306 (audioserver) tid 16374 (ApmOutput)  Fatal signal 6 (SIGABRT)
+      Abort message: 'TimeCheck timeout for IAudioFlinger::getParameters scheduled 22:03:30.918  Timeout ms 13000'
+  11-24 22:04:01  pid 16307 (audiohalservice.qti)  signal 35 (<debuggerd signal>)   ← 崩溃取证用的 dump 请求，非独立崩溃
+  11-24 22:04:02  pid 16306 tid 16374  Abort message: 'TimeCheck timeout for IAudioFlinger::createTrack scheduled 22:03:48.581'
+  11-24 22:04:39  pid 16915 tid 17017 (ApmOutput)  'TimeCheck timeout for IAudioFlinger::getParameters scheduled 22:04:25.018'
+  11-24 22:05:01  pid 17600 tid 17700 (ApmOutput)  'TimeCheck timeout for IAudioFlinger::getParameters scheduled 22:04:47.465'
+  伴随：AS.AudioService: AudioService.onAudioServerDied / QosSceneRecognizer[AudioScene]: audioServer has died!!!
+       AS.AudioService: after audioserver restart: initStreamVolume succeeded
+
+三、tombstone 归属与杜比实例数（决定性一条）
+  tombstone_00  22:03:44  audioserver      ApmOutput   getParameters 超时
+  tombstone_01  22:04:01  audiohalservice  **DAPV3 线程数 = 1**
+  tombstone_02  22:04:02  audioserver      ApmOutput   createTrack 超时
+  tombstone_03  22:04:38  audiohalservice  DAPV3 线程数 = 2
+  tombstone_04  22:04:39  audioserver      ApmOutput   getParameters 超时
+  tombstone_05  22:05:00  audiohalservice  DAPV3 线程数 = 2
+  tombstone_06  22:05:01  audioserver      ApmOutput   getParameters 超时
+  （对照上一轮：tombstone_24/25/26/27/28 = 21:40–21:42 同型；tombstone_07/08/09 = 20:58 同型）
+  ⇒ **假设一（实例数 ≥2 才崩）被证伪**：tombstone_01 只有 1 个杜比实例，配对的 audioserver 崩溃照样发生。
+
+四、环形等待闭环（本轮同时抓到两侧栈，这是终判依据）
+  【audioserver 17600】
+    tid 17700 ApmOutput（被 abort 的线程）：
+      #02 libbinder.so IPCThreadState::transact
+      #04 libbinder_ndk.so AIBinder_transact
+      #05 android.hardware.audio.effect-V4-ndk.so （BpEffect 调用）
+      #06 libaudiohal@aidl.so  android::effect::EffectHalAidl::close()+256
+      #07 libaudioflinger.so   android::EffectModule::release_l()
+      #08 libaudioflinger.so   android::EffectChain::removeEffect()
+      ⇒ 持有 AudioFlinger 大锁 + 卡在跨进程销毁调用上不返回
+    tid 17630 / 17779 / 17786 binder:17600_*：
+      #01 __futex_pi_lock_ex → std::mutex::lock → AudioFlinger::getParameters
+      ⇒ 排队等 ApmOutput 手里的锁（TimeCheck 报的就是它们，属受害者不是元凶）
+    tid 17785 binder:17600_B：
+      #04 libaudioflingerextimpl.so mutex → AudioFlingerExtImpl::getTrackEffect → getEffectParam
+        → getParameters → oplusGetParameters
+      ⇒ ColorOS 扩展层也在同一条锁上排队（说明 ColorOS 侧也在高频调 getParameters）
+
+  【audiohalservice.qti 17602】
+    tid 17798 binder:17602_5（收到销毁请求的那条）：
+      #01 pthread_join → #02 std::thread::join
+      #03 /vendor/lib64/soundfx/libswdapaidl.so  aidl::android::hardware::audio::effect::Effect…
+      #04 /vendor/lib64/soundfx/libswdapaidl.so  Effect…
+      #05 android.hardware.audio.effect-V3-ndk.so → #06 ABBinder::onTransact
+      ⇒ 销毁杜比效果时要 join 自己的工作线程，join 不返回
+    tid 17871 / 17902  DAPV3（被 join 的工作线程，两个实例各一条）：
+      #01 libfmq.so EventFlag::waitHelper → #02 libfmq.so EventFlag::wait
+      #03 libswdapaidl.so DapSwEffectImpl::process()+80
+      #04 libswdapaidl.so EffectThread::threadLoop()+…
+      ⇒ 停在"等框架喂数据"的 FMQ 等待上，销毁路径没有把它唤醒
+    tid 17870 / 17900  Music Volume L（libdlbvolaidl.so，原厂杜比音量效果自带线程）：
+      一条停在 condition_variable::wait，一条同样停在 EventFlag::wait
+      ⇒ 原厂杜比音量效果本身也在场，但卡死点不在它身上（本轮 join 栈落在 libswdapaidl.so）
+    tid 17636 audiohalservice：ResourceManager::ssrHandlingLoop（PAL 的子系统重启看护线程在场）
+    其余 low_latency_out / raw_out_61 / haptics_out_62 / deep_buffer_out / deep_buffer_hir /
+        voice_tx_68 / voip_playback_6 / in_call_music_7 全部停在 MessageQueueBase 的 EventFlag::wait
+        ⇒ 这是输出线程的正常待命形态，不是卡死
+
+  【闭环读法】框架线程 A 持 AudioFlinger 锁并等 HAL 应答销毁 → HAL 线程 B 收到销毁并等自己的工作线程 C 退出
+  → 线程 C 等框架喂数据（而喂数据的那条框架线程正被 A 卡住）→ 三方互等，13 秒看门狗到点 abort
+  → 服务重启后重建会话、再次空闲销毁 → 循环自维持，**与用户是否操作无关**。
+
+五、终判
+  缺陷位置：`/vendor/lib64/soundfx/libswdapaidl.so` 的效果销毁路径（`EffectThread::destroyThread`
+            只 join，不唤醒停在 `EventFlag::wait` 的工作线程）。
+  命中条件：只要把 `dap` 以 `<apply effect="dap"/>` 注册成音乐流后处理效果，就必然命中——
+            触发者是**输出会话销毁**（`AudioPolicyService::doStopOutput → releaseOutputSessionEffects`），
+            不是播放、不是切档、不是我们的桥。
+  与以下因素**无关**（均已排除）：档位 DB、dms-hal 重启、页面值、脚本内容、配置文件写法。
+  原厂 ZUI 不崩的原因：原厂不把 DAP 挂进后处理链，杜比走 DMS/ADSP 通路。

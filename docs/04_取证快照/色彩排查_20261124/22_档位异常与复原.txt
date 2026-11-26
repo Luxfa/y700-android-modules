@@ -1,0 +1,11 @@
+## 复原与档位异常记录 2026-11-24 19:20:51
+  set-saturation 已回 100；服务状态 Activated:false
+### 档位异常：我 19:13 写的是 10（标准），现在读到 11（自然）
+  oplus_last_color_mode = 11
+      Current color mode: ColorMode::SRGB (7)
+### 相关键现值
+  eyeprotect_rgb                                 943,983,1000,1,1
+  color_temperate_ball_mode                      3
+  setting_enable_color_temperature_regulation    0
+  color_ball_last_pointx                         432.956
+  color_ball_last_pointy                         562.88806

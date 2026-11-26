@@ -1,0 +1,53 @@
+机器码级复核输出（2026-11-24 22:2x，离线，设备零改动）
+================================================================================
+工具：临时存档/audio/dolbyfx/symdump.py（符号表）、calltree.py（.rela.plt + .plt stub 反查 bl 目标、
+      扫 b 回边判断等待是否在循环内）。库副本：libswdapaidl.so 2738480B、libdlbvolaidl.so 427288B（后者本轮从设备只读取回）。
+
+一、符号层面（推翻"库里没调 wake"这句）
+  libswdapaidl.so   导出 1492 / 导入 213
+    导入含：EventFlag::createEventFlag / deleteEventFlag / wait(jPjlb) / **wake(j)**
+    导出含：EffectImpl::notifyEventFlag(unsigned int)、EffectThread::destroyThread()、
+            EffectContext::getStatusEventFlag()
+    DT_NEEDED 比音量库多：libdapparamstorage.so 之外的 libdmshal.so（杜比 DMS 通道）
+  libdlbvolaidl.so  导出 113 / 导入 147
+    导入含：同上四件（**同样有 wake**）
+    导出含：同上三件
+  ⇒ 两库销毁骨架同源，"缺少唤醒调用"不成立。
+
+二、函数级调用反查（bl → PLT stub → 导入符号）
+  libdlbvolaidl.so
+    EffectImpl::close()        size=1156  调用 18 处，关键: EffectImpl::notifyEventFlag → EventFlag::wake
+    EffectThread::destroyThread() size=252 调用 4 处，关键: std::thread::join()
+    EffectImpl::process()      size=1260  调用 13 处，关键: EventFlag::wait
+    EffectThread::threadLoop() size=496   调用 4 处，关键: 无
+    notifyEventFlag()          size=712   调用 8 处，关键: EventFlag::wake
+  libswdapaidl.so
+    EffectImpl::close()        size=1156  调用 43 处，关键: notifyEventFlag + EffectThread::destroyThread
+    EffectThread::destroyThread() size=252 调用 9 处，关键: std::thread::join()
+    EffectImpl::process()      size=1280  调用 35 处，关键: EventFlag::wait
+    **DapSwEffectImpl::process() size=964 调用 22 处，关键: EventFlag::wait**（音量库没有这个重写）
+    EffectThread::threadLoop() size=496   调用 13 处，关键: std::condition_variable::wait
+    notifyEventFlag()          size=712   调用 21 处，关键: EventFlag::wake
+
+三、等待是否在循环内（决定性一条）
+  libdlbvolaidl.so  EffectImpl::process        wait 在 +0x78，存在回跳 0x350 → 0x5c 覆盖该点 ⇒ **循环内，醒来会重判条件**
+  libswdapaidl.so   EffectImpl::process        wait 在 +0x78，存在回跳 0x364 → 0x5c ⇒ 同样是循环内
+  libswdapaidl.so   DapSwEffectImpl::process   wait 在 +0x50，**函数体内无任何回跳覆盖该点 ⇒ 一次性死等**
+
+四、与崩溃现场对齐
+  tombstone_05（HAL 17602）44 条线程穷举：
+    17798 binder:17602_5  → pthread_join（唯一卡死点，收到销毁请求的线程）
+    17871 / 17902 DAPV3   → libfmq EventFlag::wait ← DapSwEffectImpl::process()+80（正是上面那条一次性 wait）
+    17900 Music Volume L  → EventFlag::wait（音量库的循环内 wait，安全态实测可被正常收回）
+    17870 Music Volume L  → condition_variable::wait；17791 Dolby Pregain H → 空闲
+    其余 binder/vndbinder 线程全部在 joinThreadPool 空闲 ⇒ **没有任何线程卡在等杜比 DMS 应答**
+    （⇒ "DAP 因 DMS 不应答而卡住"这条假设被现场排除）
+  安全态对照实验（原厂配置，22:09:33，抖音会话 4257 生灭）：
+    22:09:33.708 releaseOutputSessionEffects(): session 4257, refCount: 0
+    22:09:33.708 removeEffect_l() name = Music Volume Listener
+    22:09:33.709 HAL destroyEffect Music Volume Listener instance destroyed
+    22:09:33.709 removeEffectChain_l() 完成  ⇒ **同一条销毁路径，1 毫秒走完**
+
+五、结论表述（替换十九/二十节的旧说法）
+  不是"销毁代码漏了唤醒"，而是"**DAP 重写的 process() 里有一次无回跳的一次性 EventFlag 死等，
+  销毁路径发出的唤醒叫不醒它**"。缺陷在杜比封装库内部；配置层与脚本层碰不到；设备上只有这一份库。

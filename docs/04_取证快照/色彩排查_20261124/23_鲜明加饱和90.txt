@@ -1,0 +1,11 @@
+## 鲜明档 + 饱和度 90 落地 2026-11-24 19:22:43
+### 动手前现状
+  档位=11  色温=943,983,1000,1,1
+      Current color mode: ColorMode::SRGB (7)
+### 切到鲜明(12)
+      Current color mode: ColorMode::SRGB (7)
+### 打饱和度 90
+  服务状态 Activated:true
+### 最终态
+  档位=12  饱和度=90  色温=943,983,1000,1,1
+### 一键回退命令：adb shell cmd color_display set-saturation 100

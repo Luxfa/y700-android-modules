@@ -1,0 +1,15 @@
+=== wm size ===
+Physical size: 1904x3040
+=== wm density ===
+Physical density: 420
+=== 内核模式 ===
+1904x3040x120vid
+1904x3040x165vid
+1904x3040x144vid
+1904x3040x90vid
+1904x3040x60vid
+1904x3040x30vid
+=== 当前焦点 ===
+  mCurrentFocus=Window{28a3e8a u0 com.tencent.lolm/com.tencent.lolm.lgame}
+=== display 采样率 ===
+mAppRequestBaseModeRefreshRate=144.00002

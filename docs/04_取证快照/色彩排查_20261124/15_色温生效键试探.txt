@@ -1,0 +1,11 @@
+## 方案A 第2步：色温往冷 —— 定位生效键 2026-11-24 19:13:38
+基线: currentCCT=7900 currentCCT=7900 stateCCT=7900.0
+--- 试探1：只改 eyeprotect_cct 第1字段 7900→8600
+  结果: currentCCT=7900 currentCCT=7900 stateCCT=7900.0
+  键值: 8600,0,7900,4296,0
+--- 试探2：第1、3字段都改 8600
+  结果: currentCCT=7900 currentCCT=7900 stateCCT=7900.0
+--- 试探3：color_temperate_ball_mode 2→3
+  结果: currentCCT=7900 currentCCT=7900 stateCCT=7900.0
+--- 全部复原
+  复原后: currentCCT=7900 currentCCT=7900 stateCCT=7900.0

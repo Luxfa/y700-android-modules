@@ -1,0 +1,7 @@
+## 写键切档能否进鲜明：三向对照 2026-11-24 19:23:17
+起点: settings=12 SF=SRGB(7)
+写 10 后: settings=10 SF=SRGB(7)
+写 12 后: settings=12 SF=SRGB(7)
+写 11 后: settings=11 SF=SRGB(7)
+写 12 后: settings=12 SF=SRGB(7)
+### 停在鲜明；饱和度现值状态 Activated:true
