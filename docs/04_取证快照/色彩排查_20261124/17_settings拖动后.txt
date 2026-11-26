@@ -717,7 +717,7 @@ Row: 255 name=mock_location, value=0
 Row: 256 name=findmyphone_sms_service_number, value=1069003202234,1069033322338,1069040677151
 Row: 257 name=double_tap_power_button_gesture_enabled, value=0
 Row: 258 name=theme_store_variengine_entrance_button_config, value={"entranceUri":"oaps://theme/home?oapTargetUri=oaps%3A%2F%2Ftheme%2Flockentrance%3FtabId%3D1%26enterFrom%3D100039_1","entranceText":"更多精彩"}
-Row: 259 name=bluetooth_name, value=遥遥领后
+Row: 259 name=bluetooth_name, value=<BT_DEVICE>
 Row: 26 name=oplus_games_not_disturb_switch_reset_key, value=1
 Row: 260 name=oplus_common_center_incallui_floating_window_state, value=0
 Row: 261 name=autofill_service, value=com.coloros.codebook/com.coloros.codebook.book.CodeBookService
@@ -963,7 +963,7 @@ Row: 59 name=overlay_launcher_scene, value=0
 Row: 6 name=oplus_games_not_disturb_switch_key, value=0
 Row: 60 name=sleep_timeout, value=-1
 Row: 61 name=is_wallet_service_available, value=0
-Row: 62 name=device_tether_name, value=遥遥领后
+Row: 62 name=device_tether_name, value=<BT_DEVICE>
 Row: 63 name=Setting_AodState_Local, value=0
 Row: 64 name=settings_shutdown_adfr_oti, value=0
 Row: 65 name=Setting_doze_without_dim_policy, value=0
